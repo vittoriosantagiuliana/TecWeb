@@ -1,17 +1,25 @@
 body {
 	margin: auto;
+	background-color: #DDD;
 }
 
-#header {
-	text-align: center;
+#container {
+	margin: 0 10em;
 }
+
+#header {}
 
 #nav {
 	float: left;
 }
 
 #content {
-	margin: 0 10em;
+	overflow: auto;
+}
+#content > img {
+	float: right;
+	width: 30em;
+	clear: right;
 }
 
 #footer {
@@ -22,4 +30,6 @@ body {
 	bottom: 0;
 }
 
-
+.title {
+	text-align: center;
+}
