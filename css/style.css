@@ -1,4 +1,4 @@
-﻿*{
+*{
   padding: 0em;
   margin: 0em;
   font-family: Arial, Helvetica, sans-serif;
@@ -6,27 +6,29 @@
 
 #header{
   background-color:#d2ba94;
+  padding: 2em;
 }
 
 #title h1{
   text-align: center;
-  font-size: 400%;
+  font-size: 4em;
   font-family: 'Times New Roman', Times, serif;
   padding-top: 0.5em;
   padding-right:1em;
   padding-bottom: 0.5em;
   background-color: #d2ba94;
-  vertical-align: middle;
 }
 
 #title .logo{
   float: left;
-  height:90px;
-  width:90px;
+  height:6em;
+  width:6em;
   padding-top:1.3em;
   padding-left: 1.3em;
   vertical-align: middle;
   -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
 #title .logo:hover{
