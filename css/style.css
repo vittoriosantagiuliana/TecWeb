@@ -100,7 +100,7 @@
 }
 
 #content{
-	margin: 0.3em;
+	margin: 1em 16em;
 }
 
 .prima{
@@ -114,22 +114,14 @@
 }
 
 #footer{
-	background-color: #645339;
+	background-color: #b49c77;
 	border-top: 1px solid;
 	position:relative;
-	bottom: 0;
-	left:0;
-	width:100%;
-	padding: 0.3em;
-	margin-top: 1.5em;
-	font-style: italic;
-	text-align:center;
-}
-
-#footer{
-	background-color: #b49c77;
 	display: block;
-	padding: 1em;
+	padding: 2em;
+	bottom: 0;
+	text-align:center;
+	font-style: italic;
 }
 
 #footer .fa{
@@ -223,12 +215,12 @@
 }
 
 .imgB:hover{
- -webkit-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
 	transform: scale(1.05);
 }
 
 #animalsImg img{
-	width:300px;
+	width: 300px;
 	height: 200px;
 }
 
