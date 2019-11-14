@@ -45,6 +45,7 @@
   margin-right: auto;
   margin-left:auto;    
     border-radius:8px;
+    display:flex;
  }
 
 #navbar li{
@@ -82,7 +83,6 @@
   margin-right:auto;
   background-color: #d2ba94;
   height: 40px;
-  /*background-color: #00a087;*/
 }
 
 #header #current{
@@ -369,6 +369,7 @@ input[type=submit]:hover{
 #content h2{
   text-align: center;
   margin-top:1em;
+    margin-bottom: 1em;
 }
 
 .descriptionImage{
@@ -386,18 +387,30 @@ input[type=submit]:hover{
 
 }
 
-#animalsImg p{
+.animalsImg{
+    margin:auto;
+    flex:50%;
+}
+
+.animalsImg p{
     padding-bottom:1em;
-    font-size:1.5em;
+    font-size:1.3em;
     text-align: center;
     margin-top:1.5em;
 }
 
-#animalsImg img{
-    margin-left:auto;
-    margin-right: auto;
-    display:block;
-    padding-bottom:2.5em;
+#contentAnim{
+    display: flex;
+  flex-wrap: wrap;
 }
 
+.animalsImg img {
+    /*margin-left:auto;
+    margin-right: auto;
+    display:block;*/
+    padding-bottom:2.5em;
+    width:100px;
+    height: 100px;
+    margin: auto;
+}
 
