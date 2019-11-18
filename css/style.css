@@ -101,6 +101,7 @@
 
 #content{
 	margin: 3em 15em;
+	overflow: auto;
 }
 
 .prima{
@@ -244,106 +245,62 @@
 
 
 #address{
-	margin: 0.5em 0.5em;
-	margin-bottom: 2em;
+	margin: 0.5em;
 	line-height: 2.5em;
-	margin-left:2em;
+	
 }
 
 .googleMaps{
-	/*float:right;
-	max-width:65%;
+	float:right;
+	max-width: 40em;
 	height:auto;
 	margin-bottom:2em;
 	margin-right: 1em;
-	*/
 }
 
-#contattaciForm{
-	loat:right;
+#contactForm{
+	display: inline-block;
+	float: right;
 }
 
-#contattaciForm legend{
+#contactForm legend{
 	font-style: italic;
 	font-weight: bolder;
 	font-size: 1.2em;
-	padding-left:0.5em;
-	padding-right: 0.5em;
+	padding: 0 0.5em;
 }
 
-#contattaciForm fieldset{
+#contactForm fieldset{
 	border-radius: 1em;
-	padding-top: 0.75em;
-	padding-left: 1.5em;
-	padding-bottom:2em;
-	border: 1px solid #E9E7E7;
-	align-content: center;
-	margin-top:1.5em;
-	margin-left:2em;
-	margin-bottom:2em;
+	padding: 1em;
+	border: 1px solid #D9D7D7;
 }
 
-#contattaciForm input[type=text]{
-	width: 40%;
-	border-radius: 1em;
+#contactForm input{
+	border-radius: 0.4em;
 	padding: 0.4em;
-	margin-bottom: 1.3em;
-	display: inline-block;
 	border: 2px solid #b8b3b2;
 }
 
-#contattaciForm input[type=text]:focus{
-	border-color: #948F8E;
+#contactForm input[type=text], input[type=email]{
+	margin-bottom: 1em;
 }
 
-#contattaciForm input[type=text]:hover{
+#contactForm input[type=text]:hover{
 	border-color: grey;
 }
 
-#contattaciForm input[type=text], textarea {
-	border-style: inset;
-	border-width: 2px;
+#contactForm input::placeholder{
+	color: grey;
 }
 
-#contattaciForm input::-webkit-input-placeholder {
-	color: grey; 
-	opacity: 0.5; 
+#contactForm input[type=submit] {
+	float: right;
 }
 
-textarea{
-	resize:none;
-	width:75%;
-	height:150px;
-	border-radius:5px;
-}
-
-textarea:focus{
-	border-color: #948F8E;
-}
-
-textarea:hover{
-	border-color: grey;
-}
-
-input[type=submit]{
-	border-radius:4px;
-	padding: 5px 15px;
-	margin-left: 15px;
-	position:absolute;
-	margin-top:4.5em;
-}
-
-input[type=submit]:hover{
+#contactForm input[type=submit]:hover{
 	background-color: #B5B5B5;
 	border-color: grey;
-}
-
-#textLegend{
-	font-style: italic;
-}
-
-.resizedTextbox{
-	height: 175px;
 }
 
 /*--------------*/
@@ -366,8 +323,30 @@ input[type=submit]:hover{
 
 #content h2{
 	text-align: center;
-	margin-top:1em;
-	margin-bottom: 1em;
+	margin: 1em;
+}
+
+#animalsContainer{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.animalsImg{
+	box-sizing: border-box;
+	padding: 1em;
+	flex: 25%;
+}
+
+.animalsImg p{
+	padding: 1em 0em;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+.animalsImg img {
+	display:block;
+	margin: auto;
+	width: 15em;
 }
 
 .descriptionImage{
@@ -379,28 +358,4 @@ input[type=submit]:hover{
 
 .description{
 	line-height: 1.4em;
-
 }
-
-.animalsImg{
-	padding: 1em;
-	flex:25%;
-}
-
-.animalsImg p{
-	padding: 1em;
-	font-size:1.3em;
-	text-align: center;
-}
-
-#animalsContainer{
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.animalsImg img {
-	display:block;
-	margin: auto;
-	width: 15em;
-}
-
