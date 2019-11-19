@@ -331,6 +331,10 @@
 	flex-wrap: wrap;
 }
 
+#animalsContainer img{
+	border-radius: 0.2em;
+}
+
 .animalsImg{
 	box-sizing: border-box;
 	padding: 1em;
