@@ -4,12 +4,12 @@
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-        background-image: url("../images/texture4.png");
+body {
+	background-image: url("../images/texture4.png");
 }
 
 #header{
-	/*background-color:#d2ba94;*/
+	background-color: #E6DAC0;
 	padding: 2em;
     background-image: url("../images/texture.png");
 }
@@ -27,7 +27,6 @@ body{
 	width:6em;
 	padding-top:1.3em;
 	padding-left: 1.3em;
-	vertical-align: middle;
 	-webkit-transition-duration: 0.2s;
 	-moz-transition-duration: 0.2s;
 	-o-transition-duration: 0.2s;
@@ -75,26 +74,16 @@ body{
 
 #navbar{
 	margin: 0 12em;
-	/*background-color: #d2ba94;*/
 }
 
 #content{
-	margin: 3em 15em;
+	margin: 0 12em;
+	padding: 3em;
 	overflow: auto;
-}
-
-.prima{
-	display:block;
-	position:relative;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top:auto;
-	width: 80%;
-	height:250px;
+	background-color: white;
 }
 
 #footer{
-	/* background-color: #b49c77;*/
 	border-top: 1px solid;
 	position:relative;
 	display: block;
@@ -102,6 +91,7 @@ body{
 	bottom: 0;
 	text-align:center;
 	font-style: italic;
+	background-color: #E6DAC0;
     background-image: url("../images/texture.png");
 }
 
@@ -168,42 +158,41 @@ body{
 /*---HOMEPAGE---*/
 /*--------------*/
 
-#imgBar{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 20px;
+.prima{
+	width: 100%;
 	margin: auto;
-	margin-top: 5em;
 }
 
-
+#imgBar{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	margin-top: 2em;
+}
 
 #imgBar p{
-	position: relative;
 	text-align: center;
-	font-size:20px;
 	font-weight: bolder;
-	margin-bottom:2em;
 }
 
 #imgBar img{
-	grid-column: 1;
-	max-width: 65%;
-	height: auto;
-	margin-left: auto;
-	margin-right:auto;
+	vertical-align: middle;
+	max-width: 14em;
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
+}
+#imgBar img:hover{
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .imgB:hover{
 	-webkit-transform: scale(1.05);
 	transform: scale(1.05);
-}
-
-#animalsImg img{
-	width: 300px;
-	height: 200px;
 }
 
 .map{
@@ -223,19 +212,17 @@ body{
 /* CONTATTI */
 /*---------------*/
 
-
 #address{
-	margin: 0.5em;
+	display: block;
 	line-height: 2.5em;
-	
+	min-width: 8em;
+	overflow: auto;
+	float: right;
 }
 
 .googleMaps{
-	float:right;
+	float: left;
 	max-width: 40em;
-	height:auto;
-	margin-bottom:2em;
-	margin-right: 1em;
 }
 
 #contactForm{
