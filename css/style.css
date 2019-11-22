@@ -37,6 +37,13 @@ body {
 	transform: scale(1.15);
 }
 
+#posBar{
+	display:flex;
+	flex-wrap: wrap;
+	padding: 0.5em 0.5em 0.5em 2em;
+	background-color: #d4c7a5;
+}
+
 #navbar ul{
 	list-style-type: none;
 	overflow: hidden;
