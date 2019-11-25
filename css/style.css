@@ -10,8 +10,11 @@ body {
 
 #header{
 	background-color: #E6DAC0;
-	padding: 2em;
-    background-image: url("../images/texture.png");
+	padding: 1em 2em 2em 2em;
+	background-image: url("../images/texture.png");
+	box-shadow: 0 0 1em #777;
+   	position: relative;
+    	z-index: 1;
 }
 
 #title h1{
@@ -88,6 +91,9 @@ body {
 	padding: 3em;
 	overflow: auto;
 	background-color: white;
+	background-color: white;
+	box-shadow: 0 0 1em #777;
+	margin: 0 12em;
 }
 
 #footer{
@@ -99,7 +105,8 @@ body {
 	text-align:center;
 	font-style: italic;
 	background-color: #E6DAC0;
-    background-image: url("../images/texture.png");
+    	background-image: url("../images/texture.png");
+	box-shadow: 0 0 1em #777;
 }
 
 #footer .fa{
