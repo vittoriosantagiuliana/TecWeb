@@ -85,6 +85,7 @@ body {
 #navbar li a:hover {
 	background-color: #A08A68;
 	color: #2d3629;
+	transition: 0.3s;
 }
 
 #navbar li #current{
