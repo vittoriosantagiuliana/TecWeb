@@ -1,7 +1,16 @@
 *{
 	padding: 0em;
 	margin: 0em;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Raleway',Tahoma, Helvetica, sans-serif;
+}
+
+a{
+    color: #4d4122;
+    /*text-decoration: none;*/
+}
+
+a:visited{
+    color: #466e2e;
 }
 
 body {
@@ -20,7 +29,8 @@ body {
 #title h1{
 	text-align: center;
 	font-size: 4em;
-	font-family: 'Times New Roman', Times, serif;
+	font-family: 'Fredoka One';
+    font-weight: lighter;
 	padding: 0.5em 1em;
 }
 
@@ -45,6 +55,10 @@ body {
 	flex-wrap: wrap;
 	padding: 0.5em 0.5em 0.5em 2em;
 	background-color: #d4c7a5;
+}
+
+#posBar p{
+    color: #4d4122;
 }
 
 #navbar ul{
@@ -75,7 +89,7 @@ body {
 
 #navbar li #current{
 	background-color: #e3d8bc;
-	color: #648c49;
+	color: #466e2e;
 }
 
 #navbar :nth-child(6){
@@ -97,7 +111,6 @@ body {
 }
 
 #footer{
-	border-top: 1px solid;
 	position:relative;
 	display: block;
 	padding: 2em;
@@ -105,7 +118,7 @@ body {
 	text-align:center;
 	font-style: italic;
 	background-color: #E6DAC0;
-    	background-image: url("../images/texture.png");
+    background-image: url("../images/texture.png");
 	box-shadow: 0 0 1em #777;
 }
 
@@ -344,3 +357,23 @@ body {
 .description{
 	line-height: 1.4em;
 }
+
+
+/*--------------*/
+/*---ATTIVITA'---*/
+/*--------------*/
+
+.activityImage img{
+    height:20em;
+}
+
+
+
+
+
+
+
+
+
+
+
