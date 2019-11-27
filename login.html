@@ -26,7 +26,7 @@
 					<li><a href="animals.html">Animali</a></li>
 					<li><a href="activities.html">Attivit&agrave;</a></li>
 					<li><a href="contacts.html" id="current">Contatti</a></li>
-					<li><a href="login.html" id="log">Log In</a></li>
+					<li><a href="login.php" id="log">Log In</a></li>
 				</ul>
 			</div>
 		</div>
@@ -38,8 +38,8 @@
                 <form>
                     <fieldset>
                         <legend>Login</legend>
-                        &nbsp;Username:  <input type="text" name="user" placeholder="MarioRossi00"/>&nbsp;
-                        Password:  <input type="password" name="password"/>
+                        <label>Username:</label>  <input type="text" name="user" placeholder="MarioRossi00"/>&nbsp;<br>
+                        <label>Password:</label>  <input type="password" name="password"/>
                         <input type="submit" name="log" value="Login"/>
                     </fieldset>
                 </form>         
@@ -49,14 +49,14 @@
 				<form>
 					<fieldset>
 						<legend>Registrati</legend>
-                        Username:  <input type="text" name="user" placeholder="MarioRossi00"/><div class="error"> Nome utente non disponibile!</div><br/> 
-                        Password:  <input type="password" name="password"/><div class="error">La password deve contenere al massimo 20 caratteri</div><br/>
-						Nome:  <input type="text" name="name" placeholder="Mario"/><br/>
-                        Cognome:  <input type="text" name="surname" placeholder="Rossi"/><br/>
-                        Data di nascita:  <input type="date" name="date" min="1900-01-01" value="01-01-2000"/><br/>
-                        Email:  <input type="email" name="email" placeholder="mariorossi@gmail.com"/><br/>
-						Ti stai iscrivendo come:<br/>
-                            <input type="radio" name="type" value="Utente"/> Utente generico<br/>
+                        <label>Username:</label>  <input type="text" name="user" placeholder="MarioRossi00"/><div class="error"><br> Nome utente non disponibile!</div><br/> 
+                        <label>Password:</label>  <input type="password" name="password"/><br><div class="error"><div>La password deve contenere al massimo 20 caratteri</div></div>
+						<label>Nome:</label>  <input type="text" name="name" placeholder="Mario"/><br/>
+                        <label>Cognome:</label>  <input type="text" name="surname" placeholder="Rossi"/><br/>
+                        <label>Data di nascita:</label>  <input type="date" name="date" min="1900-01-01" value="01-01-2000"/><br/>
+                        <label>Email:</label>  <input type="email" name="email" placeholder="mariorossi@gmail.com"/><br/>
+						<label>Ti stai iscrivendo come:</label><br/>
+                        <input type="radio" name="type" value="Utente"/> Utente generico<br/>
 						<input type="radio" name="type" value="Accompagnatore"/> Utente accompagnatore<br/>
 						<input type="submit" name="sign" value="Registrati"/>
 					</fieldset>
