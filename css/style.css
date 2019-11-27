@@ -116,7 +116,7 @@ body {
 	text-align:center;
 	font-style: italic;
 	background-color: #E6DAC0;
-    background-image: url("../images/texture.png");
+    	background-image: url("../images/texture.png");
 	box-shadow: 0 0 1em #777;
 }
 
@@ -130,6 +130,7 @@ body {
 	border-radius: 50%;
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
+	color: white;
 }
 
 #footer .fa:hover{
