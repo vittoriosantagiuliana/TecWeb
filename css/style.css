@@ -397,7 +397,19 @@ body {
 	margin-bottom: 1em;
 }
 
-#signinForm input[type=text]:hover, input[type=email]:hover, input[type=password]:hover, input[type=date]:hover{
+#signinForm input[type=text]:hover{
+	border-color: grey;
+}
+
+#signinForm input[type=email]:hover{
+	border-color: grey;
+}
+
+#signinForm input[type=password]:hover{
+	border-color: grey;
+}
+
+#signinForm  input[type=date]:hover{
 	border-color: grey;
 }
 
@@ -407,7 +419,10 @@ body {
 }
 
 #signinForm input[type=submit] {
+    margin-right: 5em;
+    margin-bottom: 1em;
 	float: right;
+    font-size:1em;
 }
 
 #signinForm input[type=submit]:hover{
@@ -415,7 +430,60 @@ body {
 	border-color: grey;
 }
 
+#signinForm .error{
+    color: firebrick;
+    float:right;
+}
 
+#loginForm legend{
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 1.2em;
+	padding: 0 0.5em;
+}
+
+#loginForm fieldset{
+	border-radius: 1em;
+	padding: 1em;
+	border: 1px solid #D9D7D7;
+}
+
+#loginForm input{
+	border-radius: 0.4em;
+	padding: 0.4em;
+	border: 2px solid #b8b3b2;
+}
+
+#loginForm input[type=text]{
+	margin-bottom: 1em;
+}
+
+#loginForm input[type=password]{
+	margin-bottom: 1em;
+}
+
+#loginForm input[type=text]:hover{
+	border-color: grey;
+}
+
+#loginForm input[type=password]:hover{
+	border-color: grey;
+}
+
+#loginForm input::placeholder{
+	color: grey;
+}
+
+#loginForm input[type=submit] {
+    margin-right: 5em;
+	float: right;
+    font-size: 1em;
+}
+
+#loginForm input[type=submit]:hover{
+	background-color: #B5B5B5;
+	border-color: grey;
+}
 
 
 
