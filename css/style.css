@@ -23,7 +23,7 @@ body {
 	background-image: url("../images/texture.png");
 	box-shadow: 0 0 1em #777;
    	position: relative;
-    	z-index: 1;
+    z-index: 1;
 }
 
 #title h1{
@@ -85,6 +85,7 @@ body {
 #navbar li a:hover {
 	background-color: #A08A68;
 	color: #2d3629;
+	transition:0.3s;
 }
 
 #navbar li #current{
@@ -116,7 +117,7 @@ body {
 	text-align:center;
 	font-style: italic;
 	background-color: #E6DAC0;
-    	background-image: url("../images/texture.png");
+    background-image: url("../images/texture.png");
 	box-shadow: 0 0 1em #777;
 }
 
@@ -394,6 +395,11 @@ body {
 	border: 2px solid #b8b3b2;
 }
 
+#signinForm label{
+	width: 20%;
+	display: inline-block;
+}
+
 #signinForm input[type=text], input[type=email], input[type=password], input[type=date]{
 	margin-bottom: 1em;
 }
@@ -413,7 +419,6 @@ body {
 #signinForm  input[type=date]:hover{
 	border-color: grey;
 }
-
 
 #signinForm input::placeholder{
 	color: grey;
@@ -449,10 +454,16 @@ body {
 	border: 1px solid #D9D7D7;
 }
 
+#loginForm label{
+	width: 20%;
+	display: inline-block;
+}
+
 #loginForm input{
 	border-radius: 0.4em;
 	padding: 0.4em;
 	border: 2px solid #b8b3b2;
+	text-align: left;
 }
 
 #loginForm input[type=text]{
