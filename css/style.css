@@ -85,7 +85,6 @@ body {
 #navbar li a:hover {
 	background-color: #A08A68;
 	color: #2d3629;
-	transition: 0.3s;
 }
 
 #navbar li #current{
@@ -106,9 +105,7 @@ body {
 	padding: 3em;
 	overflow: auto;
 	background-color: white;
-	background-color: white;
 	box-shadow: 0 0 1em #777;
-	margin: 0 12em;
 }
 
 #footer{
@@ -366,6 +363,56 @@ body {
 
 .activityImage img{
     height:20em;
+}
+
+/*--------------*/
+/*-REGISTRAZIONE-*/
+/*--------------*/
+
+#signinForm{
+	/*display: inline-block;
+	float: center;*/
+}
+
+#signinForm legend{
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 1.2em;
+	padding: 0 0.5em;
+}
+
+#signinForm fieldset{
+	border-radius: 1em;
+	padding: 1em;
+	border: 1px solid #D9D7D7;
+}
+
+#signinForm input{
+	border-radius: 0.4em;
+	padding: 0.4em;
+	border: 2px solid #b8b3b2;
+}
+
+#signinForm input[type=text], input[type=email], input[type=password], input[type=date]{
+	margin-bottom: 1em;
+}
+
+#signinForm input[type=text]:hover, input[type=email]:hover, input[type=password]:hover, input[type=date]:hover{
+	border-color: grey;
+}
+
+
+#signinForm input::placeholder{
+	color: grey;
+}
+
+#signinForm input[type=submit] {
+	float: right;
+}
+
+#signinForm input[type=submit]:hover{
+	background-color: #B5B5B5;
+	border-color: grey;
 }
 
 
