@@ -16,7 +16,7 @@
 	<body>
 		<?php include("header.php"); ?>
         <div id="breadcrumb">
-			<p><a href="index.html">Home</a> &#124; Orario</p>
+			<p><a href="index.php">Home</a> &#124; Orario</p>
         </div>
 		<div id="content">
 			<table id="scheduleSummer">

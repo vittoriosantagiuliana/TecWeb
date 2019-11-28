@@ -16,7 +16,7 @@
 	<body>
 		<?php include("header.php"); ?>
 		<div id="breadcrumb">
-			<p><a href="index.html">Home</a> &#124; Storia</p>
+			<p><a href="index.php">Home</a> &#124; Storia</p>
 		</div>
 		<div id="content">
 			<h2>La nostra storia</h2>

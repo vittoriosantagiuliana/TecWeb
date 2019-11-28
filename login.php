@@ -16,7 +16,7 @@
 	<body>
 		<?php include("header.php"); ?>
 		<div id="breadcrumb">
-			<p><a href="index.html">Home</a> &#124; Login</p>
+			<p><a href="index.php">Home</a> &#124; Login</p>
 		</div>
 		<div id="content">
 			<div id="loginForm">

@@ -14,9 +14,9 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	</head>
 	<body>
-		<?php include("../header.php"); ?>
+		<?php include("headeranimals.php"); ?>
 		<div id="breadcrumb">
-			<p><a href="../index.html">Home</a> &#124; <a href="../animals.html">Animali</a> &#124; Ara dalle ali verdi </p>
+			<p><a href="../index.php">Home</a> &#124; <a href="../animals.php">Animali</a> &#124; Ara dalle ali verdi </p>
 		</div>
 		<div id="content">
             <h2>Ara dalle ali verdi</h2>
