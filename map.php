@@ -14,22 +14,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	</head>
 	<body>
-		<div id="header">
-			<div id="title">
-				<a href="index.html"><img class="logo" src="images/logo.png" alt="logo dello zoo"/></a>
-				<h1>Zoo Creola</h1>
-			</div>
-			<div id="navbar">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="history.html">Storia</a></li>
-					<li><a href="animals.html">Animali</a></li>
-					<li><a href="activities.html">Attivit&agrave;</a></li>
-					<li><a href="contacts.html">Contatti</a></li>
-					<li><a href="login.html" id="log">Log In</a></li>
-				</ul>
-			</div>
-		</div>
+		<?php include("header.php"); ?>
 		<div id="content">
 			<h2>Mappa interattiva, clicca sulle etichette per scoprire i nostri animali!</h2>
 				<img class="map" src="images/map.png" usemap="#imageMap" alt="mappa"/>

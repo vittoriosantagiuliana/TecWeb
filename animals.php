@@ -8,47 +8,32 @@
 		<meta name="keywords" content="zoo, tecnologie web, progetto, animali"/>
 		<meta name="language" content="italian it"/>
 		<meta name="author" content="Alessio Barbiero"/>
-        <link href="https://fonts.googleapis.com/css?family=Fredoka One" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css?family=Fredoka One" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
 		<link rel="stylesheet" href="css/style.css"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	</head>
 	<body>
-		<div id="header">
-			<div id="title">
-				<a href="index.html"><img class="logo" src="images/logo.png" alt="logo dello zoo"/></a>
-				<h1>Zoo Creola</h1>
-			</div>
-			<div id="navbar">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="history.html">Storia</a></li>
-					<li><a href="animals.html" id="current">Animali</a></li>
-					<li><a href="activities.html">Attivit&agrave;</a></li>
-					<li><a href="contacts.html">Contatti</a></li>
-					<li><a href="login.html" id="log">Log In</a></li>
-				</ul>
-			</div>
-		</div>		
-        <div id="breadcrumb">
+		<?php include("header.php"); ?>
+		<div id="breadcrumb">
 			<p><a href="index.html">Home</a> &#124; Attivit&agrave;</p>
-        </div>
-        <div id="content">
-            <h2>I nostri animali</h2>
-            <div id="animalsContainer">
-                <div class="animalsImg">
-                	<p>Ara dalle ali verdi</p>
-                	<a href="./animals/parrot.html"><img class="transiction" src="./images/animals/parrot.jpg" alt="ara dalle ali verdi"/></a>
-                        <!-- <div class="tranTxt">Ara dalle ali verdi</div> -->
-                </div>
-                <div class="animalsImg">
-                	<p>Gorilla</p>
-                	<a href="./animals/gorilla.html"><img src="./images/animals/gorilla.jpg" alt="gorilla"/></a>
-                </div>
-                <div class="animalsImg">
-                	<p>Elefante</p>
-                	<a href="./animals/elephant.html"><img src="./images/animals/elephant.jpg" alt="elefante"/></a>
-                </div>
+		</div>
+		<div id="content">
+			<h2>I nostri animali</h2>
+			<div id="animalsContainer">
+				<div class="animalsImg">
+					<p>Ara dalle ali verdi</p>
+					<a href="./animals/parrot.html"><img class="transiction" src="./images/animals/parrot.jpg" alt="ara dalle ali verdi"/></a>
+						<!-- <div class="tranTxt">Ara dalle ali verdi</div> -->
+				</div>
+				<div class="animalsImg">
+					<p>Gorilla</p>
+					<a href="./animals/gorilla.html"><img src="./images/animals/gorilla.jpg" alt="gorilla"/></a>
+				</div>
+				<div class="animalsImg">
+					<p>Elefante</p>
+					<a href="./animals/elephant.html"><img src="./images/animals/elephant.jpg" alt="elefante"/></a>
+				</div>
 				<div class="animalsImg">
 					<p>Farfalla</p>
 					<a href="./animals/butterfly.html"><img src="./images/animals/butterfly.jpg" alt="farfalla"/></a>
@@ -101,8 +86,8 @@
 					<p>Delfino</p>
 					<a href="./animals/dolphin.html"><img src="./images/animals/dolphin.jpg" alt="delfino"/></a>
 				</div>
-            </div>
-        </div>
+			</div>
+		</div>
 		<div id="footer">
 			<p>Seguici sui social per tutte le novità sul parco!</p>
 			<center data-parsed="">
