@@ -6,12 +6,12 @@
 }
 
 a{
-    color: #4d4122;
-    /*text-decoration: none;*/
+	color: #4d4122;
+	/*text-decoration: none;*/
 }
 
 a:visited{
-    color: #466e2e;
+	color: #466e2e;
 }
 
 body {
@@ -22,8 +22,8 @@ body {
 	padding: 1em;
 	background-color: #E6DAC0;
 	background-image: url("../images/texture.png");
-   	position: relative;
-    z-index: 1;
+	position: relative;
+	z-index: 1;
 	box-shadow: 0 0 1em #777;
 }
 
@@ -39,7 +39,7 @@ body {
 	text-align: center;
 	font-size: 4em;
 	font-family: 'Fredoka One';
-    font-weight: lighter;
+	font-weight: lighter;
 }
 
 #title .logo {
@@ -121,21 +121,18 @@ body {
 }
 
 #footer {
-	position:relative;
-	display: block;
+	
 	padding: 2em;
 	bottom: 0;
-	text-align:center;
-	font-style: italic;
 	background-color: #E6DAC0;
-    background-image: url("../images/texture.png");
+	background-image: url("../images/texture.png");
 	box-shadow: 0 0 1em #777;
 }
 
 #footer .fa {
-	padding: 15px;
-	font-size: 20px;
-	width: 20px;
+	flex: 1;
+	padding: 0.5em;
+	font-size: 1.2em;
 	text-align: center;
 	text-decoration: none;
 	margin: 1em 0.5em;
@@ -143,6 +140,12 @@ body {
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
 	color: white;
+}
+
+#footer .fa::after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
 }
 
 #footer .fa:hover {
@@ -158,8 +161,16 @@ body {
 	font-style: italic;
 }
 
-#containerSocial {
+#social {
+	position: relative;
 	display:flex;
+	justify-content: center;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .fa-facebook {
@@ -178,8 +189,8 @@ body {
 }
 
 .fa-linkedin {
-	color: white;
 	background-color: #007bb5;
+	color: white;
 }
 
 .fa-instagram {
@@ -457,7 +468,7 @@ body {
 /*--------------*/
 
 .activityImage img{
-    height:20em;
+	height:20em;
 }
 
 /*--------------*/
@@ -518,10 +529,10 @@ body {
 }
 
 #signinForm input[type=submit] {
-    margin-right: 5em;
-    margin-bottom: 1em;
+	margin-right: 5em;
+	margin-bottom: 1em;
 	float: right;
-    font-size:1em;
+	font-size:1em;
 }
 
 #signinForm input[type=submit]:hover{
@@ -530,8 +541,8 @@ body {
 }
 
 #signinForm .error{
-    color: firebrick;
-    float:right;
+	color: firebrick;
+	float:right;
 }
 
 #loginForm legend{
@@ -580,21 +591,12 @@ body {
 }
 
 #loginForm input[type=submit] {
-    margin-right: 5em;
+	margin-right: 5em;
 	float: right;
-    font-size: 1em;
+	font-size: 1em;
 }
 
 #loginForm input[type=submit]:hover{
 	background-color: #B5B5B5;
 	border-color: grey;
 }
-
-
-
-
-
-
-
-
-

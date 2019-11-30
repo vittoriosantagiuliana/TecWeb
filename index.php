@@ -19,23 +19,11 @@
 		<div id="content">
 			<img class="prima" src="images/first.jpg" alt="immagine di copertina"/>
 			<div id="imgBar">
-				<a href="map.html"><img src="images/barMap.jpg" alt="mappa"/></a>
-				<a href="schedule.html"><img src="images/barSchedule.jpg" alt="orari"/></a>
-				<a href="ticket.html"><img src="images/barTicket.jpg" alt="biglietti"/></a>
+				<a href="map.php"><img src="images/barMap.jpg" alt="mappa"/></a>
+				<a href="schedule.php"><img src="images/barSchedule.jpg" alt="orari"/></a>
+				<a href="ticket.php"><img src="images/barTicket.jpg" alt="biglietti"/></a>
 			</div>
 		</div>
-		<div id="footer">
-			<p>Seguici sui social per tutte le novità sul parco!</p>
-			<center data-parsed="">
-				<a href="#" class="fa fa-facebook" title="Facebook"></a>
-				<a href="#" class="fa fa-twitter" title="Twitter"></a>
-				<a href="#" class="fa fa-google" title="Google+"></a>
-				<a href="#" class="fa fa-linkedin" title="Linkedin"></a>
-				<a href="#" class="fa fa-instagram" title="Instagram"></a>
-				<a href="#" class="fa fa-pinterest" title="Pinterest"></a>
-			</center>
-			<p><span xml:lan="en">All rights reserved</span> - Alessio Barbiero, Federico Caretta, Matteo Lattanzio, Vittorio Santagiuliana</p>
-			<p> Zoo Creola, Via delle Seghe 69 Saccolongo(PD), 049xxxxxxx</p>
-		</div>
+		<?php include("footer.php"); ?>
 	</body>
 </html>

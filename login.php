@@ -23,8 +23,10 @@
 				<form>
 					<fieldset>
 						<legend>Login</legend>
-						<label>Username:</label>  <input type="text" name="user" placeholder="MarioRossi00"/>&nbsp;<br>
-						<label>Password:</label>  <input type="password" name="password"/>
+						<label>Username:</label>
+						<input type="text" name="user" placeholder="MarioRossi00"/>&nbsp;<br>
+						<label>Password:</label>
+						<input type="password" name="password"/>
 						<input type="submit" name="log" value="Login"/>
 					</fieldset>
 				</form>         
@@ -34,32 +36,26 @@
 				<form>
 					<fieldset>
 						<legend>Registrati</legend>
-									 <label>Username:</label>  <input type="text" name="user" placeholder="MarioRossi00"/><br><div class="error"><br> Nome utente non disponibile!</div><br/> 
-									<label>Password:</label>  <input type="password" name="password"/><br><div class="error">La password deve contenere al massimo 20 caratteri</div><br/>
-						<label>Nome:</label>  <input type="text" name="name" placeholder="Mario"/><br/>
-									<label>Cognome:</label>  <input type="text" name="surname" placeholder="Rossi"/><br/>
-									<label>Data di nascita:</label>  <input type="date" name="date" min="1900-01-01" value="01-01-2000"/><br/>
-									<label>Email:</label>  <input type="email" name="email" placeholder="mariorossi@gmail.com"/><br/>
+						<label>Username:</label>
+						<input type="text" name="user" placeholder="MarioRossi00"/><br><div class="error"><br> Nome utente non disponibile!</div><br/> 
+						<label>Password:</label>
+						<input type="password" name="password"/><br><div class="error">La password deve contenere al massimo 20 caratteri</div><br/>
+						<label>Nome:</label>
+						<input type="text" name="name" placeholder="Mario"/><br/>
+						<label>Cognome:</label>
+						<input type="text" name="surname" placeholder="Rossi"/><br/>
+						<label>Data di nascita:</label>
+						<input type="date" name="date" min="1900-01-01" value="01-01-2000"/><br/>
+						<label>Email:</label>
+						<input type="email" name="email" placeholder="mariorossi@gmail.com"/><br/>
 						<label>Ti stai iscrivendo come:</label><br/>
-									<input type="radio" name="type" value="Utente"/> Utente generico<br/>
+						<input type="radio" name="type" value="Utente"/> Utente generico<br/>
 						<input type="radio" name="type" value="Accompagnatore"/> Utente accompagnatore<br/>
 						<input type="submit" name="sign" value="Registrati"/>
 					</fieldset>
 				</form>	
 			</div>
 		</div>
-		<div id="footer">
-			<p>Seguici sui social per tutte le novità sul parco!</p>
-			<center data-parsed="">
-				<a href="#" class="fa fa-facebook" title="Facebook"></a>
-				<a href="#" class="fa fa-twitter" title="Twitter"></a>
-				<a href="#" class="fa fa-google" title="Google+"></a>
-				<a href="#" class="fa fa-linkedin" title="Linkedin"></a>
-				<a href="#" class="fa fa-instagram" title="Instagram"></a>
-				<a href="#" class="fa fa-pinterest" title="Pinterest"></a>
-			</center>
-			<p><span xml:lan="en">All rights reserved</span> - Alessio Barbiero, Federico Caretta, Matteo Lattanzio, Vittorio Santagiuliana</p>
-			<p> Zoo Creola, Via delle Seghe 69 Saccolongo(PD), 049xxxxxxx</p>
-		</div>
+		<?php include("footer.php"); ?>
 	</body>
 </html>

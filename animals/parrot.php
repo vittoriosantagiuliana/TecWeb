@@ -31,18 +31,6 @@
 				<strong>Curiosit&agrave;&colon;</strong> Nel peso &egrave; seconda solamente all'ara giacinto, il pi&ugrave; grande uccello della famiglia delle ara. L'apertura alare dell'ara dalle ali verdi pu&ograve; raggiungere i 124 cm e la lunghezza totale del corpo i 99. Un adulto in salute pesa tra i 1250 e i 1700 grammi.
 			</p>
 		</div>
-		<div id="footer">
-			<p>Seguici sui social per tutte le novità sul parco!</p>
-			<center data-parsed="">
-				<a href="#" class="fa fa-facebook"></a>
-				<a href="#" class="fa fa-twitter"></a>
-				<a href="#" class="fa fa-google"></a>
-				<a href="#" class="fa fa-linkedin"></a>
-				<a href="#" class="fa fa-instagram"></a>
-				<a href="#" class="fa fa-pinterest"></a>
-			</center>
-			<p><span xml:lan="en">All rights reserved</span> - Alessio Barbiero, Federico Caretta, Matteo Lattanzio, Vittorio Santagiuliana</p>
-			<p> Zoo Creola, Via delle Seghe 69 Saccolongo(PD), 049xxxxxxx</p>
-		</div>
+		<?php include("../footer.php"); ?>
 	</body>
 </html>

@@ -28,21 +28,9 @@
 				<strong>Famiglia&colon;</strong><span xml:lang="la"> Bovidae</span><br/>
 				<strong>Habitat&colon;</strong> Oltre a diverse regioni d'Italia, l'allevamento delle pecore &egrave; molto diffuso in Australia, in Nuova Zelanda, in Argentina e in Sudafrica.<br/>
 				<strong>Riproduzione&colon;</strong> Il perido di gestazione di una pecora ha una lunghezza di circa 150 giorni. Circa un mese prima del parto, la pancia si gonfia molto e risulta cadente verso il terreno e le mammelle iniziano a gonfiarsi.<br/>
-				<strong>Curiosit&agrave;&colon;</strong> &Egrave; di carattere timido, ma, al contrario di quanto si possa pensare, &egrave; molto intelligente, dotata di buona memoria e facilit&agrave; di apprendimento. 
+				<strong>Curiosit&agrave;&colon;</strong> &Egrave; di carattere timido, ma, al contrario di quanto si possa pensare, &egrave; molto intelligente, dotata di buona memoria e facilit&agrave; di apprendimento.
 			</p>
 		</div>
-		<div id="footer">
-			<p>Seguici sui social per tutte le novità sul parco!</p>
-			<center data-parsed="">
-				<a href="#" class="fa fa-facebook"></a>
-				<a href="#" class="fa fa-twitter"></a>
-				<a href="#" class="fa fa-google"></a>
-				<a href="#" class="fa fa-linkedin"></a>
-				<a href="#" class="fa fa-instagram"></a>
-				<a href="#" class="fa fa-pinterest"></a>
-			</center>
-			<p><span xml:lan="en">All rights reserved</span> - Alessio Barbiero, Federico Caretta, Matteo Lattanzio, Vittorio Santagiuliana</p>
-			<p> Zoo Creola, Via delle Seghe 69 Saccolongo(PD), 049xxxxxxx</p>
-		</div>
+		<?php include("../footer.php"); ?>
 	</body>
 </html>

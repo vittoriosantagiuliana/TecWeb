@@ -31,18 +31,6 @@
 				<strong>Curiosit&agrave;&colon;</strong> La farfalla pi&ugrave; grande esistente &egrave; la farfalla della regina Alessandra, che pu&ograve; raggiungere un'apertura alare di 31 cm, una lunghezza corporea di 8 cm e un peso fino a 12 grammi. Nell'isola greca di Rodi si trova la &quot;valle delle farfalle&quot;, dove d'estate migliaia di farfalle si radunano e stazionano attratte dalla resina di un albero, il <span xml:lang="la">Liquidambar orientalis.</span>
 			</p>
 		</div>
-		<div id="footer">
-			<p>Seguici sui social per tutte le novità sul parco!</p>
-			<center data-parsed="">
-				<a href="#" class="fa fa-facebook"></a>
-				<a href="#" class="fa fa-twitter"></a>
-				<a href="#" class="fa fa-google"></a>
-				<a href="#" class="fa fa-linkedin"></a>
-				<a href="#" class="fa fa-instagram"></a>
-				<a href="#" class="fa fa-pinterest"></a>
-			</center>
-			<p><span xml:lan="en">All rights reserved</span> - Alessio Barbiero, Federico Caretta, Matteo Lattanzio, Vittorio Santagiuliana</p>
-			<p> Zoo Creola, Via delle Seghe 69 Saccolongo(PD), 049xxxxxxx</p>
-		</div>
+		<?php include("../footer.php"); ?>
 	</body>
 </html>

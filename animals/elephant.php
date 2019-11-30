@@ -31,18 +31,6 @@
 				<strong>Curiosit&agrave;&colon;</strong> A partire dalla maturit&agrave; superiore, gli elefanti rivelano un carattere irrequieto, che non raramente pu&ograve; portare a episodi di aggressivit&agrave;, anche nei confronti dell'uomo. Essi non sono monogami&colon; di solito, il maschio vive con la femmina per un periodo piuttosto lungo, anche anni, per poi cambiare compagna. Gli elefanti sono dotati di una proverbiale memoria. Individui addomesticati hanno mostrato di poter riconoscere una persona anche a distanza di anni.
 			</p>
 		</div>
-		<div id="footer">
-			<p>Seguici sui social per tutte le novità sul parco!</p>
-			<center data-parsed="">
-				<a href="#" class="fa fa-facebook"></a>
-				<a href="#" class="fa fa-twitter"></a>
-				<a href="#" class="fa fa-google"></a>
-				<a href="#" class="fa fa-linkedin"></a>
-				<a href="#" class="fa fa-instagram"></a>
-				<a href="#" class="fa fa-pinterest"></a>
-			</center>
-			<p><span xml:lan="en">All rights reserved</span> - Alessio Barbiero, Federico Caretta, Matteo Lattanzio, Vittorio Santagiuliana</p>
-			<p> Zoo Creola, Via delle Seghe 69 Saccolongo(PD), 049xxxxxxx</p>
-		</div>
+		<?php include("../footer.php"); ?>
 	</body>
 </html>

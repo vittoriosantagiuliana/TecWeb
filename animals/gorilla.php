@@ -16,7 +16,7 @@
 	<body>
 		<?php include("headeranimals.php"); ?>
 		<div id="breadcrumb">
-			<p><a href="../index.php">Home</a> &#124; <a href="../animals.php">Animali</a> &#124; Gorilla </p>
+			<p><a href="../index.php">Home</a> &#124; <a href="../animals.php">Animali</a> &#124; Gorilla</p>
 		</div>
 		<div id="content">
             <h2>Gorilla</h2>
@@ -31,18 +31,6 @@
 				<strong>Curiosit&agrave;&colon;</strong> Il gorilla &egrave; dotato di una notevole intelligenza. Un gorilla diventato famoso per la sua intelligenza &egrave; Koko, che &egrave; in grado di esprimersi a gesti e di usare diversi oggetti umani. Nel loro habitat i gorilla non hanno molti predatori. Talvolta i leopardi possono cacciare i cuccioli di gorilla, o anche le femmine, ma è raro che attacchino un maschio adulto.
 			</p>
 		</div>
-		<div id="footer">
-			<p>Seguici sui social per tutte le novità sul parco!</p>
-			<center data-parsed="">
-				<a href="#" class="fa fa-facebook"></a>
-				<a href="#" class="fa fa-twitter"></a>
-				<a href="#" class="fa fa-google"></a>
-				<a href="#" class="fa fa-linkedin"></a>
-				<a href="#" class="fa fa-instagram"></a>
-				<a href="#" class="fa fa-pinterest"></a>
-			</center>
-			<p><span xml:lan="en">All rights reserved</span> - Alessio Barbiero, Federico Caretta, Matteo Lattanzio, Vittorio Santagiuliana</p>
-			<p> Zoo Creola, Via delle Seghe 69 Saccolongo(PD), 049xxxxxxx</p>
-		</div>
+		<?php include("../footer.php"); ?>
 	</body>
 </html>

@@ -31,18 +31,6 @@
 				<strong>Curiosit&agrave;&colon;</strong> I fenicotteri producono una sostanza simile al &#34;latte di piccione&#34;, costituito da grassi, proteine e carboidrati, che viene prodotto in ghiandole allineate nel tratto digerente superiore. Entrambi i genitori nutrono i loro piccoli e i giovani fenicotteri si nutrono di questo &#34;latte&#34; per circa due mesi, finché il loro becco non è abbastanza sviluppato da poter filtrare il cibo.
 			</p>
 		</div>
-		<div id="footer">
-			<p>Seguici sui social per tutte le novità sul parco!</p>
-			<center data-parsed="">
-				<a href="#" class="fa fa-facebook"></a>
-				<a href="#" class="fa fa-twitter"></a>
-				<a href="#" class="fa fa-google"></a>
-				<a href="#" class="fa fa-linkedin"></a>
-				<a href="#" class="fa fa-instagram"></a>
-				<a href="#" class="fa fa-pinterest"></a>
-			</center>
-			<p><span xml:lan="en">All rights reserved</span> - Alessio Barbiero, Federico Caretta, Matteo Lattanzio, Vittorio Santagiuliana</p>
-			<p> Zoo Creola, Via delle Seghe 69 Saccolongo(PD), 049xxxxxxx</p>
-		</div>
+		<?php include("../footer.php"); ?>
 	</body>
 </html>
