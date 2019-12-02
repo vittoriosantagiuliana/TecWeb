@@ -31,7 +31,6 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding-bottom: 1em;
 }
 
 #title h1 {	
@@ -55,30 +54,15 @@ body {
 	transform: scale(1.15);
 }
 
-#menuBtn, #closeBtn {
-	float: right;
-	font-size: 2em;
-	text-decoration: none;
-}
-
 #navbar {
 	display: flex;
+	flex-wrap: wrap;
 	align-content: flex-start;
 	margin: 0 12em;
 	border-radius: 0.5rem;
 	overflow: hidden;
 	background-color: #4a3c29;
 	border: 1px solid #A08A68;
-}
-
-#navbar ul {
-	list-style-type: none;
-	font-size: 0;	/* toglie gli spazi tra gli elementi della lista */
- }
-
-#navbar li {
-	display: inline-block;
-	font-size: initial;
 }
 
 #navbar a {
@@ -98,6 +82,19 @@ body {
 #navbar #current {
 	background-color: #E3D8BC;
 	color: #466E2E;
+}
+
+#menuBtn, #navbar #closeBtn {
+	font-size: 2em;
+	text-decoration: none;
+}
+
+#menuBtn {
+	float: right;
+}
+
+#navbar #closeBtn {
+	display: none;
 }
 
 #breadcrumb {
@@ -238,33 +235,35 @@ body {
 		height: 3em;
 	}
 
-	.menu {
+	#navbar.menu {
 		flex-direction: column;
+		flex-wrap: nowrap;
 		position: fixed;
 		z-index: 1000;
 		height: 100%;
-		width: 20em;
+		width: 12em;
+		margin: 0;
 		top: 0;
 		bottom: 0;
 		right: -20em;
+		border: none;
+		border-radius: initial;
 		transition: right 0.3s ease-out;
-		justify-content: center;
 	}
 
 	#navbar :first-child, #navbar :last-child {
 		margin-bottom: auto;
 	}
 
-	#navbar.menu {
-		border-radius: initial;
-		border: none;
-	}
-
-	#navbar.menu li {
+	#navbar.menu a {
 		display: block;
 	}
 
-	.menuOpen {
+	#navbar.menu #closeBtn {
+		display: block;
+	}
+
+	#navbar.menuOpen {
 		right: 0;
 	}
 
@@ -274,12 +273,16 @@ body {
 }
 
 @media screen and (min-width: 640px) {
+	#title {
+		margin-bottom: 1em;
+	}
+
 	#navbar :last-child {
 		margin-left: auto;
 	}
 
-	#header .menuControl {
-		display: none;
+	#menuBtn {
+		visibility: hidden;
 	}
 }
 
