@@ -21,17 +21,20 @@
 		</div>
 		<div id="content">
 			<h2>Le nostre attivit&agrave;</h2>
-			<div class="activityImage"><img src="images/activityDolphin.jpg" alt="immersione con delfini">
+			<div class="activitySection">
+				<img src="images/activityDolphin.jpg" alt="immersione con delfini" />
 				<p>
 					IMMERSIONE CON I DELFINI - Nuotare con i delfini è una delle esperienze più emozionanti e divertenti che una persona possa vivere. Immergiti e impara a conoscere uno degli animali più intelligenti e giocosi presenti in natura. Seguiti dai nostri collaboratori, i visitatori (a gruppi di dieci) entreranno innanzitutto in una piscina per iniziare a interagire con i nostri delfini, in modo da comprendere rapidamente il loro comportamento. Successivamente, verrà consegnata una muta e un salvagente per iniziare questa indimenticabile immersione. <br>L'attività è aperta a tutti gli adulti e ai bambini dagli 8 anni in su. E' consigliato comunicare in anticipo la volontà di effettuare l'immersione il giorno della visita, in modo da poter garantire la disponibilità. Durata dell'attività: 45 minuti circa.
 				</p>
 			</div>
-			<div class="activityImage"><img src="images/activityLion.jpg" alt="attività con leoni">
+			<div class="activitySection">
+				<img src="images/activityLion.jpg" alt="attività con leoni" />
 				<p>
 					INCONTRO RAVVICINATO CON I LEONI - Chi non ha mai sognato di accarezzare uno dei felini più grandi in natura? Allo Zoo Creola tutto ciò sarà possibile! Nel corso della visita allo zoo, in orari predefiniti (presenti nel volantino che verrà consegnato all'ingresso), i nostri visitatori più coraggiosi, insieme al nostro staff, potranno interagire e dare da mangiare ai nostri leoni! <br><br>L'attività è aperta a tutti gli adulti e ai bambini dai 10 anni in su accompagnati da un adulto.
 				</p>
 			</div>
-			<div class="activityImage"><img src="images/activitySchool.jpg" alt="attività scuola">
+			<div class="activitySection">
+				<img src="images/activitySchool.jpg" alt="attività scuola" />
 				<p>
 					ATTIVITA' DIDATTICHE PER LE SCUOLE - Per tutte le scuole, saranno disponibili, alla fine della visita al parco, una serie di laboratori didattici e attività per imparare tutte le curiosità della natura e in particolare del mondo animale. I bambini potranno interagire con alcuni piccoli animali, toccare e studiare vari reperti tra cui fossili, ossa di animali e altri reperti per conoscere le degli animali dello zoo e di altri estinti da milioni di anni. <br><br>L'attività è dedicata a tutte le scuole e con un numero massimo di 25 bambini per turno. La prenotazione delle attività è obbligatoria e va comunicata al momento della prenotazione della visita allo zoo. Per le prenotazioni online, invece, è richieta la compilazione di un form. Durata dell'attività: 1 ora circa
 				</p>

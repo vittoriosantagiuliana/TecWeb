@@ -463,8 +463,39 @@ body {
 /*---ATTIVITA'---*/
 /*--------------*/
 
-.activityImage img{
+.activitySection {
+	margin-top: 1em;
+	clear: both;
+}
+
+.activitySection img{
 	height:20em;
+}
+
+.activitySection:nth-child(odd) img {
+	float: left;
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.activitySection:nth-child(even) img {
+	float: right;
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+@media screen and (max-width: 960px) {
+	.activitySection img {
+		height: 14em;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.activitySection img {
+		width: 100%;
+		height: auto;
+		margin: 0;
+	}
 }
 
 /*--------------*/
