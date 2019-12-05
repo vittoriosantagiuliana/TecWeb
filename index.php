@@ -17,7 +17,9 @@
 	<body>
 		<?php include("header.php"); ?>
 		<div id="content">
-			<img class="prima" src="images/first.jpg" alt="immagine di copertina"/>
+			<div id="backgroundContent">
+				<!--<img class="indexBackground" src="images/indexBackground.jpg" alt="immagine di copertina"/>-->
+			</div>
 			<div id="imgBar">
 				<a href="map.php"><img src="images/barMap.jpg" alt="mappa"/></a>
 				<a href="schedule.php"><img src="images/barSchedule.jpg" alt="orari"/></a>
