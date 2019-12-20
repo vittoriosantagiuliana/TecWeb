@@ -351,63 +351,159 @@ body {
 /* CONTATTI */
 /*---------------*/
 
-#address {
-	display: block;
-	line-height: 2.5em;
-	min-width: 8em;
+button {
+	overflow: visible;
+  }
+  
+  button, select {
+	text-transform: none;
+  }
+  
+  button, input, select, textarea {
+	color: #5A5A5A;
+	font: inherit;
+	margin: 0;
+  }
+  
+  input {
+	line-height: normal;
+  }
+  
+  textarea {
 	overflow: auto;
-	float: right;
-}
-
-.googleMaps {
-	float: left;
-	max-width: 40em;
-}
-
-#contactForm {
+  }
+  
+  #container {
+	border: solid 3px #474544;
+	max-width: 768px;
+	margin: 60px auto;
+	position: relative;
+	font-family: 'Raleway';
+	overflow: hidden;
+  }
+  
+  form {
+	padding: 37.5px;
+	margin: 50px 0;
+  }
+  
+  h1 {
+	color: #474544;
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: 7px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 40px;
+  }
+  
+  .underline {
+	border-bottom: solid 2px #474544;
+	margin: -0.512em auto;
+	width: 80px;
+  }
+  
+  .icon_wrapper {
+	margin: 50px auto 0;
+  }
+  
+  .icon {
+	display: block;
+	height: 80px;
+	margin: 0 auto;
+	width: 80px;
+  }
+  
+  .email {
+	  float: right;
+	  width: 45%;
+  }
+  
+  input[type='text'], [type='email'], select, textarea {
+	  background: none;
+	border: none;
+	  border-bottom: solid 2px #474544;
+	  color: #474544;
+	  font-size: 1.000em;
+	font-weight: 400;
+	letter-spacing: 1px;
+	  margin: 0em 0 1.875em 0;
+	  padding: 0 0 0.875em 0;
+	/*text-transform: uppercase;*/
+	  width: 100%;
+	  transition: all 0.3s;
+  }
+  
+  input[type='text']:focus, [type='email']:focus, textarea:focus {
+	  outline: none;
+	  padding: 0 0 0.875em 0;
+  }
+  
+  .message {
+	  float: none;
+  }
+  
+  .name {
+	  float: left;
+	  width: 45%;
+  }
+  
+  select {
+	background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+	outline: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	 color: #474544;
+	 background-color: #F2F3EB;
+  }
+  
+  select:focus{
+	outline:none;
+  }
+  
+  .subject {
+	width: 100%;
+	  color: #474544;
+  }
+  
+  .telephone {
+	width: 100%;
+  }
+  
+  textarea {
+	  line-height: 150%;
+	  height: 150px;
+	  resize: none;
+	width: 100%;
+	font-family: 'Raleway';
+  }
+  
+  #form_button {
+	background: none;
+	border: solid 2px #474544;
+	color: #474544;
+	cursor: pointer;
 	display: inline-block;
-	float: right;
-}
-
-#contactForm legend {
-	font-style: italic;
-	font-weight: bolder;
-	font-size: 1.2em;
-	padding: 0 0.5em;
-}
-
-#contactForm fieldset {
-	border-radius: 1em;
-	padding: 1em;
-	border: 1px solid #D9D7D7;
-}
-
-#contactForm input {
-	border-radius: 0.4em;
-	padding: 0.4em;
-	border: 2px solid #b8b3b2;
-}
-
-#contactForm input[type=text], input[type=email] {
-	margin-bottom: 1em;
-}
-
-#contactForm input[type=text]:hover {
-	border-color: grey;
-}
-
-#contactForm input::placeholder {
-	color: grey;
-}
-
-#contactForm input[type=submit] {
-	float: right;
-}
-
-#contactForm input[type=submit]:hover {
-	background-color: #B5B5B5;
-	border-color: grey;
-}
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 0.875em;
+	font-weight: bold;
+	outline: none;
+	padding: 20px 35px;
+	  transition: all 0.3s;
+  }
+  
+  #form_button:hover {
+	background: #474544;
+	color: #F2F3EB;
+  }
+	
+	.underline {
+	  width: 68px;
+	}
+	
+	#form_button {
+	  padding: 15px 25px;
+	}
 
 /*--------------*/
 /*---MAPPA---*/
