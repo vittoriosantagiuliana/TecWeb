@@ -15,7 +15,8 @@ a:visited{
 }
 
 body {
-	background-color: #F2F3EB;
+	/*background-color: #F2F3EB;*/
+	background: url(../images/texture4.png);
 }
 
 #containerHeader{
@@ -120,9 +121,15 @@ body {
 
 #content {
 	padding: 3em;
-	/*margin: 0 12em;*/
+	margin: 0 12em;
 	overflow: auto;
-	/*box-shadow: 0 0 1em #777;*/
+	box-shadow: 0 0 1em #777;
+	background-color: #F2F3EB;
+}
+
+#content h2, #content h3{
+	font-family: 'Luckiest Guy', Arial, Helvetica, sans-serif;
+	color: #362d23;
 }
 
 #content>img {
@@ -136,7 +143,6 @@ body {
 	  padding: 2em;
 	  bottom: 0;
 	  text-align:center;
-	  font-style: italic;
 	  background-color: #362d23;
   }
   
@@ -201,9 +207,18 @@ body {
 	  color: white;
   }
 
-/*@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
+	#title h3{
+		padding-left: 0.3em;
+	}
+
 	#navbar {
 		margin: 0 4em;
+	}
+
+	#imgBar img{
+		margin-left: 1.5em;
+		margin-right: 1.5em;
 	}
 
 	#content {
@@ -213,6 +228,10 @@ body {
 }
 
 @media screen and (max-width: 960px) {
+	#title h3{
+		padding-left: 0.3em;
+	}
+
 	#navbar {
 		padding: 1em;
 	}
@@ -231,7 +250,7 @@ body {
 	}
 }
 
-@media screen and (max-width: 640px) {
+/*@media screen and (max-width: 640px) {
 	#title h1 {
 		font-size: 2em;
 	}
@@ -323,6 +342,7 @@ body {
 	max-width: 14em;
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
+	background: none;
 }
 #imgBar img:hover {
 	-webkit-transform: scale(1.1);
@@ -346,6 +366,15 @@ body {
 	height: 45px;
 	display: block;
 }
+
+/*---------------*/
+/* STORIA */
+/*---------------*/
+
+#content p{
+	margin: 0 3em 0 3em;
+}
+
 
 /*---------------*/
 /* CONTATTI */
@@ -395,6 +424,7 @@ button {
 	text-align: center;
 	text-transform: uppercase;
 	margin-top: 40px;
+	font-family: 'Luckiest Guy';
   }
   
   .underline {
@@ -506,16 +536,46 @@ button {
 	}
 
 /*--------------*/
-/*---MAPPA---*/
+/*---COME RAGGIUNGERCI---*/
 /*--------------*/
 
-#mapcontent {
-	padding-top: 1.5em;
-	padding-bottom: 1em;
-	font-size: 20px;
+#googleMaps h1{
+  font-family: 'Luckiest Guy';
+  text-align: center;
+  margin-top: -0.5em;
+  margin-bottom: 1em;
+}
+
+#mapMap{
+	width: 512px;
+    display: block;
+	margin-right: 7em;
+	float:right;
+}
+
+#mapText p{
 	text-align: center;
-	font-style: italic;
-	background-color: #d2ba94;
+  float: left;
+  vertical-align: middle;
+  margin: 4em 13em;
+  font-size: 1.2em;
+}
+
+.mapouter{
+  display: flex;
+  flex-wrap: wrap;
+  text-align:center;
+  height:500px;
+  width:600px;  
+  margin-top: 1.5em;
+  box-shadow: 0 0 1em #777;
+}
+
+.gmap_canvas{
+  overflow:hidden;
+  background:none!important;
+  height:500px;
+  width:600px;
 }
 
 
@@ -641,6 +701,7 @@ button {
 
 #signinForm input[type=text], input[type=email], input[type=password], input[type=date]{
 	margin-bottom: 1em;
+	width:15em;
 }
 
 #signinForm input[type=text]:hover{
@@ -668,6 +729,7 @@ button {
 	margin-bottom: 1em;
 	float: right;
 	font-size:1em;
+	width:6em;
 }
 
 #signinForm input[type=submit]:hover{
@@ -703,6 +765,7 @@ button {
 	padding: 0.4em;
 	border: 2px solid #b8b3b2;
 	text-align: left;
+	width: 15em;
 }
 
 #loginForm input[type=text]{
@@ -729,6 +792,8 @@ button {
 	margin-right: 5em;
 	float: right;
 	font-size: 1em;
+	width: 6em;
+	text-align: center;
 }
 
 #loginForm input[type=submit]:hover{
