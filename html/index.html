@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD <?php  ?>XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-		<title>Zoo - Mappa</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Zoo</title>
 		<meta name="title" content="Zoo"/>
-		<meta name="description" content="Mappa dello zoo"/>
+		<meta name="description" content="Home page dello zoo"/>
 		<meta name="keywords" content="zoo, tecnologie web, progetto, animali"/>
 		<meta name="language" content="italian it"/>
 		<meta name="author" content="Alessio Barbiero"/>
@@ -16,27 +16,16 @@
 	</head>
 	<body>
 		<div id="header"></div>
-        <div id="breadcrumb">
-			<p><a href="index.php">Home</a> &#124; Orario</p>
-        </div>
 		<div id="content">
-			<table id="scheduleSummer">
-				<caption>Orari Estivi &#40;da aprile a settembre&#41;</caption>
-				<tr>
-					<td>
-
-					</td>
-				</tr>
-			</table>
-			<table id="scheduleWinter">
-				<caption>Orari Invernali &#40;da ottobre a marzo&#41;</caption>
-				<tr>
-					<td>
-
-					</td>
-				</tr>
-			</table>
+			<div id="backgroundContent">
+				<!--<img class="indexBackground" src="images/indexBackground.jpg" alt="immagine di copertina"/>-->
+			</div>
+			<div id="imgBar">
+				<a href="map.php"><img src="images/barMap.jpg" alt="mappa"/></a>
+				<a href="schedule.php"><img src="images/barSchedule.jpg" alt="orari"/></a>
+				<a href="ticket.php"><img src="images/barTicket.jpg" alt="biglietti"/></a>
+			</div>
 		</div>
-		<?php include("footer.php"); ?>
+		<div id="footer"></div>
 	</body>
 </html>
