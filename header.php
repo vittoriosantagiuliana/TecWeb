@@ -12,7 +12,7 @@ class Header
 	public static function navbar()
 	{
 		$page = $arrayName = array(
-			'Home' => 'index.php',
+			'Home' => 'home.php',
 			'Storia' => 'history.php',
 			'Animali' => 'animals.php',
 			'Attivit&agrave;' => 'activities.php',
@@ -23,8 +23,7 @@ class Header
 		$output = "<div id=\"navbar\">";
 		$output .= "<a href=\"#\" id=\"closeBtn\" class=\"fa fa-times-circle menuControl\" title=\"close menu\"></a>";
 		foreach ($page as $nome => $indirizzo) {
-			$output .= "<a href=\"$indirizzo\"";
-			$output .= basename($_SERVER['PHP_SELF']) == $indirizzo ? " id=\"current\">" : ">";
+			$output .= basename($_SERVER['PHP_SELF']) == $indirizzo ? "<a id=\"current\">" : "<a href=\"$indirizzo\">";
 			$output .= $nome . "</a>";
 		}
 		$output .= "</div>";
