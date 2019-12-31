@@ -5,96 +5,111 @@
 	line-height: 1.5em;
 }
 
-a{
+a {
 	color: #4d4122;
-	/*text-decoration: none;*/
 }
 
-a:visited{
+a:visited {
 	color: #466e2e;
 }
 
 body {
-	/*background-color: #F2F3EB;*/
+	background-color: #F2F3EB;
 	background: url(../images/texture4.png);
 }
 
-#containerHeader{
-    width: 100%;
+#containerHeader {
+	width: 100%;
 	position: fixed;
-	top:0;
 }
 
-#header{
+#header {
 	position: sticky;
-    display: flex;
-    align-content: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #362d23;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    overflow: hidden;
-	padding: 1em 1em 1em 1.5em;
+	top: 0;
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+	background-color: #362d23;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	overflow: hidden;
+	padding: 1em;
+	padding-left: 1.5em;
 }
 
-#title h3{
-    font-family: 'Luckiest Guy';
-    font-size: 2.3em;
-    padding-top:0.15em;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
+#title {
+	display: flex;
+	align-content: center;
 }
 
-#title h3:hover{
-    -webkit-transform: scale(1.05);
+#title h1 {
+	font-family: 'Luckiest Guy';
+	font-size: 2.3em;
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+
+#title h1:hover{
+	-webkit-transform: scale(1.05);
 	-moz-transform: scale(1.05);
 	-o-transform: scale(1.05);
 	transform: scale(1.05);
 	-webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
+	transition-duration: 0.2s;
 }
 
-
-#title a{
-    text-decoration: none;
-    color: #cfb682;
-    vertical-align: auto;
+#title a {
+	text-decoration: none;
+	color: #cfb682;
+	vertical-align: middle;
 }
 
-#header ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0px 0.6em;
-    padding: 1em 0em 1em 0em;
-    font-size: 1.2em;
+#menuBtn, #navbar #closeBtn {
+	font-size: 2em;
+	text-decoration: none;
 }
 
-#header ul li a{
-    text-decoration: none;
-    color:#cfb682;
-    display: block;
-    font-family: 'Raleway';
-    font-weight: bold;
-    position:relative;
+#menuBtn {
+	float: right;
 }
 
-#header ul li a:after{
-    content: '';
-    position: absolute;
-    width: 0; height: 3px;
-    display: block;
-    margin-top: 5px;
-    right: 0;
-    background: #497337;
-    transition: width .3s ease;
-    -webkit-transition: width .3s ease;
-  }
+#navbar #closeBtn {
+	display: none;
+}
 
-#header ul li a:hover:after{
-    width: 100%;
-    left: 0;
-    background: #497337;
+#navbar {
+	display: flex;
+}
+
+#navbar a {
+	font-size: 1.2em;
+	padding: 1em 0em 1em 0em;
+	margin: 0px 0.6em;
+	text-decoration: none;
+	color:#cfb682;
+	display: block;
+	font-family: 'Raleway';
+	font-weight: bold;
+	position:relative;
+}
+
+#navbar a:after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 3px;
+	display: block;
+	margin-top: 5px;
+	right: 0;
+	background: #497337;
+	transition: width .3s ease;
+	-webkit-transition: width .3s ease;
+}
+
+#navbar a:hover:after {
+	width: 100%;
+	left: 0;
+	background: #497337;
 }
 
 /*#menuBtn, #navbar #closeBtn {
@@ -111,7 +126,6 @@ body {
 }*/
 
 #breadcrumb {
-	margin-top:6em;
 	display: flex;
 	padding: 0.5em 2em;
 	/*background-color: #362d23;*/
@@ -127,7 +141,7 @@ body {
 	background-color: #F2F3EB;
 }
 
-#content h2, #content h3{
+#content h2, #content h3 {
 	font-family: 'Luckiest Guy', Arial, Helvetica, sans-serif;
 	color: #362d23;
 }
@@ -138,77 +152,66 @@ body {
 }
 
 #footer {
-	  position:relative;
-	  display: block;
-	  padding: 2em;
-	  bottom: 0;
-	  text-align:center;
-	  background-color: #362d23;
-  }
-  
-  #footer .fa {
-	  padding: 15px;
-	  font-size: 20px;
-	  width: 20px;
-	  text-align: center;
-	  text-decoration: none;
-	  margin: 1em 0.5em;
-	  border-radius: 50%;
-	  -webkit-transition-duration: 0.2s;
-	  transition-duration: 0.2s;
-	  color: white;
-  }
-  
-  #footer .fa:hover {
-	  -webkit-transform: scale(1.15);
-	  -moz-transform: scale(1.15);
-	  -o-transform: scale(1.15);
-	  transform: scale(1.15);
-  }
-  
-  #footer p {
-	  text-align: center;
-	  font-size: 0.9em;
-	  color: #cfb682;
-	  font-family: 'Raleway';
-  }
-  
-  #containerSocial {
-	  display:flex;
-  }
-  
-  .fa-facebook {
-	  background-color: #3B5998;
-	  color: white;
-  }
-  
-  .fa-google {
-	  background-color: #dd4b39;
-	  color: white;
-  }
-  
-  .fa-twitter {
-	  background-color: #55ACEE;
-	  color: white;
-  }
-  
-  .fa-linkedin {
-	  color: white;
-	  background-color: #007bb5;
-  }
-  
-  .fa-instagram {
-	  background: #125688;
-	  color: white;
-  }
-  
-  .fa-pinterest {
-	  background: #cb2027;
-	  color: white;
-  }
+	padding: 2em;
+	bottom: 0;
+	background-color: #362d23;
+}
+
+#footer p {
+	text-align: center;
+	font-size: 0.9em;
+	color: #cfb682;
+	font-family: 'Raleway';
+}
+
+#socialContainer {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.socialButton {
+	width: 3em;
+	overflow: hidden;
+	position: relative;
+	margin: 1em 0.5em;
+	border-radius: 50%;
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	color: white;
+	background-color: white;
+}
+
+.socialButton::after {	/* cerchio responsive */
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+
+.socialButton:hover {
+	transform: scale(1.15);
+	-webkit-transform: scale(1.15);
+}
+
+.socialButton .fa {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 50%;
+	color: white;
+	text-decoration: none;
+}
+
+.fa-facebook	{ background-color: #3B5998; }
+.fa-google		{ background-color: #DD4B39; }
+.fa-twitter		{ background-color: #55ACEE; }
+.fa-linkedin	{ background-color: #007BB5; }
+.fa-instagram	{ background-color: #125688; }
+.fa-pinterest	{ background-color: #CB2027; }
 
 @media screen and (max-width: 1200px) {
-	#title h3{
+	#title h1{
 		padding-left: 0.3em;
 	}
 
@@ -228,7 +231,7 @@ body {
 }
 
 @media screen and (max-width: 960px) {
-	#title h3{
+	#title h1{
 		padding-left: 0.3em;
 	}
 
@@ -382,41 +385,41 @@ body {
 
 button {
 	overflow: visible;
-  }
-  
-  button, select {
+}
+
+button, select {
 	text-transform: none;
-  }
-  
-  button, input, select, textarea {
+}
+
+button, input, select, textarea {
 	color: #5A5A5A;
 	font: inherit;
 	margin: 0;
-  }
-  
-  input {
+}
+
+input {
 	line-height: normal;
-  }
-  
-  textarea {
+}
+
+textarea {
 	overflow: auto;
-  }
-  
-  #container {
+}
+
+#container {
 	border: solid 3px #474544;
 	max-width: 768px;
 	margin: 60px auto;
 	position: relative;
 	font-family: 'Raleway';
 	overflow: hidden;
-  }
-  
-  form {
+}
+
+form {
 	padding: 37.5px;
 	margin: 50px 0;
-  }
-  
-  h1 {
+}
+
+h1 {
 	color: #474544;
 	font-size: 32px;
 	font-weight: 700;
@@ -425,90 +428,90 @@ button {
 	text-transform: uppercase;
 	margin-top: 40px;
 	font-family: 'Luckiest Guy';
-  }
-  
-  .underline {
+}
+
+.underline {
 	border-bottom: solid 2px #474544;
 	margin: -0.512em auto;
 	width: 80px;
-  }
-  
-  .icon_wrapper {
+}
+
+.icon_wrapper {
 	margin: 50px auto 0;
-  }
-  
-  .icon {
+}
+
+.icon {
 	display: block;
 	height: 80px;
 	margin: 0 auto;
 	width: 80px;
-  }
-  
-  .email {
-	  float: right;
-	  width: 45%;
-  }
-  
-  input[type='text'], [type='email'], select, textarea {
-	  background: none;
+}
+
+.email {
+	float: right;
+	width: 45%;
+}
+
+input[type='text'], [type='email'], select, textarea {
+	background: none;
 	border: none;
-	  border-bottom: solid 2px #474544;
-	  color: #474544;
-	  font-size: 1.000em;
+	border-bottom: solid 2px #474544;
+	color: #474544;
+	font-size: 1.000em;
 	font-weight: 400;
 	letter-spacing: 1px;
-	  margin: 0em 0 1.875em 0;
-	  padding: 0 0 0.875em 0;
+	margin: 0em 0 1.875em 0;
+	padding: 0 0 0.875em 0;
 	/*text-transform: uppercase;*/
-	  width: 100%;
-	  transition: all 0.3s;
-  }
-  
-  input[type='text']:focus, [type='email']:focus, textarea:focus {
-	  outline: none;
-	  padding: 0 0 0.875em 0;
-  }
-  
-  .message {
-	  float: none;
-  }
-  
-  .name {
-	  float: left;
-	  width: 45%;
-  }
-  
-  select {
+	width: 100%;
+	transition: all 0.3s;
+}
+
+input[type='text']:focus, [type='email']:focus, textarea:focus {
+	outline: none;
+	padding: 0 0 0.875em 0;
+}
+
+.message {
+	float: none;
+}
+
+.name {
+	float: left;
+	width: 45%;
+}
+
+select {
 	background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
 	outline: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
-	 color: #474544;
-	 background-color: #F2F3EB;
-  }
-  
-  select:focus{
+	color: #474544;
+	background-color: #F2F3EB;
+}
+
+select:focus{
 	outline:none;
-  }
-  
-  .subject {
+}
+
+.subject {
 	width: 100%;
-	  color: #474544;
-  }
-  
-  .telephone {
+	color: #474544;
+}
+
+.telephone {
 	width: 100%;
-  }
-  
-  textarea {
-	  line-height: 150%;
-	  height: 150px;
-	  resize: none;
+}
+
+textarea {
+	line-height: 150%;
+	height: 150px;
+	resize: none;
 	width: 100%;
 	font-family: 'Raleway';
-  }
-  
-  #form_button {
+}
+
+#form_button {
 	background: none;
 	border: solid 2px #474544;
 	color: #474544;
@@ -519,20 +522,20 @@ button {
 	font-weight: bold;
 	outline: none;
 	padding: 20px 35px;
-	  transition: all 0.3s;
-  }
-  
-  #form_button:hover {
+	transition: all 0.3s;
+}
+
+#form_button:hover {
 	background: #474544;
 	color: #F2F3EB;
-  }
+}
 	
 	.underline {
-	  width: 68px;
+	width: 68px;
 	}
 	
 	#form_button {
-	  padding: 15px 25px;
+	padding: 15px 25px;
 	}
 
 /*--------------*/
@@ -540,42 +543,42 @@ button {
 /*--------------*/
 
 #googleMaps h1{
-  font-family: 'Luckiest Guy';
-  text-align: center;
-  margin-top: -0.5em;
-  margin-bottom: 1em;
+font-family: 'Luckiest Guy';
+text-align: center;
+margin-top: -0.5em;
+margin-bottom: 1em;
 }
 
 #mapMap{
 	width: 512px;
-    display: block;
+	display: block;
 	margin-right: 7em;
 	float:right;
 }
 
 #mapText p{
 	text-align: center;
-  float: left;
-  vertical-align: middle;
-  margin: 4em 13em;
-  font-size: 1.2em;
+float: left;
+vertical-align: middle;
+margin: 4em 13em;
+font-size: 1.2em;
 }
 
 .mapouter{
-  display: flex;
-  flex-wrap: wrap;
-  text-align:center;
-  height:500px;
-  width:600px;  
-  margin-top: 1.5em;
-  box-shadow: 0 0 1em #777;
+display: flex;
+flex-wrap: wrap;
+text-align:center;
+height:500px;
+width:600px;
+margin-top: 1.5em;
+box-shadow: 0 0 1em #777;
 }
 
 .gmap_canvas{
-  overflow:hidden;
-  background:none!important;
-  height:500px;
-  width:600px;
+overflow:hidden;
+background:none!important;
+height:500px;
+width:600px;
 }
 
 
@@ -716,7 +719,7 @@ button {
 	border-color: grey;
 }
 
-#signinForm  input[type=date]:hover{
+#signinForminput[type=date]:hover{
 	border-color: grey;
 }
 
