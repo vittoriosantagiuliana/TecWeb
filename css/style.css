@@ -29,7 +29,7 @@ body {
 	display: flex;
 	align-content: center;
 	justify-content: space-between;
-	background-color: #362d23;
+	background-color: #362D23;
 	text-transform: uppercase;
 	font-family: sans-serif;
 	overflow: hidden;
@@ -62,19 +62,6 @@ body {
 	text-decoration: none;
 	color: #cfb682;
 	vertical-align: middle;
-}
-
-#menuBtn, #navbar #closeBtn {
-	font-size: 2em;
-	text-decoration: none;
-}
-
-#menuBtn {
-	float: right;
-}
-
-#navbar #closeBtn {
-	display: none;
 }
 
 #navbar {
@@ -112,25 +99,21 @@ body {
 	background: #497337;
 }
 
-/*#menuBtn, #navbar #closeBtn {
+#navbar #closeBtn, #menuBtn {
 	font-size: 2em;
 	text-decoration: none;
+	display: none;
 }
 
 #menuBtn {
 	float: right;
 }
 
-#navbar #closeBtn {
-	display: none;
-}*/
-
 #breadcrumb {
 	display: flex;
 	padding: 0.5em 2em;
-	/*background-color: #362d23;*/
-	background-color: #cfb682;
-	color: #362d23;
+	background-color: #CFB682;
+	color: #362D23;
 }
 
 #content {
@@ -143,7 +126,7 @@ body {
 
 #content h2, #content h3 {
 	font-family: 'Luckiest Guy', Arial, Helvetica, sans-serif;
-	color: #362d23;
+	color: #362D23;
 }
 
 #content>img {
@@ -154,13 +137,13 @@ body {
 #footer {
 	padding: 2em;
 	bottom: 0;
-	background-color: #362d23;
+	background-color: #362D23;
 }
 
 #footer p {
 	text-align: center;
 	font-size: 0.9em;
-	color: #cfb682;
+	color: #CFB682;
 	font-family: 'Raleway';
 }
 
@@ -253,7 +236,7 @@ body {
 	}
 }
 
-/*@media screen and (max-width: 640px) {
+@media screen and (max-width: 640px) {
 	#title h1 {
 		font-size: 2em;
 	}
@@ -275,6 +258,7 @@ body {
 		right: -20em;
 		border: none;
 		border-radius: initial;
+		background-color: #362D23;
 		transition: right 0.3s ease-out;
 	}
 
@@ -284,9 +268,10 @@ body {
 
 	#navbar.menu a {
 		display: block;
+		text-align: center;
 	}
 
-	#navbar.menu #closeBtn {
+	#navbar.menu #closeBtn, #menuBtn {
 		display: block;
 	}
 
@@ -306,10 +291,6 @@ body {
 
 	#navbar :last-child {
 		margin-left: auto;
-	}
-
-	#menuBtn {
-		visibility: hidden;
 	}
 }
 
@@ -421,12 +402,10 @@ form {
 
 h1 {
 	color: #474544;
-	font-size: 32px;
+	font-size: 3em;
 	font-weight: 700;
-	letter-spacing: 7px;
 	text-align: center;
 	text-transform: uppercase;
-	margin-top: 40px;
 	font-family: 'Luckiest Guy';
 }
 
