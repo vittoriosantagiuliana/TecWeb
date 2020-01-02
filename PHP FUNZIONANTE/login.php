@@ -1,4 +1,4 @@
-<?php include('checksignin.php'); ?>
+<?php include('checksignin.php');?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 	<head>
@@ -35,7 +35,7 @@
 			</div>
 			<h2>Se non sei ancora iscritto:</h2>
 			<div id="signinForm">
-				<form method="post" action="login.php">
+				<form method="post" action="login.php" id="register">
 					<fieldset>
 						<legend>Registrati</legend>
 						<label>Username:</label>
@@ -47,7 +47,7 @@
 						<input type="password" name="password"/><br>
 						<?php if(isset($pError)): ?>
 							<div class="error"><?php echo $pError; ?></div>
-						<?php endif ?><br/><br/>
+						<?php endif ?><br/>
 						<label>Nome:</label>
 						<input type="text" name="name" placeholder="Mario"/><br/>
 						<label>Cognome:</label>
@@ -60,13 +60,34 @@
 							<div class="error"><?php echo $error_e; ?></div>
 						<?php endif ?><br/><br/> 
 						<label>Ti stai iscrivendo come:</label><br/>
-						<input type="radio" name="type" value="Utente"/> Utente generico<br/>
-						<input type="radio" name="type" value="Accompagnatore"/> Utente accompagnatore<br/>
+						<input type="radio" name="type" value="Utente" id="utente" onclick="change(this)"/> Utente generico<br/>
+						<input type="radio" name="type" value="Accompagnatore" id="accompagnatore" onclick="change(this)"/> Utente accompagnatore<br/>
+						<div id="more">
+						</div>
+						<div id="scuole">
+						</div>
 						<input type="submit" name="sign" value="Registrati"/>
 					</fieldset>
 				</form>	
 			</div>
 		</div>
 		<div id="footer"></div>
+		<script>
+			function change(radio){
+				if(radio.checked && radio.id==="accompagnatore"){
+					document.getElementById("more").innerHTML="<label>Da quante persone è formato il gruppo?</label><input type='number' name='num' min='2' max='50'/><br/><label>Si tratta di un gruppo di studenti?</label><input type='radio' name='choice' value='si' id='si' onclick='change(this)'/> Sì<br/><input type='radio' name='choice' value='no' id='no' onclick='change(this)'/> No<br/>";
+				}else if(radio.checked && radio.id==="utente"){
+					document.getElementById("more").innerHTML="";
+					document.getElementById("scuole").innerHTML="";
+				}
+				if(radio.checked && radio.id==="no"){
+					document.getElementById("scuole").innerHTML="";
+				}else if(radio.checked && radio.id==="si"){
+					document.getElementById("scuole").innerHTML="<label>Inserisci il nome della classe</label><input type='text' name='class' placeholder='1A'/></br><label>Seleziona la scuola dalla lista</label><select name='scuole'><?php while($scuola = mysqli_fetch_array($scuole)){ ?><option value='<?php echo $scuola['Nome_Ist']; ?>'><?php echo $scuola['Nome_Ist'].' ('.$scuola['Citta_Ist'].')'; ?></option><?php }?></select>";
+				}
+			}//change
+		</script>
 	</body>
 </html>
+
+

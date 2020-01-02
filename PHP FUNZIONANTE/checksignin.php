@@ -18,6 +18,7 @@
 	$birth='';
 	$email='';
 	$type='';
+	$scuole=$connessione->query("SELECT Nome_Ist,Citta_Ist from istituto");
 	if(isset($_POST["sign"])){
 		$username=mysqli_real_escape_string($connessione,$_POST["user"]);
 		$password=mysqli_real_escape_string($connessione,$_POST["password"]);
