@@ -11,28 +11,46 @@
 		exit();
 	}
 	
-	$username=stripslashes($_POST["user"]);
-	$password=stripslashes($_POST["password"]);
-	$name=stripslashes($_POST["name"]);
-	$surname=stripslashes($_POST["surname"]);
-	$birth=stripslashes($_POST["date"]);
-	$email=stripslashes($_POST["email"]);
-	$type=stripslashes($_POST["type"]);
-	$search=$connessione->query("SELECT * FROM Utente WHERE Username_Ut='$username' OR Email_Ut='$email'");
-	if(!$search){
-		if($type=="Utente")
-			$sql=("INSERT INTO Utente VALUES ('$username','$password','$name','$surname','$email','$birth','$type')");
-		else
-			$sql=("INSERT INTO Utente VALUES ('$username','$password','$name','$surname','$email','$birth','$type'); INSERT INTO UtenteAccompagnatore VALUES ('$username', NULL);");
-		$result=$connessione->query($sql);
-		if(!$result){
-			echo "Errore della query: ".$connessione->error;
-			exit();
+	$username='';
+	$password='';
+	$name='';
+	$surname='';
+	$birth='';
+	$email='';
+	$type='';
+	if(isset($_POST["sign"])){
+		$username=mysqli_real_escape_string($connessione,$_POST["user"]);
+		$password=mysqli_real_escape_string($connessione,$_POST["password"]);
+		if(strlen($password)>20){
+			$pError="La password deve contenere al massimo 20 caratteri";
 		}else{
-			header("Location: correctSignin.php");
+			$name=mysqli_real_escape_string($connessione,$_POST["name"]);
+			$surname=mysqli_real_escape_string($connessione,$_POST["surname"]);
+			$birth=mysqli_real_escape_string($connessione,$_POST["date"]);
+			$email=mysqli_real_escape_string($connessione,$_POST["email"]);
+			$type=mysqli_real_escape_string($connessione,$_POST["type"]);
+			$search=$connessione->query("SELECT * FROM Utente WHERE Username_Ut='$username'");
+			$search2=$connessione->query("SELECT * FROM Utente WHERE Email_Ut='$email'");
+			$row1=mysqli_num_rows($search);
+			$row2=mysqli_num_rows($search2);
+			if($row1==0 && $row2==0){
+				if($type=="Utente")
+					$sql=("INSERT INTO Utente VALUES ('$username','$password','$name','$surname','$email','$birth','$type')");
+				else
+					$sql=("INSERT INTO Utente VALUES ('$username','$password','$name','$surname','$email','$birth','$type'); INSERT INTO UtenteAccompagnatore VALUES ('$username', NULL);");
+				$result=$connessione->query($sql);
+				if(!$result){
+					echo "Errore della query: ".$connessione->error;
+					exit();
+				}else{
+					header("Location: correctSignin.php");
+				}
+			}else{
+				if($row1>0)
+					$error_n="Nome utente gi&agrave; in uso";
+				else
+					$error_e="Email gi&agrave; in uso";
+			}
 		}
-	}else{
-		echo "Nome utente o email gi&agrave; in uso!";
-		exit();
 	}
 ?>
