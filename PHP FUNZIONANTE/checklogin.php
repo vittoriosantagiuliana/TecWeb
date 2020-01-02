@@ -11,26 +11,30 @@
 		exit();
 	}
 	
-	$username=$_POST["user"];
-	$password=$_POST["password"];
-	
-	$username=stripslashes($username);
-	$password=stripslashes($password);
-	
-	$sql="SELECT * FROM $tab_name WHERE Username_Ut='$username' and Password_Ut='$password'";
-	$result=$connessione->query($sql);
-	if(!$result){
-		echo "Errore della query: ".$connessione->error;
-		exit();
+	if(isset($_POST["log"])){
+		if($_POST["user"]==''){
+			$error_u="Inserisci il nome utente";
+		}else if($_POST["password"]==''){
+			$error_p="Inserisci la password";
+		}else{
+			$username=mysqli_real_escape_string($connessione,$_POST["user"]);
+			$password=mysqli_real_escape_string($connessione,$_POST["password"]);
+			$sql="SELECT * FROM $tab_name WHERE Username_Ut='$username' and Password_Ut='$password'";
+			$result=$connessione->query($sql);
+			if(!$result){
+				echo "Errore della query: ".$connessione->error;
+				exit();
+			}
+			$conta=mysqli_num_rows($result);
+			if($conta==1){
+				session_start();
+				$_SESSION['user']=$username;
+				$_SESSION['password']=$password;
+				header("Location: index.php");		
+			}else{
+				$error_m="LOGIN FALLITO! Per favore riprova con altre credenziali oppure REGISTRATI";
+			}//else
+		}
 	}
-	$conta=mysqli_num_rows($result);
-	if($conta==1){
-		session_start();
-		$_SESSION['user']=$username;
-		$_SESSION['password']=$password;
-		header("Location: index.php");		
-	}else{
-		echo "Identificazione non riuscita: nome utente o password errati<br/>";
-		echo "Torna a pagine di <a href=\"login.php\">login</a>";
-	}//else
 ?>
+
