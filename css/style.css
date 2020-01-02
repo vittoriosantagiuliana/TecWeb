@@ -25,26 +25,30 @@ body {
 
 #header {
 	position: sticky;
+	z-index: 100;
 	top: 0;
 	display: flex;
-	align-content: center;
+	align-items: center;
 	justify-content: space-between;
 	background-color: #362D23;
 	text-transform: uppercase;
 	font-family: sans-serif;
 	overflow: hidden;
-	padding: 1em;
-	padding-left: 1.5em;
+	padding: 0.5em 1em;
 }
 
 #title {
 	display: flex;
-	align-content: center;
+	align-items: center;
+	flex-grow: 1;
+	padding: 0 0.5em;
 }
 
 #title h1 {
 	font-family: 'Luckiest Guy';
+	padding-top: 0.3em;
 	font-size: 2.3em;
+	color: #CFB682;
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
 }
@@ -58,14 +62,9 @@ body {
 	transition-duration: 0.2s;
 }
 
-#title a {
-	text-decoration: none;
-	color: #cfb682;
-	vertical-align: middle;
-}
-
 #navbar {
 	display: flex;
+	position: relative;
 }
 
 #navbar a {
@@ -73,7 +72,7 @@ body {
 	padding: 1em 0em 1em 0em;
 	margin: 0px 0.6em;
 	text-decoration: none;
-	color:#cfb682;
+	color: #CFB682;
 	display: block;
 	font-family: 'Raleway';
 	font-weight: bold;
@@ -105,8 +104,10 @@ body {
 	display: none;
 }
 
-#menuBtn {
-	float: right;
+#title #menuBtn {
+	margin-left: auto;
+	text-decoration: none;
+	color: #CFB682;
 }
 
 #breadcrumb {
@@ -194,17 +195,9 @@ body {
 .fa-pinterest	{ background-color: #CB2027; }
 
 @media screen and (max-width: 1200px) {
-	#title h1{
-		padding-left: 0.3em;
-	}
-
-	#navbar {
-		margin: 0 4em;
-	}
-
 	#imgBar img{
 		margin-left: 1.5em;
-		margin-right: 1.5em;
+		margin-right: 1.5em; 
 	}
 
 	#content {
@@ -214,15 +207,8 @@ body {
 }
 
 @media screen and (max-width: 960px) {
-	#title h1{
-		padding-left: 0.3em;
-	}
-
 	#navbar {
 		padding: 1em;
-	}
-
-	#navbar {
 		margin: 0;
 	}
 
@@ -237,14 +223,6 @@ body {
 }
 
 @media screen and (max-width: 640px) {
-	#title h1 {
-		font-size: 2em;
-	}
-
-	#title .logo {
-		height: 3em;
-	}
-
 	#navbar.menu {
 		flex-direction: column;
 		flex-wrap: nowrap;
@@ -284,16 +262,6 @@ body {
 	}
 }
 
-@media screen and (min-width: 640px) {
-	#title {
-		margin-bottom: 1em;
-	}
-
-	#navbar :last-child {
-		margin-left: auto;
-	}
-}
-
 
 /*--------------*/
 /*---HOMEPAGE---*/
@@ -309,7 +277,7 @@ body {
 #imgBar{
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 	overflow: hidden;
 	margin-top: 12em;
 }
@@ -320,14 +288,14 @@ body {
 }
 
 #imgBar img {
-	vertical-align: middle;
-	margin-left:3em;
-	margin-right:3em;
+	margin: 0 1em;
 	max-width: 14em;
+	/* max-width: 100%; sembra funzionare */
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
-	background: none;
+	flex: auto;
 }
+
 #imgBar img:hover {
 	-webkit-transform: scale(1.1);
 	-moz-transform: scale(1.1);
@@ -400,9 +368,10 @@ form {
 	margin: 50px 0;
 }
 
-h1 {
+#container h2 {
 	color: #474544;
 	font-size: 3em;
+	letter-spacing: 0.3em;
 	font-weight: 700;
 	text-align: center;
 	text-transform: uppercase;

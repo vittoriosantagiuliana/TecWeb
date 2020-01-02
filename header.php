@@ -22,7 +22,7 @@ class Header
 		);
 
 		$output = "<div id=\"navbar\">";
-		$output .= "<a href=\"#\" id=\"closeBtn\" class=\"fa fa-times-circle menuControl\" title=\"close menu\"></a>";
+		$output .= "<a href=\"#\" class=\"fa fa-times-circle\" id=\"closeBtn\" title=\"close menu\"></a>";
 		foreach ($page as $nome => $indirizzo) {
 			$output .= basename($_SERVER['PHP_SELF']) == $indirizzo ? "<a id=\"current\">" : "<a href=\"$indirizzo\">";
 			$output .= $nome . "</a>";
