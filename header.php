@@ -11,7 +11,7 @@ class Header
 
 	public static function navbar()
 	{
-		$page = $arrayName = array(
+		$page = array(
 			'Home' => 'home.php',
 			'Storia' => 'history.php',
 			'Animali' => 'animals.php',
@@ -20,6 +20,13 @@ class Header
 			'Come raggiungerci' => 'maps.php',
 			'Accedi' => 'login.php'
 		);
+
+		if (isset($_SESSION["userType"]) && $_SESSION["userType"] == "user")
+			$page['Area personale'] = 'user.php';
+		elseif (isset($_SESSION["userType"]) && $_SESSION["userType"] == "admin")
+			$page['Amministrazione'] = 'admin.php';
+		else
+			$page['Accedi'] = 'login.php';
 
 		$output = "<div id=\"navbar\">";
 		$output .= "<a href=\"#\" class=\"fa fa-times-circle\" id=\"closeBtn\" title=\"close menu\"></a>";
