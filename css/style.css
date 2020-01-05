@@ -130,13 +130,33 @@ body {
 	color: #362D23;
 }
 
-#content>img {
+/*#content>img {
 	width: 100%;
 	margin: 1em 0;
+}*/
+
+#topBtn{
+	z-index: 99;
+	display: none;
+	position: fixed;
+	font-size: 22px;
+	bottom:60px;
+	right: 40px;
+	width:50px;
+	height:50px;
+	border-radius: 50%;
+	border:none;
+	color:white;
+	background-color: #c97814;
+	cursor: pointer;
+}
+
+#topBtn:hover{
+	background-color: #a86511;
 }
 
 #footer {
-	padding: 2em;
+	padding: 1em 0 1em 0;
 	bottom: 0;
 	background-color: #362D23;
 }
@@ -197,7 +217,7 @@ body {
 @media screen and (max-width: 1200px) {
 	#imgBar img{
 		margin-left: 1.5em;
-		margin-right: 1.5em; 
+		margin-right: 1.5em;
 	}
 
 	#content {
@@ -320,17 +340,52 @@ body {
 }
 
 /*---------------*/
+/* HOMEPAGE -> MAP */
+/*---------------*/
+
+#mapImage img{
+	border: solid 2px #474544;
+	width:80%;
+	height: auto;
+	display: block;
+	margin: 3em auto 3em auto;
+}
+
+#linkMap{
+	text-align: center;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	margin: 1em 0 1em 0;
+}
+
+
+/*---------------*/
 /* STORIA */
 /*---------------*/
 
-#content p{
+/*#content p{
 	margin: 0 3em 0 3em;
-}
+}*/
 
 
 /*---------------*/
 /* CONTATTI */
 /*---------------*/
+
+#contactText{
+	text-align: center;
+	font-size:1.3em;
+}
+
+#contactNumbers{
+	display: block;
+	border: solid 3px #474544;
+	padding: 1em 1.4em 1em 1.4em;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 1em;
+	margin-bottom: 5em;
+}
 
 button {
 	overflow: visible;
@@ -477,11 +532,11 @@ textarea {
 	background: #474544;
 	color: #F2F3EB;
 }
-	
+
 	.underline {
 	width: 68px;
 	}
-	
+
 	#form_button {
 	padding: 15px 25px;
 	}
@@ -491,44 +546,37 @@ textarea {
 /*--------------*/
 
 #googleMaps h1{
-font-family: 'Luckiest Guy';
-text-align: center;
-margin-top: -0.5em;
-margin-bottom: 1em;
+  font-family: 'Luckiest Guy';
+  text-align: center;
+  margin-top: 0;
+	margin-bottom: 1em;
+	font-size: 2em;
 }
 
-#mapMap{
-	width: 512px;
-	display: block;
-	margin-right: 7em;
-	float:right;
-}
-
-#mapText p{
+#googleMaps p{
 	text-align: center;
-float: left;
-vertical-align: middle;
-margin: 4em 13em;
-font-size: 1.2em;
+	margin-top:2em;
+	font-size: 1.25em;
 }
 
 .mapouter{
-display: flex;
-flex-wrap: wrap;
-text-align:center;
-height:500px;
-width:600px;
-margin-top: 1.5em;
-box-shadow: 0 0 1em #777;
+	text-align:right;
+	height:400px;
+	width:1000px;
+	margin:0 auto;
+	/*box-shadow: 0 0 1em #777;*/
+	padding: 2px;
+	border: 2px solid #c3c4bb;
+	margin-top: 3em;
+	margin-bottom: 4em;
 }
 
-.gmap_canvas{
-overflow:hidden;
-background:none!important;
-height:500px;
-width:600px;
+.gmap_canvas {
+	overflow:hidden;
+	background:none!important;
+	height:400px;
+	width:1000px;
 }
-
 
 /*--------------*/
 /*---ANIMALI---*/
@@ -567,15 +615,17 @@ width:600px;
 	height: 11em;
 }
 
-.descriptionImage {
+.descriptionImage{
 	max-width: 30em;
-	display:block;
-	margin: 2em auto;
-	border-radius: 0.5em;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 3em;
+	border-radius: 0.3em;
 }
 
-.description {
-	line-height: 1.4em;
+.description{
+	line-height: 1.75em;
+	text-align: center;
 }
 
 /*--------------*/
@@ -589,18 +639,20 @@ width:600px;
 
 .activitySection img{
 	height:20em;
+	margin-left:3em;
+	margin-right: 3em;
 }
 
 .activitySection:nth-child(odd) img {
 	float: left;
-	margin-right: 1.5em;
-	margin-bottom: 1.5em;
+	margin-right: 2em;
+	margin-bottom: 2em;
 }
 
 .activitySection:nth-child(even) img {
 	float: right;
-	margin-left: 1.5em;
-	margin-bottom: 1.5em;
+	margin-left: 2em;
+	margin-bottom: 2em;
 }
 
 @media screen and (max-width: 960px) {
