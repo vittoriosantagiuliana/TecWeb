@@ -1,6 +1,6 @@
 <?php
-	require_once "header.php";
-	require_once "footer.php";
+	require_once "includes/header.php";
+	require_once "includes/footer.php";
 
 	$output = file_get_contents("html/activities.html");
 	$output = str_replace('<div id="header"></div>', Header::build(), $output);

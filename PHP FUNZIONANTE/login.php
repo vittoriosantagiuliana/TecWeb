@@ -35,7 +35,7 @@
 						<input type="password" name="password"/><?php if(isset($error_p)): ?> <div class="error"><?php echo $error_p; ?></div><?php endif ?></br>
 						<input type="submit" name="log" value="Login"/>
 					</fieldset>
-				</form>         
+				</form>
 			</div>
 			<h2>Se non sei ancora iscritto:</h2>
 			<div id="signinForm">

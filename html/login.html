@@ -14,45 +14,92 @@
 		<link rel="stylesheet" href="css/style.css"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 		<script type="text/javascript" src="script/script.js"></script>
+		<script type="text/javascript" src="script/login.js"></script>
 	</head>
 	<body>
 		<div id="header"></div>
-		<div id="breadcrumb">
-			<p><a href="index.php">Home</a> &#124; Login</p>
-		</div>
+			<div id="breadcrumb">
+				<p><a href="index.php">Home</a> &#124; Login</p>
+			</div>
 		<div id="content">
+			<h3 errorH/>
 			<div id="loginForm">
-				<form method="post" action="checklogin.php">
+				<form method="post" action="login.php">
 					<fieldset>
 						<legend>Login</legend>
 						<label>Username:</label>
-						<input type="text" name="user" placeholder="MarioRossi00"/>&nbsp;<br>
+						<input type="text" name="user" placeholder="MarioRossi00"/>
+						<div error_u/>
+						<br/>
 						<label>Password:</label>
 						<input type="password" name="password"/>
+						<div error_p/>
 						<input type="submit" name="log" value="Login"/>
 					</fieldset>
 				</form>
 			</div>
 			<h2>Se non sei ancora iscritto:</h2>
 			<div id="signinForm">
-				<form method="post" action="checksignin.php">
+				<form method="post" action="login.php">
 					<fieldset>
 						<legend>Registrati</legend>
 						<label>Username:</label>
-						<input type="text" name="user" placeholder="MarioRossi00"/><br/><div class="error"><br> Nome utente non disponibile!</div><br/>
+						<input type="text" name="user" placeholder="MarioRossi00"/>
+						<br/>
+						<div error_r_u/>
+						<div error_n/>
+						<br/>
 						<label>Password:</label>
-						<input type="password" name="password"/><br><div class="error">La password deve contenere al massimo 20 caratteri</div><br/>
+						<input type="password" name="password"/>
+						<br/>
+						<div error_r_p/>
+						<br/>
 						<label>Nome:</label>
-						<input type="text" name="name" placeholder="Mario"/><br/>
+						<input type="text" name="name" placeholder="Mario"/>
+						<br/>
+						<div error_r_n/>
+						<br/>
 						<label>Cognome:</label>
-						<input type="text" name="surname" placeholder="Rossi"/><br/>
+						<input type="text" name="surname" placeholder="Rossi"/>
+						<br/>
+						<div error_r_s/>
+						<br/>
 						<label>Data di nascita:</label>
-						<input type="date" name="date" min="1900-01-01" value="01-01-2000"/><br/>
+						<input type="date" name="date" min="1900-01-01" value="01-01-2000"/>
+						<br/>
+						<div error_r_d/>
+						<br/>
 						<label>Email:</label>
-						<input type="email" name="email" placeholder="mariorossi@gmail.com"/><br/>
-						<label>Ti stai iscrivendo come:</label><br/>
-						<input type="radio" name="type" value="Utente"/> Utente generico<br/>
-						<input type="radio" name="type" value="Accompagnatore"/> Utente accompagnatore<br/>
+						<input type="email" name="email" placeholder="mariorossi@gmail.com"/>
+						<br/>
+						<div error_r_e/>
+						<div error_e/>
+						<br/>
+						<label>Ti stai iscrivendo come:</label>
+						<br/>
+						<input type="radio" name="type" value="Utente" id="btnUtente" onclick="change(this)"/> Utente generico
+						<br/>
+						<input type="radio" name="type" value="Accompagnatore" id="btnAccompagnatore" onclick="change(this)"/> Utente accompagnatore
+						<br/>
+						<div error_r_t/>
+						<br/>
+						<div id="gruppo">
+							<label>Da quante persone è formato il gruppo?</label>
+							<input type='number' name='num' min='2' max='50'/>
+							<br/>
+							<label>Si tratta di un gruppo di studenti?</label>
+							<input type='radio' name='choice' value='si' id='btnScuolaSi' onclick='change(this)'/> Sì
+							<input type='radio' name='choice' value='no' id='btnScuolaNo' onclick='change(this)'/> No
+							<br/>
+							<div id="scuola">
+								<label>Inserisci il nome della classe</label>
+								<input type='text' name='class' placeholder='1A'/>
+								<br/>
+								<label>Seleziona la scuola dalla lista</label>
+								<select name='scuole'/>
+							</div>
+						</div>
+						<br/>
 						<input type="submit" name="sign" value="Registrati"/>
 					</fieldset>
 				</form>

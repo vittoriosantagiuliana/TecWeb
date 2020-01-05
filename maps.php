@@ -17,7 +17,7 @@
 		<script type="text/javascript" src="script/script.js"></script>
 	</head>
 <body>
-    <?php include("header.php"); ?>
+    <?php include("includes/header.php"); ?>
     <div id="breadcrumb">
 			<p><a href="index.html">Home</a> &#124; Come raggiungerci</p>
         </div>
@@ -36,5 +36,5 @@
         </div>
     </div>
     </div>
-    <?php include("footer.php"); ?>
+    <?php include("includes/footer.php"); ?>
 </body>
