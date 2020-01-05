@@ -1,16 +1,45 @@
-<div id="header">
-	<div id="title">
-		<a href="../index.php"><img class="logo" src="../images/logo.png" alt="logo dello zoo"/></a>
-		<h1>Zoo Creola</h1>
-		<a href="#" id="menuBtn" class="fa fa-bars menuControl" title="menu"></a>
-	</div>
-	<div id="navbar">
-		<a href="#" id="closeBtn" class="fa fa-times-circle menuControl" title="close menu"></a>
-		<a href="../index.php">Home</a>
-		<a href="../history.php">Storia</a>
-		<a href="../animals.php" id="current">Animali</a>
-		<a href="../activities.php">Attivit&agrave;</a>
-		<a href="../contacts.php">Contatti</a>
-		<a href="../login.php">Log In</a>
-	</div>
-</div>
+<?php
+
+class Header
+{
+	public static function build()
+	{
+		session_start();
+		$output = file_get_contents("../html/header.html");
+		$output = str_replace("<div id=\"navbar\"></div>", Header::navbar(), $output);
+		return $output;
+	}
+
+	public static function navbar()
+	{
+		$page = array(
+			'Home' => 'home.php',
+			'Storia' => 'history.php',
+			'Animali' => 'animals.php',
+			'Attivit&agrave;' => 'activities.php',
+			'Contatti' => 'contacts.php',
+			'Come raggiungerci' => 'maps.php'
+		);
+
+		if (isset($_SESSION["userType"]))
+			$page['Esci'] = 'logout.php';
+		if (isset($_SESSION["userType"]) && $_SESSION["userType"] == "user")
+			$page['Area personale'] = 'user.php';
+		elseif (isset($_SESSION["userType"]) && $_SESSION["userType"] == "admin")
+			$page['Amministrazione'] = 'admin.php';
+		else
+			$page['Accedi'] = 'login.php';
+
+		$output = "<div id=\"navbar\">";
+		$output .= "<a href=\"#\" class=\"fa fa-times-circle\" id=\"closeBtn\" title=\"close menu\"></a>";
+		foreach ($page as $nome => $indirizzo) {
+			$output .= basename($_SERVER['PHP_SELF']) == $indirizzo ? "<a id=\"current\">" : "<a href=\"$indirizzo\">";
+			$output .= $nome . "</a>";
+		}
+		$output .= "</div>";
+
+		return $output;
+	}
+}
+
+?>
