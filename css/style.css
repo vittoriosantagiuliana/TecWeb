@@ -183,7 +183,6 @@ body {
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
 	color: white;
-	background-color: white;
 }
 
 .socialButton::after {	/* cerchio responsive */
