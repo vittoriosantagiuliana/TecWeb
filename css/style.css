@@ -551,6 +551,7 @@ textarea {
   margin-top: 0;
 	margin-bottom: 1em;
 	font-size: 2em;
+	color: #474544;
 }
 
 #googleMaps p{
@@ -560,21 +561,18 @@ textarea {
 }
 
 .mapouter{
+	position:relative;
 	text-align:right;
-	height:400px;
+	height:300px;
 	width:1000px;
-	margin:0 auto;
-	/*box-shadow: 0 0 1em #777;*/
-	padding: 2px;
-	border: 2px solid #c3c4bb;
-	margin-top: 3em;
-	margin-bottom: 4em;
+	border: 3px solid #d6d0c5;
+	display: block;
+	margin: 0 auto;
 }
-
-.gmap_canvas {
+.gmap_canvas{
 	overflow:hidden;
 	background:none!important;
-	height:400px;
+	height:300px;
 	width:1000px;
 }
 
