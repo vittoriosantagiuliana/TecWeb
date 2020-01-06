@@ -636,20 +636,18 @@ textarea {
 
 .activitySection img{
 	height:20em;
-	margin-left:3em;
-	margin-right: 3em;
 }
 
 .activitySection:nth-child(odd) img {
 	float: left;
-	margin-right: 2em;
-	margin-bottom: 2em;
+	margin-bottom: 3em;
+	margin-right:2em;
 }
 
 .activitySection:nth-child(even) img {
 	float: right;
-	margin-left: 2em;
-	margin-bottom: 2em;
+	margin-bottom: 3em;
+	margin-left:2em;
 }
 
 @media screen and (max-width: 960px) {
