@@ -125,8 +125,9 @@ body {
 	background-color: #F2F3EB;
 }
 
-#content h2, #content h3 {
+#content h1, #content h2, #content h3 {
 	font-family: 'Luckiest Guy', Arial, Helvetica, sans-serif;
+	text-align: center;
 	color: #362D23;
 }
 
@@ -183,6 +184,7 @@ body {
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
 	color: white;
+	/*background-color: white;*/
 }
 
 .socialButton::after {	/* cerchio responsive */
@@ -338,6 +340,19 @@ body {
 	display: block;
 }
 
+@media screen and (max-width: 640px){
+
+	#backgroundContent{
+		height:21em;
+		overflow-x: hidden;
+	}
+
+	#imgBar img{
+		width: 10em;
+		height: auto;
+	}
+}
+
 /*---------------*/
 /* HOMEPAGE -> MAP */
 /*---------------*/
@@ -355,6 +370,23 @@ body {
 	font-size: 1.5em;
 	text-transform: uppercase;
 	margin: 1em 0 1em 0;
+}
+
+/*-----------------------------*/
+/*---HOMEPAGE->INFORMAZIONI---*/
+/*---------------------------*/
+
+
+#informationList p{
+
+}
+
+#informationList ul{
+	margin-bottom: 2em;
+}
+
+#informationList li{
+	list-style-type: square;
 }
 
 
@@ -557,6 +589,7 @@ textarea {
 	text-align: center;
 	margin-top:2em;
 	font-size: 1.25em;
+	font-size:
 }
 
 .mapouter{
@@ -573,6 +606,26 @@ textarea {
 	background:none!important;
 	height:300px;
 	width:1000px;
+}
+
+@media screen and (max-width: 1400px) {
+	.mapouter{
+		width:800px;
+	}
+
+	.gmap_canvas{
+		width:800px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.mapouter{
+		width:700px;
+	}
+
+	.gmap_canvas{
+		width:700px;
+	}
 }
 
 /*--------------*/
@@ -649,6 +702,7 @@ textarea {
 	margin-bottom: 3em;
 	margin-left:2em;
 }
+
 
 @media screen and (max-width: 960px) {
 	.activitySection img {

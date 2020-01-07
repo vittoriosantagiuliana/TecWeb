@@ -1,0 +1,51 @@
+	
+	
+	
+	
+	*{
+		color: black;
+		background:white;
+		box-shadow:none;
+	}
+
+
+	a{
+		color:black;
+		text-decoration: none;
+	}
+
+	a:visited{
+		color:black;
+		text-decoration: none;
+	}
+
+	#header{
+		background:white;
+		box-shadow: none;
+	}
+
+	#breadcrumb{
+		background:white;
+		box-shadow: none;
+	}
+
+	#content{
+		background:white;
+		width:100%;
+		box-shadow: none;
+	}
+
+	#navbar{
+		display: none;
+	}
+
+	#footer #social{
+		display:none;
+	}
+
+	#footer{
+		box-shadow: none;
+		line-height: 1.5em;
+	}
+}
+
