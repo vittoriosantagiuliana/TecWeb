@@ -724,42 +724,23 @@ textarea {
 .description{
 	line-height: 1.75em;
 	width: 100%;
-	overflow: hidden;
+	display: grid;
+	grid-template-columns: auto auto;
 }
 
 .description dt {
 	font-weight: bolder;
 	text-align: right;
-	float: left;
-	width: 13%;
-	clear: left;
 }
 .description dd {
-	float: left;
-	width: 87%;
-}
-
-@media screen and (max-width: 1400px) {
-	.description dt {
-		width: 15%;
-	}
-	.description dd {
-		width: 85%;
-	}
-}
-
-@media screen and (max-width: 960px) {
-	.description dt {
-		width: 27%;
-	}
-	.description dd {
-		width: 73%;
-	}
+	text-align: left
 }
 
 @media screen and (max-width: 640px) {
-	.description dt, .description dd {
-		width: 100%;
+	.description {
+		grid-template-columns: auto;
+	}
+	.description dt {
 		text-align: left;
 	}
 }
