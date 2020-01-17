@@ -237,10 +237,16 @@ body {
 	#content {
 		margin: 0;
 		padding: 2em;
+		padding-bottom: 18em;
 	}
 }
 
 @media screen and (max-width: 960px) {
+
+	#body{
+		position:relative;
+	}
+
 	#navbar {
 		padding: 1em;
 		margin: 0;
@@ -249,15 +255,32 @@ body {
 	#content {
 		margin: 0;
 		padding: 1em;
+		padding-bottom:18em;
 	}
 
 	#footer {
-		padding: 1em;
+		position:absolute;
 	}
 }
 
+@media (hover:none),
+(hover:on-demand) {
+  #navbar.menu a:hover {
+    background: none;
+  }
+}
+
 @media screen and (max-width: 640px) {
+
+	#title h1:hover{
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+	}
+
 	#navbar.menu {
+		box-shadow: 0 0 1em #292319;
 		flex-direction: column;
 		flex-wrap: nowrap;
 		position: fixed;
@@ -272,6 +295,10 @@ body {
 		border-radius: initial;
 		background-color: #362D23;
 		transition: right 0.3s ease-out;
+	}
+
+	#navbar.menu :first-child{
+		color: #CFB682;
 	}
 
 	#navbar.menu :first-child, #navbar.menu :last-child {
@@ -294,6 +321,19 @@ body {
 	#breadcrumb {
 		display: none;
 	}
+
+	#content{
+		padding-bottom:16em;
+	}
+
+	.socialButton {
+		margin:0.3em;
+	}
+
+	#topBtn{
+		bottom:100px;
+		right: 10px;
+		}
 }
 
 
