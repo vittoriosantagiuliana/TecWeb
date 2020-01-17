@@ -713,6 +713,7 @@ textarea {
 }
 
 .descriptionImage{
+	width: 100%;
 	max-width: 30em;
 	display: block;
 	margin: 0 auto;
@@ -722,7 +723,45 @@ textarea {
 
 .description{
 	line-height: 1.75em;
-	text-align: center;
+	width: 100%;
+	overflow: hidden;
+}
+
+.description dt {
+	font-weight: bolder;
+	text-align: right;
+	float: left;
+	width: 13%;
+	clear: left;
+}
+.description dd {
+	float: left;
+	width: 87%;
+}
+
+@media screen and (max-width: 1400px) {
+	.description dt {
+		width: 15%;
+	}
+	.description dd {
+		width: 85%;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.description dt {
+		width: 27%;
+	}
+	.description dd {
+		width: 73%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.description dt, .description dd {
+		width: 100%;
+		text-align: left;
+	}
 }
 
 /*--------------*/
