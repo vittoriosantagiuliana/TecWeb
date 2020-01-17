@@ -16,8 +16,6 @@ a:visited {
 body {
 	background-color: #F2F3EB;
 	background: url(../images/texture4.png);
-	position:relative;
-	min-width: 100%;
 }
 
 #containerHeader {
@@ -133,7 +131,6 @@ body {
 	margin: 0 12em;
 	box-shadow: 0 0 1em #777;
 	background-color: #F2F3EB;
-	padding-bottom:25em;
 }
 
 #content h1, #content h2, #content h3 {
@@ -171,8 +168,6 @@ body {
 	padding: 1em 0 1em 0;
 	bottom: 0;
 	background-color: #362D23;
-	position: absolute;
-	width: 100%;
 }
 
 #footer p {
@@ -367,16 +362,6 @@ body {
 	color: white;
 	display: block;
 	margin:0 auto;
-	-webkit-transition-duration: 0.2s;
-	transition-duration: 0.2s;
-}
-
-#homeAnimals input[type='submit']:hover{
-	box-shadow: 0 0 0.3em #777;
-}
-
-#homeAnimals fieldset{
-	border: 0;
 }
 
 
@@ -467,14 +452,16 @@ body {
 
 #contactText{
 	text-align: center;
-	font-size:1.1em;
+	font-size:1.3em;
 }
 
 #contactNumbers{
 	display: block;
+	/*border: solid 3px #474544;*/
 	padding: 0em 1.4em 0.5em 1.4em;
 	width: 50%;
 	margin: 0 auto;
+	/*margin-top: 1em;*/
 	margin-bottom: 3em;
 }
 
@@ -501,7 +488,6 @@ textarea {
 }
 
 #container {
-	box-shadow: 0 0 0.5em #777;
 	border: solid 3px #474544;
 	max-width: 768px;
 	margin: 60px auto;
@@ -772,29 +758,16 @@ textarea {
 	height:20em;
 }
 
-.activitySection:nth-child(odd){
-	margin-left: 3em;
-	margin-right: 3em;
-}
-
-.activitySection:nth-child(even){
-	margin-right: 3em;
-	margin-left: 3em;
-
-}
-
 .activitySection:nth-child(odd) img {
 	float: left;
 	margin-bottom: 3em;
-	margin-right:3em;
-
+	margin-right:2em;
 }
 
 .activitySection:nth-child(even) img {
 	float: right;
 	margin-bottom: 3em;
-	margin-left:3em;
-
+	margin-left:2em;
 }
 
 
