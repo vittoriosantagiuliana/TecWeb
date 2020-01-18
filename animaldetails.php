@@ -20,14 +20,14 @@
 		exit();
 	}
 	$animale = $result->fetch_assoc();
-	$nome = $animale["NomeComune"];
-	$nomescientifico = $animale["NomeScientifico"];
-	$ordine = $animale["Ordine"];
-	$famiglia = $animale["Famiglia"];
-	$habitat = $animale["Habitat"];
-	$riproduzione = $animale["Riproduzione"];
-	$curiosita = $animale["Curiosita"];
-	$imgpath = $animale["ImagePath"];
+	$nome = htmlentities($animale["NomeComune"]);
+	$nomescientifico = htmlentities($animale["NomeScientifico"]);
+	$ordine = htmlentities($animale["Ordine"]);
+	$famiglia = htmlentities($animale["Famiglia"]);
+	$habitat = htmlentities($animale["Habitat"]);
+	$riproduzione = htmlentities($animale["Riproduzione"]);
+	$curiosita = htmlentities($animale["Curiosita"]);
+	$imgpath = htmlentities($animale["ImagePath"]);
 
 
 	$output = file_get_contents("html/animaldetails.html");
