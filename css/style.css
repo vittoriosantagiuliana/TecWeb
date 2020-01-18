@@ -693,21 +693,24 @@ textarea {
 	font-size:
 }
 
-.mapouter{
-	position:relative;
-	text-align:right;
-	height:300px;
-	width:1000px;
-	border: 3px solid #d6d0c5;
-	display: block;
-	margin: 0 auto;
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:40%;
+    position:relative;
+		width: 75%;
+    height:0;
+		border: 3px solid #E2E3DC;
+		display: block;
+		margin: 0 auto;
 }
-.gmap_canvas{
-	overflow:hidden;
-	background:none!important;
-	height:300px;
-	width:1000px;
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
+
 
 @media screen and (max-width: 1400px) {
 	.mapouter{
@@ -716,16 +719,6 @@ textarea {
 
 	.gmap_canvas{
 		width:800px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-	.mapouter{
-		width:700px;
-	}
-
-	.gmap_canvas{
-		width:700px;
 	}
 }
 
