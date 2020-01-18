@@ -21,7 +21,7 @@
 				$sql = "SELECT UsernameUt_UA FROM utenteaccompagnatore WHERE UsernameUt_UA='$username'";
 				if(!$result = $connessione->query($sql))
 					exit("Errore della query: " . $connessione->error);
-				$_SESSION["UtenteAccompagnatore"] = mysqli_num_rows($result) == 1;
+				$_SESSION["UtenteAccompagnatore"] = mysqli_num_rows($result) > 0;
 				header("Location: index.php");
 				exit();
 			} else {
@@ -30,4 +30,3 @@
 		}
 	}
 ?>
-

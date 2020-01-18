@@ -23,9 +23,9 @@ class Header
 		if (isset($_SESSION["userType"]))
 			$page['Esci'] = 'logout.php';
 		if (isset($_SESSION["userType"]) && $_SESSION["userType"] == "user")
-			$page['Area personale'] = 'user.php';
+			$page['Area personale'] = 'profile.php';
 		elseif (isset($_SESSION["userType"]) && $_SESSION["userType"] == "admin")
-			$page['Amministrazione'] = 'admin.php';
+			$page['Amministrazione'] = 'profile.php';
 		else
 			$page['Accedi'] = 'login.php';
 
@@ -40,5 +40,4 @@ class Header
 		return $output;
 	}
 }
-
 ?>
