@@ -194,7 +194,7 @@ body {
 	width: 3em;
 	overflow: hidden;
 	position: relative;
-	margin: 1em 0.5em;
+	margin: 1em 0.25em;
 	border-radius: 50%;
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
@@ -335,9 +335,9 @@ body {
 	}
 
 	#topBtn{
-		bottom:100px;
-		right: 10px;
-		}
+		bottom:115px;
+		right: 5px;
+	}
 }
 
 
@@ -382,7 +382,6 @@ body {
 #imgBar img {
 	margin: 0 1em;
 	max-width: 14em;
-	/* max-width: 100%; sembra funzionare */
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
 	flex: auto;
@@ -405,7 +404,7 @@ body {
 }
 
 #homeAnimals input[type='submit']{
-	border-radius: 1em;
+	border-radius: 3em;
 	padding: 0.5em 0.5em 0.5em 0.5em;
 	background-color: #2f6115;
 	color: white;
@@ -453,10 +452,15 @@ body {
 		margin-right: 0;
 	}
 
+	#imgBar h3{
+		font-size: 1em;
+	}
+
 	#imgBar img{
 		width: 10em;
 		height: auto;
 	}
+
 }
 
 /*---------------*/
@@ -481,11 +485,6 @@ body {
 /*-----------------------------*/
 /*---HOMEPAGE->INFORMAZIONI---*/
 /*---------------------------*/
-
-
-#informationList p{
-
-}
 
 #informationList ul{
 	margin-bottom: 2em;
@@ -519,6 +518,7 @@ body {
 #contactText{
 	text-align: center;
 	font-size:1.1em;
+	margin-top: 1.5em;
 }
 
 #contactNumbers{
@@ -555,7 +555,7 @@ textarea {
 	box-shadow: 0 0 0.5em #777;
 	border: solid 3px #474544;
 	max-width: 768px;
-	margin: 60px auto;
+	margin: 5em auto;
 	position: relative;
 	font-family: 'Raleway';
 	overflow: hidden;
@@ -569,7 +569,7 @@ form {
 #container h2 {
 	color: #474544;
 	font-size: 2.4em;
-	letter-spacing: 0.3em;
+	letter-spacing: 0.1em;
 	font-weight: 700;
 	text-align: center;
 	text-transform: uppercase;
@@ -684,54 +684,52 @@ textarea {
 	padding: 15px 25px;
 	}
 
-/*--------------*/
-/*---COME RAGGIUNGERCI---*/
-/*--------------*/
-
-#googleMaps h1{
-  font-family: 'Luckiest Guy';
-  text-align: center;
-  margin-top: 0;
-	margin-bottom: 1em;
-	font-size: 2em;
-	color: #474544;
-}
-
-#googleMaps p{
-	text-align: center;
-	margin-top:2em;
-	font-size: 1.25em;
-	font-size:
-}
-
-.map-responsive{
-    overflow:hidden;
-    padding-bottom:40%;
-    position:relative;
-		width: 75%;
-    height:0;
-		border: 3px solid #E2E3DC;
-		display: block;
-		margin: 0 auto;
-}
-.map-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-}
-
-
-@media screen and (max-width: 1400px) {
-	.mapouter{
-		width:800px;
+	#googleMaps h1{
+	  font-family: 'Luckiest Guy';
+	  text-align: center;
+	  margin-top: 0;
+		margin-bottom: 1em;
+		font-size: 2em;
+		color: #474544;
 	}
 
-	.gmap_canvas{
-		width:800px;
+	#googleMaps p{
+		text-align: center;
+		margin-top:2em;
+		font-size: 1.1em;
+		font-size:
 	}
-}
+
+	.map-responsive{
+	    overflow:hidden;
+	    padding-bottom:40%;
+	    position:relative;
+			width: 75%;
+	    height:0;
+			border: 3px solid #E2E3DC;
+			display: block;
+			margin: 0 auto;
+	}
+	.map-responsive iframe{
+	    left:0;
+	    top:0;
+	    height:100%;
+	    width:100%;
+	    position:absolute;
+	}
+
+	@media screen and (max-width: 640px){
+
+		#container{
+			margin:5em auto;
+		}
+
+		#container h2{
+			font-size: 2em;
+			letter-spacing: 0.1em;
+		}
+
+	}
 
 /*--------------*/
 /*---ANIMALI---*/

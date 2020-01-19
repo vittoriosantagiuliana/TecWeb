@@ -5,7 +5,6 @@
 
 	$username = $_SESSION["userName"];
 	
-	$gruppo = $connessione->query("SELECT GP.UsernameUT_UA AS UsernameUT_UA, GP.ID_Gr AS ID_Gr,GP.NumPers_Gr AS NumPers_Gr,C.Nome_C AS Nome_C,C.NomeIst_C AS NomeIst_C FROM gruppoProva as GP LEFT JOIN classe as C on GP.ID_Gr=C.IDGr_C ORDER BY GP.ID_Gr");
 	if(isset($_POST["add"])){
 		if($_POST["data"]==''){
 			$errorD="Inserisci una data per la tua prenotazione!";
