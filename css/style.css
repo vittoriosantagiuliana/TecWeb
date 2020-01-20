@@ -422,6 +422,14 @@ body {
 	border: 0;
 }
 
+#homeAnimals img{
+	height:35em;
+	width: auto;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: -2em;
+}
+
 
 #socialBar .social {
 	width:45px;
@@ -445,6 +453,12 @@ body {
 	}
 }
 
+@media screen and (max-width: 960px){
+	#homeAnimals img{
+		height: 25em;
+	}
+}
+
 @media screen and (max-width: 640px){
 
 	#backgroundContent{
@@ -459,6 +473,9 @@ body {
 	#imgBar img{
 		width: 10em;
 		height: auto;
+	}
+	#homeAnimals img{
+		height: 15em;
 	}
 
 }
