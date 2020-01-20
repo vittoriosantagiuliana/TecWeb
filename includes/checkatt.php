@@ -48,7 +48,7 @@
 		$data=fopen($currfile,'rb');
 		$size=filesize($currfile);
 		$contents=fread($data,$size);
-		fclose($data);
+		fclose($data);  
 		$bin_data = addslashes($contents);
 		  
 		$result=$connessione->query("INSERT INTO attivita(Nome_Att,Descrizione_Att,Immagine_Att) VALUES ('$nomeAtt','$descAtt','$bin_data')");

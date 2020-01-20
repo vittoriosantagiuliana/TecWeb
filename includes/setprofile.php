@@ -46,7 +46,7 @@
 		$conto=$connessione->query("SELECT SUM(CostoTot_T) AS totale FROM ticket");
 		$totale=mysqli_fetch_array($conto);
 		$prenotazioni=$connessione->query("SELECT G.NumPers_Gr AS persone, A.Nome_Att AS att, P.Data_P AS data FROM partecipazione AS P JOIN gruppo AS G on P.IDGr_P=G.ID_Gr JOIN attivita AS A on P.IDAtt_P=A.ID_Att;");
-		$messaggi=$connessione->query("SELECT * FROM messaggio");
+		$messaggi=$connessione->query("SELECT * FROM messaggio ORDER BY Data_Mes");
 		/*if(isset($_POST["mth"])){
 			$mese=mysqli_real_escape_string($connessione,$_POST["month"]);
 			$anno=mysqli_real_escape_string($connessione,$_POST["year"]);
