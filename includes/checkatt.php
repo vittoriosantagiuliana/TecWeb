@@ -43,17 +43,12 @@
 	if(isset($_POST["addAtt"])){
 		$nomeAtt=mysqli_real_escape_string($connessione,$_POST['nomeAtt']);
 		$descAtt=mysqli_real_escape_string($connessione,$_POST['descAtt']);
-		//$imgAtt=$_FILES['imgAtt'];
-		
-		
 		$currfile = $_FILES['imgAtt']['tmp_name'];
 		$filename = $_FILES['imgAtt']['name'];
 		$data=fopen($currfile,'rb');
 		$size=filesize($currfile);
 		$contents=fread($data,$size);
 		fclose($data);
-		//$encoded=base64_encode($contents);
-		  
 		$bin_data = addslashes($contents);
 		  
 		$result=$connessione->query("INSERT INTO attivita(Nome_Att,Descrizione_Att,Immagine_Att) VALUES ('$nomeAtt','$descAtt','$bin_data')");
