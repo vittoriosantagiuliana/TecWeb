@@ -5,7 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 		<title>Zoo - Attività</title>
 		<meta name="title" content="Zoo"/>
-		<meta name="description" content="Animali dello zoo"/>
+		<meta name="description" content="Attivita' dello zoo"/>
 		<meta name="keywords" content="zoo, tecnologie web, progetto, animali"/>
 		<meta name="language" content="italian it"/>
 		<meta name="author" content="Alessio Barbiero"/>

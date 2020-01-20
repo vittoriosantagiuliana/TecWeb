@@ -19,7 +19,7 @@
 	<body>
 		<div id="header"></div>
 		<div id="breadcrumb">
-			<p><a href="index.php">Home</a> &#124; Profilo</p>
+			<p><a href="index.html">Home</a> &#124; Profilo</p>
 		</div>
 		<div id="content">
 		<?php if(isset($_SESSION["userName"]) && $_SESSION["userName"]!="admin"): ?>
