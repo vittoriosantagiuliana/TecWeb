@@ -60,6 +60,7 @@
 					<br/><br/></p>
 				<?php } ?>
 			<?php endif ?>
+			<h3>Per aggiungere un nuovo gruppo <a href="addgroup.php">vai alla pagina dedicata!</a></h3>
 		<?php endif ?>
 		<?php if(isset($_SESSION["userName"]) && $_SESSION["userName"]=="admin"): ?>
 			<h1>Pagina amministrazione</h1>
