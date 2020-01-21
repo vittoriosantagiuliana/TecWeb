@@ -841,6 +841,103 @@ textarea {
 
 }
 
+#registraAtt{
+	margin-top: 12em;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#registraAtt legend{
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 1.2em;
+	padding: 0 0.5em;
+}
+
+#registraAtt fieldset{
+	border-radius: 1em;
+	padding: 1em;
+	border: 1px solid #D9D7D7;
+}
+
+#registraAtt input[type=submit]{
+	margin-right: 5em;
+	margin-bottom: 1em;
+	float: right;
+	font-size:1em;
+	width:8em;
+	padding:0.4em;
+	border-radius: 0.4em;
+	border: 2px solid #b8b3b2;
+}
+
+#registraAtt input[type=submit]:hover{
+	background-color: #B5B5B5;
+	border-color: grey;
+}
+
+#registraAtt select{
+	outline: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	color: #474544;
+	background-color: #F2F3EB;
+}
+
+#registraAtt label{
+	margin-right: 1em;
+}
+
+#addActivity{
+	margin-top: 8em;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#addActivity legend{
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 1.2em;
+	padding: 0 0.5em;
+}
+
+#addActivity fieldset{
+	border-radius: 1em;
+	padding: 1em;
+	border: 1px solid #D9D7D7;
+}
+
+#addActivity input[type=submit]{
+	margin-right: 5em;
+	margin-bottom: 1em;
+	float: right;
+	font-size:1em;
+	width:9em;
+	padding:0.4em;
+	border-radius: 0.4em;
+	border: 2px solid #b8b3b2;
+}
+
+
+
+#addActivity input[type=submit]:hover{
+	background-color: #B5B5B5;
+	border-color: grey;
+}
+
+#addActivity select{
+	outline: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	color: #474544;
+	background-color: #F2F3EB;
+}
+
+#addActivity label{
+	margin-right: 1em;
+}
 
 @media screen and (max-width: 960px) {
 	.activitySection img {
@@ -855,6 +952,67 @@ textarea {
 		margin: 0;
 	}
 }
+
+/*--------------*/
+/*---ORARIO E BIGLIETTI---*/
+/*--------------*/
+
+#ticket{
+	margin-top: 8em;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#ticket legend{
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 1.2em;
+	padding: 0 0.5em;
+}
+
+#ticket fieldset{
+	border-radius: 1em;
+	padding: 1em;
+	border: 1px solid #D9D7D7;
+}
+
+#ticket input[type=submit]{
+	margin-right: 5em;
+	margin-bottom: 1em;
+	float: right;
+	font-size:1em;
+	width:8em;
+	padding:0.4em;
+	border-radius: 0.4em;
+	border: 2px solid #b8b3b2;
+}
+
+#ticket input[type=submit]:hover{
+	background-color: #B5B5B5;
+	border-color: grey;
+}
+
+#ticket select{
+	outline: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	color: #474544;
+	background-color: #F2F3EB;
+}
+
+#ticket label{
+	margin-right: 1em;
+}
+
+
+
+
+
+
+
+
+
 
 /*--------------*/
 /*-REGISTRAZIONE-*/
@@ -989,4 +1147,54 @@ textarea {
 #loginForm input[type=submit]:hover{
 	background-color: #B5B5B5;
 	border-color: grey;
+}
+
+
+/*--------------*/
+/*-PROFILO-*/
+/*--------------*/
+
+#profileText{
+	line-height: 1.5em;
+}
+
+#profileText p{
+	margin-left: 3em;
+	line-height: 2em;
+}
+
+#profile input{
+	width: 25%;
+	display:inline-block;
+	border-radius: 0.4em;
+	padding: 0.4em;
+	border: 2px solid #b8b3b2;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#profile label{
+	width: 15%;
+	display: inline-block;
+	margin-left: 1em;
+}
+
+#profile input[type=submit] {
+	margin-right: 3em;
+	margin-bottom: 1em;
+	float: right;
+	font-size:1em;
+	width:8em;
+}
+
+@media screen and (max-width:640px){
+
+	#profile input{
+		margin-left:2em;
+		width:60%;
+	}
+
+	#profile input[type=submit] {
+		margin-right: 0;
+	}
 }
