@@ -40,6 +40,7 @@
 			</form>
 			<?php if($_SESSION["UtenteAccompagnatore"]): ?>
 				<h3>I tuoi gruppi</h3><br/>
+				<p>Per aggiungere un nuovo gruppo <a href="addgroup.php">vai alla pagina dedicata!</a></p><br/><br/>
 				<?php while ($gr=mysqli_fetch_array($gruppi)){ ?>
 					<p>
 					<?php if($gr['Nome_C']==NULL){ ?>
@@ -59,8 +60,8 @@
 						<?php } ?>
 					<br/><br/></p>
 				<?php } ?>
+				
 			<?php endif ?>
-			<h3>Per aggiungere un nuovo gruppo <a href="addgroup.php">vai alla pagina dedicata!</a></h3>
 		<?php endif ?>
 		<?php if(isset($_SESSION["userName"]) && $_SESSION["userName"]=="admin"): ?>
 			<h1>Pagina amministrazione</h1>
