@@ -69,14 +69,16 @@
 			<?php endif ?>
 			<?php if(isset($_SESSION) && $_SESSION["userName"]=="admin"):?>
 				<form method="post" action="activities.php" id="addActivity" enctype="multipart/form-data">
-					<legend>Aggiungi una nuova attivit&agrave;</legend>
-					<label for="nomeAtt">Nome attivit&agrave;: </label>
-					<input type="text" name="nomeAtt"/>
-					<label for="descAtt">Descrizione attivit&agrave;: </label>
-					<textarea name="descAtt" cols="30" rows="5"></textarea>
-					<label for="imgAtt">Inserisci un'immagine per l'attivit&agrave;: </label>
-					<input type="file" name="imgAtt" id="imgAtt" accept="image/png, image/jpeg"/>
-					<input type="submit" name="addAtt" value="Aggiungi attivit&agrave;"/>
+					<fieldset>
+						<legend>Aggiungi una nuova attivit&agrave;</legend>
+						<label for="nomeAtt">Nome attivit&agrave;: </label>
+						<input type="text" name="nomeAtt"/>
+						<label for="descAtt">Descrizione attivit&agrave;: </label>
+						<textarea name="descAtt" cols="30" rows="5"></textarea>
+						<label for="imgAtt">Inserisci un'immagine per l'attivit&agrave;: </label>
+						<input type="file" name="imgAtt" id="imgAtt" accept="image/png, image/jpeg"/>
+						<input type="submit" name="addAtt" value="Aggiungi attivit&agrave;"/>
+					</fieldset>
 				</form>
 			<?php endif ?>
 		</div>
