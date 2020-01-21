@@ -4,13 +4,12 @@
 	require_once "includes/dbhandler.php";
 	
 	$connessione = connessione();
-	$tab_name="animali";
 	if (!isset($_GET["animal"])) {
 		header("Location: notfound.php");
 		exit();
 	}
-	$idAnimale = mysqli_real_escape($connessione, $_GET["animal"]);
-	$sql = "SELECT * FROM $tab_name WHERE NomeComune = $idAnimale";
+	$idAnimale = mysqli_real_escape_string($connessione, urldecode($_GET["animal"]));
+	$sql = "SELECT * FROM animale WHERE Comune_An = \"$idAnimale\";";
 	if (!$result = $connessione->query($sql)) {
 		header("Location: notfound.php");
 		exit();
@@ -20,14 +19,14 @@
 		exit();
 	}
 	$animale = $result->fetch_assoc();
-	$nome = htmlentities($animale["NomeComune"]);
-	$nomescientifico = htmlentities($animale["NomeScientifico"]);
-	$ordine = htmlentities($animale["Ordine"]);
-	$famiglia = htmlentities($animale["Famiglia"]);
-	$habitat = htmlentities($animale["Habitat"]);
-	$riproduzione = htmlentities($animale["Riproduzione"]);
-	$curiosita = htmlentities($animale["Curiosita"]);
-	$imgpath = htmlentities($animale["ImagePath"]);
+	$nome = $animale["Comune_An"];
+	$nomescientifico = $animale["Scientifico_An"];
+	$ordine = $animale["Ordine_An"];
+	$famiglia = $animale["Famiglia_An"];
+	$habitat = $animale["Habitat_An"];
+	$riproduzione = $animale["Riproduzione_An"];
+	$curiosita = $animale["Curiosita_An"];
+	$immagine = base64_encode($animale["Immagine_An"]);
 
 
 	$output = file_get_contents("html/animaldetails.html");
@@ -41,7 +40,7 @@
 	$output = str_replace("%Habitat%", $habitat, $output);
 	$output = str_replace("%Riproduzione%", $riproduzione, $output);
 	$output = str_replace("%Curiosita%", $curiosita, $output);
-	$output = str_replace("%ImgPath%", $imgpath, $output);
-
+	$output = str_replace("%Immagine%", $immagine, $output);
+	
 	echo $output;
 ?>
