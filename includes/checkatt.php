@@ -1,6 +1,7 @@
 <?php
 	require_once "includes/dbhandler.php";
 	$connessione = connessione();
+	session_start();
 	$tab_name = "utente";
 
 	$username = $_SESSION["userName"];

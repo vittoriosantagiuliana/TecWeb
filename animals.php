@@ -1,5 +1,6 @@
 <?php
 	require_once "includes/dbhandler.php";
+	session_start();
 	$connessione = connessione();
 
 function listaAnimali() {
