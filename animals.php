@@ -1,7 +1,10 @@
 <?php
+	require_once "includes/header.php";
+	require_once "includes/footer.php";
 	require_once "includes/dbhandler.php";
-	session_start();
 	$connessione = connessione();
+	if (!isset($_SESSION))
+			session_start();
 
 function listaAnimali() {
 	global $connessione;
@@ -47,9 +50,6 @@ if(isset($_SESSION["userName"]) && $_SESSION["userType"]=="admin")
 	</form>";
 else
 	$adminForm = "";
-	
-	require_once "includes/header.php";
-	require_once "includes/footer.php";
 
 	$output = file_get_contents("html/animals.html");
 	$output = str_replace("<div id=\"header\"></div>", Header::build(), $output);

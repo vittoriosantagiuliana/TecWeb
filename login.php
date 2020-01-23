@@ -1,23 +1,24 @@
 <?php
 
-function listaScuole()
-{
-	$selectScuole = "<select name='scuole'>";
-	while($scuola = mysqli_fetch_array($scuole))
-	{
-		$selectScuole .= "<option value=\"" . $scuola['Nome_Ist'] . "\">" .
-			$scuola['Nome_Ist'] . " (" . $scuola['Citta_Ist'] . ")" .
-			"</option>";
-	}
-	$selectScuole .= "</select>";
-	return $selectScuole;
-}
-
-	session_start();
 	require_once "includes/header.php";
 	require_once "includes/footer.php";
 	require_once "includes/checksignin.php";
 	require_once "includes/checklogin.php";
+	if (!isset($_SESSION))
+		session_start();
+
+function listaScuole()
+{
+	$selectScuole = "<select name=\"scuole\">";
+
+	$scuole = $connessione->query("SELECT Nome_Ist, Citta_Ist FROM istituto");
+	while($scuola = $scuole->fetch_assoc())
+		$selectScuole .= "<option value=\"" . $scuola["Nome_Ist"] . "\">" .
+			$scuola["Nome_Ist"] . " (" . $scuola["Citta_Ist"] . ")" .
+			"</option>";
+	$selectScuole .= "</select>";
+	return $selectScuole;
+}
 
 
 	$output = file_get_contents("html/login.html");

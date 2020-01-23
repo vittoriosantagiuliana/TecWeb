@@ -1,6 +1,11 @@
 <?php
+	require_once "includes/header.php";
+	require_once "includes/footer.php";
+	require_once "includes/checkatt.php";
 	require_once "includes/dbhandler.php";
 	$connessione = connessione();
+	if (!isset($_SESSION))
+			session_start();
 
 function listaAttivita() {
 	global $connessione;
@@ -89,9 +94,6 @@ function formAttivita() {
 	return $form;
 }
 
-	require_once "includes/header.php";
-	require_once "includes/footer.php";
-	require_once "includes/checkatt.php";
 
 	$output = file_get_contents("html/activities.html");
 	$output = str_replace("<div id=\"header\"></div>", Header::build(), $output);

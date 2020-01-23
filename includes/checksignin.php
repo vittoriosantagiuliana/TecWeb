@@ -3,14 +3,13 @@
 	$connessione = connessione();
 	$tab_name="utente";
 	
-	$username=' ';
+	$username='';
 	$password='';
 	$name='';
 	$surname='';
 	$birth='';
 	$email='';
 	$type='';
-	$scuole=$connessione->query("SELECT Nome_Ist,Citta_Ist from istituto");
 	if(isset($_POST["sign"])){
 		if($_POST["user"]==''){
 			$error_r_u="Inserisci un nome utente";

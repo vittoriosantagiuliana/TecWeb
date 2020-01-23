@@ -10,4 +10,6 @@ window.onload = function () {
 	btnScuola.onclick = function () { checkScuola(); }
 	document.getElementById('btnUtente').onclick = function () { checkGruppo(); }
 	document.getElementById('btnScuolaNo').onclick = function () { checkScuola(); }
+	checkGruppo();
+	checkScuola();
 }
