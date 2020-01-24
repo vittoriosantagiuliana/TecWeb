@@ -8,7 +8,9 @@
 	}
 
 	$inviato = isset($_GET["done"]) ? "<h2>Grazie del tuo messaggio! Verrai ricontattato al pi&ugrave; presto!</h2>" : "";
-	$inviato = isset($_GET["error"]) ? "<h2>" . $_GET["done"] . "</h2>" : "";
+	if (isset($_GET["error"])) {
+		$inviato = "<h2>" . $_GET["done"] . "</h2>";
+	}
 
 	$valueUser = "";
 	$valueEmail = "";
