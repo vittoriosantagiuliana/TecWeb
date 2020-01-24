@@ -11,7 +11,9 @@
 		echo "Connessione fallita(".$connessione->connect_errno."):".$connessione->connect_error;
 		exit();
 	}
-	$username=$_SESSION['userName'];
+	if(isset($_SESSION['userName'])){
+		$username=$_SESSION['userName'];
+	}
 	$scuole=$connessione->query("SELECT Nome_Ist,Citta_Ist from istituto ORDER BY Citta_Ist");
 	$sql='';
 	if(isset($_POST["add"])){

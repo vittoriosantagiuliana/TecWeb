@@ -12,7 +12,9 @@
 		exit();
 	}
 	
-	$username=$_SESSION["userName"];
+	if(isset($_SESSION['userName'])){
+		$username=$_SESSION["userName"];
+	}
 	$totI=0;
 	$totRA=0;
 	$totRB=0;
