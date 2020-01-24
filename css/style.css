@@ -135,7 +135,7 @@ body {
 	margin: 0 12em;
 	box-shadow: 0 0 1em #777;
 	background-color: #F2F3EB;
-	padding-bottom:25em;
+	padding-bottom:20em;
 }
 
 #content h1, #content h2, #content h3 {
@@ -143,11 +143,6 @@ body {
 	text-align: center;
 	color: #474544;
 }
-
-/*#content>img {
-	width: 100%;
-	margin: 1em 0;
-}*/
 
 #topBtn{
 	z-index: 99;
@@ -199,7 +194,6 @@ body {
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
 	color: white;
-	/*background-color: white;*/
 }
 
 .socialButton::after {	/* cerchio responsive */
@@ -427,7 +421,7 @@ body {
 	width: auto;
 	display: block;
 	margin: 0 auto;
-	margin-bottom: -2em;
+	padding-top: 2em;
 }
 
 
@@ -523,9 +517,21 @@ body {
 /* STORIA */
 /*---------------*/
 
-/*#content p{
-	margin: 0 3em 0 3em;
-}*/
+#zooHistory img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 30em;
+	width: auto;
+	margin-bottom: 3em;
+}
+
+@media screen and (max-width:640px){
+	#zooHistory img{
+		height:14em;
+		width: auto;
+	}
+}
 
 
 /*---------------*/
@@ -747,6 +753,58 @@ textarea {
 		}
 
 	}
+
+	/*--------------*/
+/*---ORARIO E BIGLIETTI---*/
+/*--------------*/
+
+#ticket{
+	margin-top: 8em;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#ticket legend{
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 1.2em;
+	padding: 0 0.5em;
+}
+
+#ticket fieldset{
+	border-radius: 1em;
+	padding: 1em;
+	border: 1px solid #D9D7D7;
+}
+
+#ticket input[type=submit]{
+	margin-right: 5em;
+	margin-bottom: 1em;
+	float: right;
+	font-size:1em;
+	width:8em;
+	padding:0.4em;
+	border-radius: 0.4em;
+	border: 2px solid #b8b3b2;
+}
+
+#ticket input[type=submit]:hover{
+	background-color: #B5B5B5;
+	border-color: grey;
+}
+
+#ticket select{
+	outline: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	color: #474544;
+	background-color: #F2F3EB;
+}
+
+#ticket label{
+	margin-right: 1em;
+}
 
 /*--------------*/
 /*---ANIMALI---*/
