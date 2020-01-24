@@ -4,14 +4,19 @@
 	require_once "includes/footer.php";
 	require_once "includes/checksignin.php";
 	require_once "includes/checklogin.php";
+	require_once "includes/dbhandler.php";
+	$connessione = connessione();
+
 	if (!isset($_SESSION))
 		session_start();
 
 function listaScuole()
 {
-	$selectScuole = "<select name=\"scuole\">";
-
+	global $connessione;
 	$scuole = $connessione->query("SELECT Nome_Ist, Citta_Ist FROM istituto");
+	
+	$selectScuole = "<select name=\"scuole\">
+						<option value=\"---\">- - -</option>";
 	while($scuola = $scuole->fetch_assoc())
 		$selectScuole .= "<option value=\"" . $scuola["Nome_Ist"] . "\">" .
 			$scuola["Nome_Ist"] . " (" . $scuola["Citta_Ist"] . ")" .
@@ -20,12 +25,9 @@ function listaScuole()
 	return $selectScuole;
 }
 
-
 	$output = file_get_contents("html/login.html");
 	$output = str_replace("<div id=\"header\"></div>", Header::build(), $output);
 	$output = str_replace("<div id=\"footer\"></div>", Footer::build(), $output);
-
-	$output = str_replace("<select name='scuole'/>", listaScuole(), $output);
 
 	$output = str_replace("<h3 errorH/>", isset($error_m) ? "<h3 class=\"errorH\">" . $error_u . "</h3>" : "", $output);
 	$output = str_replace("<div error_u/>", isset($error_u) ? "<div class=\"error\">" . $error_u . "</div>" : "", $output);
@@ -39,7 +41,9 @@ function listaScuole()
 	$output = str_replace("<div error_r_e/>", isset($error_r_e) ? "<div class=\"error\">" . $error_r_e . "</div>" : "", $output);
 	$output = str_replace("<div error_e/>", isset($error_e) ? "<div class=\"error\">" . $error_e . "</div>" : "", $output);
 	$output = str_replace("<div error_r_t/>", isset($error_r_t) ? "<div class=\"error\">" . $error_r_t . "</div>" : "", $output);
-
+	$output = str_replace("<div error_g_n/>", isset($error_g_n) ? "<div class=\"error\">" . $error_g_n . "</div>" : "", $output);
+	$output = str_replace("<div error_g_c/>", isset($error_g_c) ? "<div class=\"error\">" . $error_g_c . "</div>" : "", $output);
+	$output = str_replace("<select name=\"scuole\"/>", listaScuole(), $output);
 
 	echo $output;
 
