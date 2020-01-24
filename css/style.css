@@ -13,6 +13,10 @@ a:visited {
 	color: #3d8c0d;
 }
 
+h1,h2,h3{
+	font-family: 'Luckiest Guy';
+}
+
 body {
 	background-color: #F2F3EB;
 	background: url(../images/texture4.png);
@@ -52,7 +56,7 @@ body {
 	font-family: 'Luckiest Guy';
 	padding-top: 0.3em;
 	font-size: 2.3em;
-	color: #CFB682;
+	color: #CFB682 !important;
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
 }
@@ -117,7 +121,6 @@ body {
 }
 
 #navbar #current{
-	/*background: #497337;*/
 	float:left;
 	height: 14px;
 	border-bottom: 3px solid #497337;
@@ -143,11 +146,6 @@ body {
 	text-align: center;
 	color: #474544;
 }
-
-/*#content>img {
-	width: 100%;
-	margin: 1em 0;
-}*/
 
 #topBtn{
 	z-index: 99;
@@ -199,7 +197,6 @@ body {
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
 	color: white;
-	/*background-color: white;*/
 }
 
 .socialButton::after {	/* cerchio responsive */
@@ -294,7 +291,7 @@ body {
 		position: fixed;
 		z-index: 1000;
 		height: 100%;
-		width: 12em;
+		width: 17em;
 		margin: 0;
 		top: 0;
 		bottom: 0;
@@ -340,7 +337,6 @@ body {
 		}
 }
 
-
 /*--------------*/
 /*---HOMEPAGE---*/
 /*--------------*/
@@ -382,7 +378,6 @@ body {
 #imgBar img {
 	margin: 0 1em;
 	max-width: 14em;
-	/* max-width: 100%; sembra funzionare */
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
 	flex: auto;
@@ -482,11 +477,6 @@ body {
 /*---HOMEPAGE->INFORMAZIONI---*/
 /*---------------------------*/
 
-
-#informationList p{
-
-}
-
 #informationList ul{
 	margin-bottom: 2em;
 }
@@ -502,15 +492,25 @@ body {
 	}
 }
 
-
 /*---------------*/
 /* STORIA */
 /*---------------*/
 
-/*#content p{
-	margin: 0 3em 0 3em;
-}*/
+#zooHistory img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 30em;
+	width: auto;
+	margin-bottom: 3em;
+}
 
+@media screen and (max-width:640px){
+	#zooHistory img{
+		height:14em;
+		width: auto;
+	}
+}
 
 /*---------------*/
 /* CONTATTI */
@@ -573,7 +573,7 @@ form {
 	font-weight: 700;
 	text-align: center;
 	text-transform: uppercase;
-	font-family: 'Luckiest Guy';
+	/*font-family: 'Luckiest Guy';*/
 }
 
 .underline {
@@ -682,11 +682,7 @@ textarea {
 
 	#form_button {
 	padding: 15px 25px;
-	}
-
-/*--------------*/
-/*---COME RAGGIUNGERCI---*/
-/*--------------*/
+}
 
 #googleMaps h1{
   font-family: 'Luckiest Guy';
@@ -700,7 +696,7 @@ textarea {
 #googleMaps p{
 	text-align: center;
 	margin-top:2em;
-	font-size: 1.25em;
+	font-size: 1.1em;
 	font-size:
 }
 
@@ -721,7 +717,6 @@ textarea {
     width:100%;
     position:absolute;
 }
-
 
 @media screen and (max-width: 1400px) {
 	.mapouter{
@@ -920,11 +915,16 @@ textarea {
 	border: 2px solid #b8b3b2;
 }
 
-
-
 #addActivity input[type=submit]:hover{
 	background-color: #B5B5B5;
 	border-color: grey;
+}
+
+
+input[type=date]{
+	border-radius: 0.4em;
+	padding: 0.4em;
+	border: 2px solid #b8b3b2;
 }
 
 #addActivity select{
@@ -1005,15 +1005,6 @@ textarea {
 	margin-right: 1em;
 }
 
-
-
-
-
-
-
-
-
-
 /*--------------*/
 /*-REGISTRAZIONE-*/
 /*--------------*/
@@ -1047,9 +1038,10 @@ textarea {
 	display: inline-block;
 }
 
-#signinForm input[type=text], input[type=email], input[type=password], input[type=date]{
+ input[type=text], input[type=email], input[type=password], input[type=date]{
 	margin-bottom: 1em;
 	width:15em;
+	background-color: #F2F3EB;
 }
 
 #signinForm input[type=text]:hover{
