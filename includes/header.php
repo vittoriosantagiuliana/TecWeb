@@ -4,7 +4,9 @@ class Header
 {
 	public static function build()
 	{
-		session_start();
+		if (!isset($_SESSION)) {
+			session_start();
+		}
 		$output = file_get_contents("html/header.html");
 		$output = str_replace("<div id=\"navbar\"></div>", Header::navbar(), $output);
 		return $output;
@@ -20,14 +22,16 @@ class Header
 			'Contatti' => 'contacts.php',
 		);
 
-		if (isset($_SESSION["userType"]))
+		if (isset($_SESSION["userType"])) {
 			$page['Esci'] = 'logout.php';
-		if (isset($_SESSION["userType"]) && $_SESSION["userType"] == "user")
+		}
+		if (isset($_SESSION["userType"]) && $_SESSION["userType"] == "user") {
 			$page['Area personale'] = 'user.php';
-		elseif (isset($_SESSION["userType"]) && $_SESSION["userType"] == "admin")
+		} elseif (isset($_SESSION["userType"]) && $_SESSION["userType"] == "admin") {
 			$page['Amministrazione'] = 'admin.php';
-		else
+		} else {
 			$page['Accedi'] = 'login.php';
+		}
 
 		$output = "<div id=\"navbar\">";
 		$output .= "<i href=\"#\" class=\"fa fa-times-circle\" id=\"closeBtn\" title=\"close menu\"></i>";
@@ -40,5 +44,3 @@ class Header
 		return $output;
 	}
 }
-
-?>

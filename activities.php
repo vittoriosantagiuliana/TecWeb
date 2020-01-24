@@ -36,6 +36,7 @@ function formAttivita()
 {
     global $connessione;
     $form = "";
+    $username = isset($_SESSION["userName"]) ? $_SESSION["userName"] : "";
 
     if (isset($_SESSION["userName"]) && $_SESSION["UtenteAccompagnatore"]) {
         $connessione->query("DROP VIEW IF EXISTS gruppoProva;
