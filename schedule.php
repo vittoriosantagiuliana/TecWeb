@@ -73,7 +73,7 @@
 		</form>";
 	}
 	else {
-	    $formAcquisto = "<p>Per l'acquisto dei biglietti effettuare il <span xml:lang=\"en\">login</span> o registrare un nuovo <span xml:lang=\"en\">account</span>";
+    		$formAcquisto = "<p>Per l'acquisto dei biglietti effettuare il <span xml:lang=\"en\">login</span> o registrare un nuovo <span xml:lang=\"en\">account</span>";
 	}
 
     $output = file_get_contents("html/schedule.html");
