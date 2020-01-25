@@ -13,7 +13,7 @@ function listaAnimali() {
 		header("Location: notfound.php");
 		exit();
 	}
-	while($animale = $animali->fetch_assoc()) {
+	while ($animale = $animali->fetch_assoc()) {
 		$nomeAnimale = $animale["Comune_An"];
 		$output .= "<div class=\"animalsImg\">
 			 <p>" . $nomeAnimale . "</p>
@@ -25,7 +25,7 @@ function listaAnimali() {
 	return $output;
 }
 
-if(isset($_SESSION["userName"]) && $_SESSION["userType"]=="admin")
+if (isset($_SESSION["userName"]) && $_SESSION["userType"]=="admin")
 	$adminForm = "<form method=\"post\" action=\"includes/animals.php\" id=\"addAnimal\" enctype=\"multipart/form-data\">
 		<fieldset>
 			<legend>Aggiungi un nuovo animale</legend>

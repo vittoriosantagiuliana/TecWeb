@@ -22,11 +22,13 @@
 	$email = $user["Mail_Ut"];
 
 function listaGruppi() {
+	global $username, $connessione;
 	$output = "<p>";
 	$connessione->query("DROP VIEW IF EXISTS gruppoProva; CREATE VIEW gruppoProva AS SELECT UsernameUt_UA, ID_Gr, NumPers_Gr FROM gruppo, utenteaccompagnatore WHERE UsernameUt_UA='$username' AND IDGr_UA=ID_Gr;");
 	$gruppi = $connessione->query("SELECT GP.UsernameUT_UA AS UsernameUT_UA, GP.ID_Gr AS ID_Gr,GP.NumPers_Gr AS NumPers_Gr,C.Nome_C AS Nome_C,C.NomeIst_C AS NomeIst_C FROM gruppoProva as GP LEFT JOIN classe as C on GP.ID_Gr=C.IDGr_C ORDER BY GP.ID_Gr");
 
 	while ($gruppo = $gruppi->fetch_assoc()) {
+
 		if ($gruppo["Nome_C"] == NULL) {
 			$output .= "<strong>Tipologia gruppo: </strong>gruppo generico<br/>
 			<strong>Numero di persone: </strong>" . $gruppo["NumPers_Gr"] . "<br/>";
@@ -42,12 +44,13 @@ function listaGruppi() {
 			"<strong>Attivit&agrave; svolta o prenotata: </strong>" . $attivita['Nome_Att'] . "in data" . $attivita["Data_P"] . "<br/>";
 		}
 	}
+	
 	$output .= "</p>";
 
 	return $output;
 }
 function accompagnatore() {
-	$output = "<h3>I tuoi gruppi</h3><br/>
+	return "<h3>I tuoi gruppi</h3><br/>
 		<p>
 			Per aggiungere un nuovo gruppo <a href=\"addgroup.php\">vai alla pagina dedicata!</a>
 		</p><br/>" . listaGruppi();
@@ -60,6 +63,7 @@ function accompagnatore() {
 	$output = str_replace("%Nome%", $nome, $output);
 	$output = str_replace("%Cognome%", $cognome, $output);
 	$output = str_replace("%Email%", $email, $output);
+	
 	$sezioneAccompagnatore = $_SESSION["UtenteAccompagnatore"] ? accompagnatore() : "";
 	$output = str_replace("<p accompagnatore/>", $sezioneAccompagnatore, $output);
 
