@@ -27,67 +27,46 @@
 				<h3 class="errorH"><?php echo $error_m; ?>
 			<?php endif ?>
 			<div id="loginForm">
-				<form method="post" action="login.php">
+				<form method="post" action="login.php" id="login" onsubmit="isEmptyLogin()">
 					<fieldset>
 						<legend>Login</legend>
 						<label>Username:</label>
-						<input type="text" name="user" placeholder="MarioRossi00"/><?php if(isset($error_u)): ?> <div class="error"><?php echo $error_u; ?></div><?php endif ?><br/>
+						<input type="text" name="user" placeholder="MarioRossi00"/><br/>
 						<label>Password:</label>
-						<input type="password" name="password"/><?php if(isset($error_p)): ?> <div class="error"><?php echo $error_p; ?></div><?php endif ?></br>
+						<input type="password" name="password"/></br>
 						<input type="submit" name="log" value="Login"/>
 					</fieldset>
 				</form>         
 			</div>
 			<h2>Se non sei ancora iscritto:</h2>
 			<div id="signinForm">
-				<form method="post" action="login.php" id="register">
+				<form method="post" action="login.php" id="register" onsubmit="isEmptyRegister()">
 					<fieldset>
 						<legend>Registrati</legend>
 						<label>Username:</label>
 						<input type="text" name="user" placeholder="MarioRossi00"/>
 						<?php if(isset($error_n)): ?>
 							<div class="error"><?php echo $error_n; ?></div>
-						<?php endif ?><br/>
-						<?php if(isset($error_r_u)): ?>
-							<div class="error"><?php echo $error_r_u; ?></div>
 						<?php endif ?><br/>						
 						<label>Password:</label>
 						<input type="password" name="password"/><br/>
 						<?php if(isset($pError)): ?>
 							<div class="error"><?php echo $pError; ?></div>
 						<?php endif ?><br/>
-						<?php if(isset($error_r_p)): ?>
-							<div class="error"><?php echo $error_r_p; ?></div>
-						<?php endif ?><br/>
 						<label>Nome:</label>
-						<input type="text" name="name" placeholder="Mario"/>
-						<?php if(isset($error_r_n)): ?>
-							<div class="error"><?php echo $error_r_n; ?></div>
-						<?php endif ?><br/>
+						<input type="text" name="name" placeholder="Mario"/><br/>
 						<label>Cognome:</label>
-						<input type="text" name="surname" placeholder="Rossi"/>
-						<?php if(isset($error_r_s)): ?>
-							<div class="error"><?php echo $error_r_s; ?></div>
-						<?php endif ?><br/>
+						<input type="text" name="surname" placeholder="Rossi"/><br/>
 						<label>Data di nascita:</label>
-						<input type="date" name="date" min="1900-01-01"/>
-						<?php if(isset($error_r_d)): ?>
-							<div class="error"><?php echo $error_r_d; ?></div>
-						<?php endif ?><br/>
+						<input type="date" name="date" min="1900-01-01"/><br/>
 						<label>Email:</label>
 						<input type="email" name="email" placeholder="mariorossi@gmail.com"/>
 						<?php if(isset($error_e)): ?>
 							<div class="error"><?php echo $error_e; ?></div>
 						<?php endif ?><br/>
-						<?php if(isset($error_r_e)): ?>
-							<div class="error"><?php echo $error_r_e; ?></div>
-						<?php endif ?><br/>
 						<label>Ti stai iscrivendo come:</label><br/>
 						<input type="radio" name="type" value="Utente" id="utente" onclick="change(this)"/> Utente generico<br/>
 						<input type="radio" name="type" value="Accompagnatore" id="accompagnatore" onclick="change(this)"/> Utente accompagnatore<br/>
-						<?php if(isset($error_r_t)): ?>
-							<div class="error"><?php echo $error_r_t; ?></div>
-						<?php endif ?><br/>
 						<div id="more">
 						</div>
 						<div id="scuole">
@@ -101,7 +80,7 @@
 		<script>
 			function change(radio){
 				if(radio.checked && radio.id==="accompagnatore"){
-					document.getElementById("more").innerHTML="<label>Da quante persone è formato il gruppo?</label><input type='number' name='num' min='10' max='60'/><?php if(isset($error_g_n)): ?><div class='error'><?php echo $error_g_n; ?></div><?php endif ?><br/><label>Si tratta di un gruppo di studenti?</label><br/><input type='radio' name='choice' value='si' id='si' onclick='change(this)'/> Sì<br/><input type='radio' name='choice' value='no' id='no' onclick='change(this)'/> No <?php if(isset($error_g_c)): ?><div class='error'><?php echo $error_g_c; ?></div><?php endif ?><br/>";
+					document.getElementById("more").innerHTML="<label>Da quante persone è formato il gruppo?</label><input type='number' name='num' min='10' max='60'/><br/><label>Si tratta di un gruppo di studenti?</label><br/><input type='radio' name='choice' value='si' id='si' onclick='change(this)'/> Sì<br/><input type='radio' name='choice' value='no' id='no' onclick='change(this)'/> No<br/>";
 				}else if(radio.checked && radio.id==="utente"){
 					document.getElementById("more").innerHTML="";
 					document.getElementById("scuole").innerHTML="";
@@ -109,9 +88,89 @@
 				if(radio.checked && radio.id==="no"){
 					document.getElementById("scuole").innerHTML="";
 				}else if(radio.checked && radio.id==="si"){
-					document.getElementById("scuole").innerHTML="<label>Inserisci il nome della classe</label><input type='text' name='class' placeholder='1A'/><?php if(isset($error_g_cl)): ?><div class='error'><?php echo $error_g_cl; ?></div><?php endif ?><br/><label>Seleziona l'istituto dalla lista</label><select name='scuole'><option value='---'>- - -</option><?php while($scuola = mysqli_fetch_array($scuole)){ ?><option value='<?php echo $scuola['Nome_Ist']; ?>'><?php echo $scuola['Nome_Ist'].' ('.$scuola['Citta_Ist'].')'; ?></option><?php }?></select><h4>Oppure aggiungine uno nuovo</h4><br/><?php if(isset($error_n)): ?><div class='error'><?php echo $error_n; ?></div><?php endif ?><br/><label>Nome istituto</label><input type='text' name='newS' placeholder='Istituto Da Vinci'/><br/><label>Citt&agrave; istituto</label><br/><select name='citta'><option value='---'>- - -</option><option value='ag'>Agrigento</option><option value='al'>Alessandria</option><option value='an'>Ancona</option><option value='ao'>Aosta</option><option value='ar'>Arezzo</option><option value='ap'>Ascoli Piceno</option><option value='at'>Asti</option><option value='av'>Avellino</option><option value='ba'>Bari</option><option value='bt'>Barletta-Andria-Trani</option><option value='bl'>Belluno</option><option value='bn'>Benevento</option><option value='bg'>Bergamo</option><option value='bi'>Biella</option><option value='bo'>Bologna</option><option value='bz'>Bolzano</option><option value='bs'>Brescia</option><option value='br'>Brindisi</option><option value='ca'>Cagliari</option><option value='cl'>Caltanissetta</option><option value='cb'>Campobasso</option><option value='ci'>Carbonia-iglesias</option><option value='ce'>Caserta</option><option value='ct'>Catania</option><option value='cz'>Catanzaro</option><option value='ch'>Chieti</option><option value='co'>Como</option><option value='cs'>Cosenza</option><option value='cr'>Cremona</option><option value='kr'>Crotone</option><option value='cn'>Cuneo</option><option value='en'>Enna</option><option value='fm'>Fermo</option><option value='fe'>Ferrara</option><option value='fi'>Firenze</option><option value='fg'>Foggia</option><option value='fc'>Forl&igrave;-Cesena</option><option value='fr'>Frosinone</option><option value='ge'>Genova</option><option value='go'>Gorizia</option><option value='gr'>Grosseto</option><option value='im'>Imperia</option><option value='is'>Isernia</option><option value='sp'>La spezia</option><option value='aq'>L'aquila</option><option value='lt'>Latina</option><option value='le'>Lecce</option><option value='lc'>Lecco</option><option value='li'>Livorno</option><option value='lo'>Lodi</option><option value='lu'>Lucca</option><option value='mc'>Macerata</option><option value='mn'>Mantova</option><option value='ms'>Massa-Carrara</option><option value='mt'>Matera</option><option value='vs'>Medio Campidano</option><option value='me'>Messina</option><option value='mi'>Milano</option><option value='mo'>Modena</option><option value='mb'>Monza e Brianza</option><option value='na'>Napoli</option><option value='no'>Novara</option><option value='nu'>Nuoro</option><option value='og'>Ogliastra</option><option value='ot'>Olbia-Tempio</option><option value='or'>Oristano</option><option value='pd'>Padova</option><option value='pa'>Palermo</option><option value='pr'>Parma</option><option value='pv'>Pavia</option><option value='pg'>Perugia</option><option value='pu'>Pesaro e Urbino</option><option value='pe'>Pescara</option><option value='pc'>Piacenza</option><option value='pi'>Pisa</option><option value='pt'>Pistoia</option><option value='pn'>Pordenone</option><option value='pz'>Potenza</option><option value='po'>Prato</option><option value='rg'>Ragusa</option><option value='ra'>Ravenna</option><option value='rc'>Reggio Calabria</option><option value='re'>Reggio Emilia</option><option value='ri'>Rieti</option><option value='rn'>Rimini</option><option value='rm'>Roma</option><option value='ro'>Rovigo</option><option value='sa'>Salerno</option><option value='ss'>Sassari</option><option value='sv'>Savona</option><option value='si'>Siena</option><option value='sr'>Siracusa</option><option value='so'>Sondrio</option><option value='ta'>Taranto</option><option value='te'>Teramo</option><option value='tr'>Terni</option><option value='to'>Torino</option><option value='tp'>Trapani</option><option value='tn'>Trento</option><option value='tv'>Treviso</option><option value='ts'>Trieste</option><option value='ud'>Udine</option><option value='va'>Varese</option><option value='ve'>Venezia</option><option value='vb'>Verbano-Cusio-Ossola</option><option value='vc'>Vercelli</option><option value='vr'>Verona</option><option value='vv'>Vibo valentia</option><option value='vi'>Vicenza</option><option value='vt'>Viterbo</option></select><br/><label>Indirizzo istituto</label><input type='text' name='ind' placeholder='via Roma'/>";
+					document.getElementById("scuole").innerHTML="<label>Inserisci il nome della classe</label><input type='text' name='class' placeholder='1A'/><br/><label>Seleziona l'istituto dalla lista</label><select name='scuole'><option value='---'>- - -</option><?php while($scuola = mysqli_fetch_array($scuole)){ ?><option value='<?php echo $scuola['Nome_Ist']; ?>'><?php echo $scuola['Nome_Ist'].' ('.$scuola['Citta_Ist'].')'; ?></option><?php }?></select><h4>Oppure aggiungine uno nuovo</h4><br/><label>Nome istituto</label><input type='text' name='newS' placeholder='Istituto Da Vinci'/><br/><label>Citt&agrave; istituto</label><br/><select name='citta'><option value='---'>- - -</option><option value='ag'>Agrigento</option><option value='al'>Alessandria</option><option value='an'>Ancona</option><option value='ao'>Aosta</option><option value='ar'>Arezzo</option><option value='ap'>Ascoli Piceno</option><option value='at'>Asti</option><option value='av'>Avellino</option><option value='ba'>Bari</option><option value='bt'>Barletta-Andria-Trani</option><option value='bl'>Belluno</option><option value='bn'>Benevento</option><option value='bg'>Bergamo</option><option value='bi'>Biella</option><option value='bo'>Bologna</option><option value='bz'>Bolzano</option><option value='bs'>Brescia</option><option value='br'>Brindisi</option><option value='ca'>Cagliari</option><option value='cl'>Caltanissetta</option><option value='cb'>Campobasso</option><option value='ci'>Carbonia-iglesias</option><option value='ce'>Caserta</option><option value='ct'>Catania</option><option value='cz'>Catanzaro</option><option value='ch'>Chieti</option><option value='co'>Como</option><option value='cs'>Cosenza</option><option value='cr'>Cremona</option><option value='kr'>Crotone</option><option value='cn'>Cuneo</option><option value='en'>Enna</option><option value='fm'>Fermo</option><option value='fe'>Ferrara</option><option value='fi'>Firenze</option><option value='fg'>Foggia</option><option value='fc'>Forl&igrave;-Cesena</option><option value='fr'>Frosinone</option><option value='ge'>Genova</option><option value='go'>Gorizia</option><option value='gr'>Grosseto</option><option value='im'>Imperia</option><option value='is'>Isernia</option><option value='sp'>La spezia</option><option value='aq'>L'aquila</option><option value='lt'>Latina</option><option value='le'>Lecce</option><option value='lc'>Lecco</option><option value='li'>Livorno</option><option value='lo'>Lodi</option><option value='lu'>Lucca</option><option value='mc'>Macerata</option><option value='mn'>Mantova</option><option value='ms'>Massa-Carrara</option><option value='mt'>Matera</option><option value='vs'>Medio Campidano</option><option value='me'>Messina</option><option value='mi'>Milano</option><option value='mo'>Modena</option><option value='mb'>Monza e Brianza</option><option value='na'>Napoli</option><option value='no'>Novara</option><option value='nu'>Nuoro</option><option value='og'>Ogliastra</option><option value='ot'>Olbia-Tempio</option><option value='or'>Oristano</option><option value='pd'>Padova</option><option value='pa'>Palermo</option><option value='pr'>Parma</option><option value='pv'>Pavia</option><option value='pg'>Perugia</option><option value='pu'>Pesaro e Urbino</option><option value='pe'>Pescara</option><option value='pc'>Piacenza</option><option value='pi'>Pisa</option><option value='pt'>Pistoia</option><option value='pn'>Pordenone</option><option value='pz'>Potenza</option><option value='po'>Prato</option><option value='rg'>Ragusa</option><option value='ra'>Ravenna</option><option value='rc'>Reggio Calabria</option><option value='re'>Reggio Emilia</option><option value='ri'>Rieti</option><option value='rn'>Rimini</option><option value='rm'>Roma</option><option value='ro'>Rovigo</option><option value='sa'>Salerno</option><option value='ss'>Sassari</option><option value='sv'>Savona</option><option value='si'>Siena</option><option value='sr'>Siracusa</option><option value='so'>Sondrio</option><option value='ta'>Taranto</option><option value='te'>Teramo</option><option value='tr'>Terni</option><option value='to'>Torino</option><option value='tp'>Trapani</option><option value='tn'>Trento</option><option value='tv'>Treviso</option><option value='ts'>Trieste</option><option value='ud'>Udine</option><option value='va'>Varese</option><option value='ve'>Venezia</option><option value='vb'>Verbano-Cusio-Ossola</option><option value='vc'>Vercelli</option><option value='vr'>Verona</option><option value='vv'>Vibo valentia</option><option value='vi'>Vicenza</option><option value='vt'>Viterbo</option></select><br/><label>Indirizzo istituto</label><input type='text' name='ind' placeholder='via Roma'/>";
 				}
 			}//change
+			
+			function isEmptyLogin(){
+				var user=document.forms["login"]["user"].value;
+				var psw=document.forms["login"]["password"].value;
+				if(user==null | user==''){
+					alert("Per accedere, specifica il nome utente");
+					return false;
+				}else if(psw==null | psw==''){
+					alert("Per accedere, specifica la password");
+					return false;
+				}else
+					return true;
+			}//isEmptyLogin
+			
+			function isEmptyRegister(){
+				var user=document.forms["register"]["user"].value;
+				var psw=document.forms["register"]["password"].value;
+				var name=document.forms["register"]["name"].value;
+				var surname=document.forms["register"]["surname"].value;
+				var date=document.forms["register"]["date"].value;
+				var email=document.forms["register"]["email"].value;
+				var type=document.forms["register"]["type"].value;
+				if(user==null | user==''){
+					alert("Specifica un nome utente per registrarti");
+					return false;
+				}else if(psw==null | psw==''){
+					alert("Specifica una password per registrarti");
+					return false;
+				}else if(name==null | name==''){
+					alert("Inserisci il tuo nome per registrarti")
+					return false;
+				}else if(surname==null | surname==''){
+					alert("Inserisci il tuo cognome per registrarti");
+					return false;
+				}else if(date==null | date==''){
+					alert("Inserisci una data di nascita valida per registrarti");
+					return false;
+				}else if(email==null | email==''){
+					alert("Inserisci un indirizzo mail per registrarti");
+					return false;
+				}
+				else if(type==null | type==''){
+					alert("Specifica la tipologia di account che vuoi creare");
+					return false;
+				}
+				if(type=="Accompagnatore"){
+					var num=document.forms["register"]["num"].value;
+					var sel=document.forms["register"]["choice"].value;
+					if(num==null | num==''){
+						alert("Specifica il numero di partecipanti");
+						return false;
+					}else if(sel==null | sel==''){
+						alert("Specifica il tipo di gruppo");
+						return false;
+					}
+					if(sel=="si"){
+						var cl=document.forms["register"]["class"].value;
+						var sc=document.forms["register"]["scuole"].value;
+						var ns=document.forms["register"]["newS"].value;
+						var cit=document.forms["register"]["citta"].value;
+						var ind=document.forms["register"]["ind"].value;
+						if(cl==null | cl==''){
+							alert("Inserisci il nome della classe");
+							return false;
+						}else if(sc=='---'){
+							if((ns==null | ns=='') | (cit=='---') | (ind==null | ind=='')){
+								alert("Inserisci o scegli un istituto");
+								return false;
+							}
+						}else if((ns==null | ns=='') | (cit=='---') | (ind==null | ind=='')){
+							if(sc=='---'){
+								alert("Inserisci o scegli un istituto");
+								return false;
+							}
+						}
+					}
+				}
+				return true;
+			}//isEmptyRegister
+			
 		</script>
 	</body>
 </html>
