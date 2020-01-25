@@ -4,7 +4,6 @@
     if (!isset($_SESSION))
     	session_start();
 
-    $formAcquisto = "";
     if (isset($_SESSION["userName"])) {
     	$formAcquisto = "<form method=\"post\" action=\"schedule.php\" id=\"ticket\">
 			<fieldset>
@@ -72,6 +71,9 @@
 				<input type=\"submit\" name=\"buy\" value=\"Acquista\"/>
 			</fieldset>
 		</form>";
+	}
+	else {
+	    $formAcquisto = "<p>Per l'acquisto dei biglietti effettuare il <span xml:lang=\"en\">login</span> o registrare un nuovo <span xml:lang=\"en\">account</span>";
 	}
 
     $output = file_get_contents("html/schedule.html");
