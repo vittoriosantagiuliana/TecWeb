@@ -10,7 +10,7 @@
 
 	$risultato = isset($_GET["done"]) ? "<h2>Grazie del tuo messaggio! Verrai ricontattato al pi&ugrave; presto!</h2>" : "";
 	if (isset($_GET["error"])) {
-		$risultato = "<h2>" . $_GET["done"] . "</h2>";
+		$risultato = "<h2>Errore della query: " . urldecode($_GET["error"]) . "</h2>";
 	}
 
 	$valueUser = "";
