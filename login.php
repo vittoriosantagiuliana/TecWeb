@@ -43,6 +43,7 @@ function listaScuole()
 	$output = str_replace("<div error_r_t/>", isset($error_r_t) ? "<div class=\"error\">" . $error_r_t . "</div>" : "", $output);
 	$output = str_replace("<div error_g_n/>", isset($error_g_n) ? "<div class=\"error\">" . $error_g_n . "</div>" : "", $output);
 	$output = str_replace("<div error_g_c/>", isset($error_g_c) ? "<div class=\"error\">" . $error_g_c . "</div>" : "", $output);
+	$output = str_replace("<div error_g_cl/>", isset($error_g_cl) ? "<div class=\"error\">" . $error_g_cl . "</div>" : "", $output);
 	$output = str_replace("<select name=\"scuole\"/>", listaScuole(), $output);
 
 	echo $output;
