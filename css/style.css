@@ -147,6 +147,83 @@ body {
 	color: #474544;
 }
 
+form{
+	overflow: hidden;
+}
+
+legend{
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 1.2em;
+	padding: 0 0.5em;
+}
+
+fieldset{
+	border-radius: 1em;
+	padding: 1em;
+	border: 1px solid #D9D7D7;
+}
+
+label{
+	width: 15em;
+	display: inline-block;
+}
+
+select{
+	color: #474544;
+	background: none;
+	display: inline-block;
+	border: none;
+	border-bottom: solid 2px #474544;
+	font-weight: 400;
+	width: 25em;
+	margin-bottom: 2em;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+}
+
+input{
+	margin-bottom: 2em;
+	width: 15em;
+	padding: 0.4em;
+	text-align: left;
+	display: inline-block;
+	border-radius: 0.4em;
+	border: 2px solid #B8B3B2;
+	background-color: #F2F3EB;
+}
+
+input::placeholder{
+	color: #777;
+}
+
+input[type="radio"]{
+	width: auto;
+	margin-bottom: 0;
+}
+
+input[type=submit] {
+	margin-right: 5em;
+	width: 6em;
+	float: right;
+	text-align: center;
+}
+
+input[type=submit]:hover{
+	background-color: #B5B5B5;
+}
+
+input:hover{
+	border-color: grey;
+}
+
+.error{
+	color: firebrick;
+	float:right;
+}
+
 #topBtn{
 	z-index: 99;
 	display: none;
@@ -179,7 +256,7 @@ body {
 	text-align: center;
 	font-size: 0.9em;
 	color: #CFB682;
-	font-family: 'Raleway';
+	font-family: "Raleway";
 }
 
 #socialContainer {
@@ -259,13 +336,9 @@ body {
 	#footer {
 		position:absolute;
 	}
-}
-
-@media (hover:none),
-(hover:on-demand) {
-  #navbar.menu a:hover {
-    background: none;
-  }
+	label {
+		width: 12em;
+	}
 }
 
 @media screen and (max-width: 640px) {
@@ -323,7 +396,7 @@ body {
 		display: none;
 	}
 
-	#content{
+	#content {
 		padding-bottom:16em;
 	}
 
@@ -331,10 +404,24 @@ body {
 		margin:0.3em;
 	}
 
-	#topBtn{
+	#topBtn {
 		bottom:100px;
 		right: 10px;
-		}
+	}
+
+	label, input, select {
+		width: 100%;
+	}
+
+	fieldset {
+		padding-right: 3em;
+	}
+}
+
+@media (hover:none) or (hover:on-demand) {
+	#navbar.menu a:hover {
+		background: none;
+	}
 }
 
 /*--------------*/
@@ -529,51 +616,50 @@ body {
 	margin-bottom: 3em;
 }
 
-button {
+#contact_form button {
 	overflow: visible;
 }
 
-button, select {
+#contact_form button, #contact_form select {
 	text-transform: none;
 }
 
-button, input, select, textarea {
+#contact_form button, #contact_form input, #contact_form select, #contact_form textarea {
 	color: #5A5A5A;
 	font: inherit;
 	margin: 0;
 }
 
-input {
+#contact_form input {
 	line-height: normal;
 }
 
-textarea {
+#contact_form textarea {
 	overflow: auto;
 }
 
 #container {
 	box-shadow: 0 0 0.5em #777;
 	border: solid 3px #474544;
-	max-width: 768px;
-	margin: 60px auto;
+	max-width: 40em;
+	margin: 5em auto;
 	position: relative;
 	font-family: 'Raleway';
 	overflow: hidden;
+	padding: 3em;
 }
 
-form {
-	padding: 37.5px;
-	margin: 50px 0;
+form#contact_form {
+	margin: 5em 0;
 }
 
-#container h2 {
+#contact_form h2 {
 	color: #474544;
 	font-size: 2.4em;
 	letter-spacing: 0.3em;
 	font-weight: 700;
 	text-align: center;
 	text-transform: uppercase;
-	/*font-family: 'Luckiest Guy';*/
 }
 
 .underline {
@@ -598,22 +684,20 @@ form {
 	width: 45%;
 }
 
-input[type='text'], [type='email'], select, textarea {
+#contact_form input[type="text"], #contact_form [type="email"], #contact_form select, #contact_form textarea {
 	background: none;
 	border: none;
 	border-bottom: solid 2px #474544;
 	color: #474544;
-	font-size: 1.000em;
 	font-weight: 400;
 	letter-spacing: 1px;
 	margin: 0em 0 1.875em 0;
 	padding: 0 0 0.875em 0;
-	/*text-transform: uppercase;*/
 	width: 100%;
 	transition: all 0.3s;
 }
 
-input[type='text']:focus, [type='email']:focus, textarea:focus {
+#contact_form input[type='text']:focus, [type='email']:focus, textarea:focus {
 	outline: none;
 	padding: 0 0 0.875em 0;
 }
@@ -627,7 +711,7 @@ input[type='text']:focus, [type='email']:focus, textarea:focus {
 	width: 45%;
 }
 
-select {
+#contact_form select {
 	background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
 	outline: none;
 	-moz-appearance: none;
@@ -636,7 +720,7 @@ select {
 	background-color: #F2F3EB;
 }
 
-select:focus{
+#contact_form select:focus{
 	outline:none;
 }
 
@@ -649,7 +733,7 @@ select:focus{
 	width: 100%;
 }
 
-textarea {
+#contact_form textarea {
 	line-height: 150%;
 	height: 150px;
 	resize: none;
@@ -1008,138 +1092,6 @@ input[type=date]{
 /*--------------*/
 /*-REGISTRAZIONE-*/
 /*--------------*/
-
-#signinForm{
-	/*display: inline-block;
-	float: center;*/
-}
-
-#signinForm legend{
-	font-style: italic;
-	font-weight: bolder;
-	font-size: 1.2em;
-	padding: 0 0.5em;
-}
-
-#signinForm fieldset{
-	border-radius: 1em;
-	padding: 1em;
-	border: 1px solid #D9D7D7;
-}
-
-#signinForm input{
-	border-radius: 0.4em;
-	padding: 0.4em;
-	border: 2px solid #b8b3b2;
-}
-
-#signinForm label{
-	width: 20%;
-	display: inline-block;
-}
-
- input[type=text], input[type=email], input[type=password], input[type=date]{
-	margin-bottom: 1em;
-	width:15em;
-	background-color: #F2F3EB;
-}
-
-#signinForm input[type=text]:hover{
-	border-color: grey;
-}
-
-#signinForm input[type=email]:hover{
-	border-color: grey;
-}
-
-#signinForm input[type=password]:hover{
-	border-color: grey;
-}
-
-#signinForminput[type=date]:hover{
-	border-color: grey;
-}
-
-#signinForm input::placeholder{
-	color: grey;
-}
-
-#signinForm input[type=submit] {
-	margin-right: 5em;
-	margin-bottom: 1em;
-	float: right;
-	font-size:1em;
-	width:6em;
-}
-
-#signinForm input[type=submit]:hover{
-	background-color: #B5B5B5;
-	border-color: grey;
-}
-
-#signinForm .error{
-	color: firebrick;
-	float:right;
-}
-
-#loginForm legend{
-	font-style: italic;
-	font-weight: bolder;
-	font-size: 1.2em;
-	padding: 0 0.5em;
-}
-
-#loginForm fieldset{
-	border-radius: 1em;
-	padding: 1em;
-	border: 1px solid #D9D7D7;
-}
-
-#loginForm label{
-	width: 20%;
-	display: inline-block;
-}
-
-#loginForm input{
-	border-radius: 0.4em;
-	padding: 0.4em;
-	border: 2px solid #b8b3b2;
-	text-align: left;
-	width: 15em;
-}
-
-#loginForm input[type=text]{
-	margin-bottom: 1em;
-}
-
-#loginForm input[type=password]{
-	margin-bottom: 1em;
-}
-
-#loginForm input[type=text]:hover{
-	border-color: grey;
-}
-
-#loginForm input[type=password]:hover{
-	border-color: grey;
-}
-
-#loginForm input::placeholder{
-	color: grey;
-}
-
-#loginForm input[type=submit] {
-	margin-right: 5em;
-	float: right;
-	font-size: 1em;
-	width: 6em;
-	text-align: center;
-}
-
-#loginForm input[type=submit]:hover{
-	background-color: #B5B5B5;
-	border-color: grey;
-}
 
 
 /*--------------*/

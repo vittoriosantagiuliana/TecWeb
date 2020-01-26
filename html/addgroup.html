@@ -48,7 +48,7 @@
 							<label>Seleziona la scuola dalla lista</label>
 							<select name="scuole"/>
 						</div>
-						<h4>Oppure aggiungine uno nuovo</h4>
+						<h4>Oppure aggiungine una nuova</h4>
 						<div error_n/>
 						<div>
 							<label>Nome istituto</label>
@@ -177,21 +177,9 @@
 					</div>
 					</div>
 					<input type="submit" name="add" value="Aggiungi"/>
-
-
-
 				</fieldset>
 			</form>
 		</div>
 		<div id="footer"></div>
-		<script>
-			function change(radio){
-				if(radio.checked && radio.id==="no"){
-					document.getElementById("scuole").innerHTML="";
-				}else if(radio.checked && radio.id==="si"){
-					document.getElementById("scuole").innerHTML="";
-				}
-			}
-		</script>
 	</body>
 </html>
