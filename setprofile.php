@@ -37,8 +37,7 @@
 			exit();
 		}
 		else {
-			//header("Location: profile.php?error=" . urldecode($connessione->error));
-			echo "Errore della query: " . $connessione->error;
+			header("Location: profile.php?error=" . urlencode($connessione->error));
 			exit();
 		}
 	}

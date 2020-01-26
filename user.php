@@ -79,6 +79,9 @@ function accompagnatore() {
 		</p><br/>" . listaGruppi();
 }
 
+	$errore = isset($_GET["error"]) ? "<h2>Errore nella query: " . urldecode($_GET["error"]) . "</h2>" : "";
+	$sezioneAccompagnatore = $_SESSION["UtenteAccompagnatore"] ? accompagnatore() : "";
+
 	$output = file_get_contents("html/user.html");
 	$output = str_replace("<div id=\"header\"></div>", Header::build(), $output);
 	$output = str_replace("<div id=\"footer\"></div>", Footer::build(), $output);
@@ -86,9 +89,8 @@ function accompagnatore() {
 	$output = str_replace("%Nome%", $nome, $output);
 	$output = str_replace("%Cognome%", $cognome, $output);
 	$output = str_replace("%Email%", $email, $output);
-	$output = str_replace("<p biglietti/>", listaBiglietti(), $output);
-	
-	$sezioneAccompagnatore = $_SESSION["UtenteAccompagnatore"] ? accompagnatore() : "";
+	$output = str_replace("<h2 error/>", $errore, $output);
+	$output = str_replace("<p biglietti/>", listaBiglietti(), $output);	
 	$output = str_replace("<p accompagnatore/>", $sezioneAccompagnatore, $output);
 
 	echo $output;

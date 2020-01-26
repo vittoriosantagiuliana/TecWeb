@@ -19,7 +19,7 @@
 			exit();
 		}
 		else {
-			header("Location: contacts.php?error=" . urldecode($connessione->error));
+			header("Location: contacts.php?error=" . urlencode($connessione->error));
 			exit();
 		}
 
