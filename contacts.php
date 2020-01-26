@@ -6,10 +6,11 @@
 	if (!isset($_SESSION)) {
 		session_start();
 	}
+	$connessione = connessione();
 
-	$inviato = isset($_GET["done"]) ? "<h2>Grazie del tuo messaggio! Verrai ricontattato al pi&ugrave; presto!</h2>" : "";
+	$risultato = isset($_GET["done"]) ? "<h2>Grazie del tuo messaggio! Verrai ricontattato al pi&ugrave; presto!</h2>" : "";
 	if (isset($_GET["error"])) {
-		$inviato = "<h2>" . $_GET["done"] . "</h2>";
+		$risultato = "<h2>" . $_GET["done"] . "</h2>";
 	}
 
 	$valueUser = "";
@@ -27,7 +28,7 @@
 	$output = file_get_contents("html/contacts.html");
 	$output = str_replace("<div id=\"header\"></div>", Header::build(), $output);
 	$output = str_replace("<div id=\"footer\"></div>", Footer::build(), $output);
-	$output = str_replace("<h2 inviato/>", $inviato, $output);
+	$output = str_replace("<h2 risultato/>", $risultato, $output);
 	$output = str_replace("%ValueUsername%", $valueUser, $output);
 	$output = str_replace("%ValueEmail%", $valueEmail, $output);
 
