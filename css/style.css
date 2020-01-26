@@ -13,6 +13,10 @@ a:visited {
 	color: #3d8c0d;
 }
 
+h1,h2,h3{
+	font-family: 'Luckiest Guy';
+}
+
 body {
 	background-color: #F2F3EB;
 	background: url(../images/texture4.png);
@@ -52,7 +56,7 @@ body {
 	font-family: 'Luckiest Guy';
 	padding-top: 0.3em;
 	font-size: 2.3em;
-	color: #CFB682;
+	color: #CFB682 !important;
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
 }
@@ -117,7 +121,6 @@ body {
 }
 
 #navbar #current{
-	/*background: #497337;*/
 	float:left;
 	height: 14px;
 	border-bottom: 3px solid #497337;
@@ -135,7 +138,7 @@ body {
 	margin: 0 12em;
 	box-shadow: 0 0 1em #777;
 	background-color: #F2F3EB;
-	padding-bottom:20em;
+	padding-bottom:25em;
 }
 
 #content h1, #content h2, #content h3 {
@@ -189,7 +192,7 @@ body {
 	width: 3em;
 	overflow: hidden;
 	position: relative;
-	margin: 1em 0.25em;
+	margin: 1em 0.5em;
 	border-radius: 50%;
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
@@ -238,6 +241,7 @@ body {
 }
 
 @media screen and (max-width: 960px) {
+
 	#body{
 		position:relative;
 	}
@@ -287,7 +291,7 @@ body {
 		position: fixed;
 		z-index: 1000;
 		height: 100%;
-		width: 12em;
+		width: 17em;
 		margin: 0;
 		top: 0;
 		bottom: 0;
@@ -328,11 +332,10 @@ body {
 	}
 
 	#topBtn{
-		bottom:115px;
-		right: 5px;
-	}
+		bottom:100px;
+		right: 10px;
+		}
 }
-
 
 /*--------------*/
 /*---HOMEPAGE---*/
@@ -397,7 +400,7 @@ body {
 }
 
 #homeAnimals input[type='submit']{
-	border-radius: 3em;
+	border-radius: 1em;
 	padding: 0.5em 0.5em 0.5em 0.5em;
 	background-color: #2f6115;
 	color: white;
@@ -413,14 +416,6 @@ body {
 
 #homeAnimals fieldset{
 	border: 0;
-}
-
-#homeAnimals img{
-	height:35em;
-	width: auto;
-	display: block;
-	margin: 0 auto;
-	padding-top: 2em;
 }
 
 
@@ -446,12 +441,6 @@ body {
 	}
 }
 
-@media screen and (max-width: 960px){
-	#homeAnimals img{
-		height: 25em;
-	}
-}
-
 @media screen and (max-width: 640px){
 
 	#backgroundContent{
@@ -459,18 +448,10 @@ body {
 		margin-right: 0;
 	}
 
-	#imgBar h3{
-		font-size: 1em;
-	}
-
 	#imgBar img{
 		width: 10em;
 		height: auto;
 	}
-	#homeAnimals img{
-		height: 15em;
-	}
-
 }
 
 /*---------------*/
@@ -511,7 +492,6 @@ body {
 	}
 }
 
-
 /*---------------*/
 /* STORIA */
 /*---------------*/
@@ -532,7 +512,6 @@ body {
 	}
 }
 
-
 /*---------------*/
 /* CONTATTI */
 /*---------------*/
@@ -540,7 +519,6 @@ body {
 #contactText{
 	text-align: center;
 	font-size:1.1em;
-	margin-top: 1.5em;
 }
 
 #contactNumbers{
@@ -569,10 +547,6 @@ input {
 	line-height: normal;
 }
 
-input[type=date], input[type=text], input[type=password], input[type=email]{
-	background-color: #F2F3EB;
-}
-
 textarea {
 	overflow: auto;
 }
@@ -581,7 +555,7 @@ textarea {
 	box-shadow: 0 0 0.5em #777;
 	border: solid 3px #474544;
 	max-width: 768px;
-	margin: 5em auto;
+	margin: 60px auto;
 	position: relative;
 	font-family: 'Raleway';
 	overflow: hidden;
@@ -595,11 +569,11 @@ form {
 #container h2 {
 	color: #474544;
 	font-size: 2.4em;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.3em;
 	font-weight: 700;
 	text-align: center;
 	text-transform: uppercase;
-	font-family: 'Luckiest Guy';
+	/*font-family: 'Luckiest Guy';*/
 }
 
 .underline {
@@ -708,105 +682,50 @@ textarea {
 
 	#form_button {
 	padding: 15px 25px;
-	}
-
-	#googleMaps h1{
-	  font-family: 'Luckiest Guy';
-	  text-align: center;
-	  margin-top: 0;
-		margin-bottom: 1em;
-		font-size: 2em;
-		color: #474544;
-	}
-
-	#googleMaps p{
-		text-align: center;
-		margin-top:2em;
-		font-size: 1.1em;
-		font-size:
-	}
-
-	.map-responsive{
-	    overflow:hidden;
-	    padding-bottom:40%;
-	    position:relative;
-			width: 75%;
-	    height:0;
-			border: 3px solid #E2E3DC;
-			display: block;
-			margin: 0 auto;
-	}
-	.map-responsive iframe{
-	    left:0;
-	    top:0;
-	    height:100%;
-	    width:100%;
-	    position:absolute;
-	}
-
-	@media screen and (max-width: 640px){
-
-		#container{
-			margin:5em auto;
-		}
-
-		#container h2{
-			font-size: 2em;
-			letter-spacing: 0.1em;
-		}
-
-	}
-
-/*------------------------*/
-/*---ORARIO E BIGLIETTI---*/
-/*------------------------*/
-
-#ticket{
-	margin-top: 8em;
-	width: 75%;
-	margin-left: auto;
-	margin-right: auto;
 }
 
-#ticket legend{
-	font-style: italic;
-	font-weight: bolder;
-	font-size: 1.2em;
-	padding: 0 0.5em;
-}
-
-#ticket fieldset{
-	border-radius: 1em;
-	padding: 1em;
-	border: 1px solid #D9D7D7;
-}
-
-#ticket input[type=submit]{
-	margin-right: 5em;
+#googleMaps h1{
+  font-family: 'Luckiest Guy';
+  text-align: center;
+  margin-top: 0;
 	margin-bottom: 1em;
-	float: right;
-	font-size:1em;
-	width:8em;
-	padding:0.4em;
-	border-radius: 0.4em;
-	border: 2px solid #b8b3b2;
-}
-
-#ticket input[type=submit]:hover{
-	background-color: #B5B5B5;
-	border-color: grey;
-}
-
-#ticket select{
-	outline: none;
-	-moz-appearance: none;
-	-webkit-appearance: none;
+	font-size: 2em;
 	color: #474544;
-	background-color: #F2F3EB;
 }
 
-#ticket label{
-	margin-right: 1em;
+#googleMaps p{
+	text-align: center;
+	margin-top:2em;
+	font-size: 1.1em;
+	font-size:
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:40%;
+    position:relative;
+		width: 75%;
+    height:0;
+		border: 3px solid #E2E3DC;
+		display: block;
+		margin: 0 auto;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+@media screen and (max-width: 1400px) {
+	.mapouter{
+		width:800px;
+	}
+
+	.gmap_canvas{
+		width:800px;
+	}
 }
 
 /*--------------*/
@@ -917,6 +836,108 @@ textarea {
 
 }
 
+#registraAtt{
+	margin-top: 12em;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#registraAtt legend{
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 1.2em;
+	padding: 0 0.5em;
+}
+
+#registraAtt fieldset{
+	border-radius: 1em;
+	padding: 1em;
+	border: 1px solid #D9D7D7;
+}
+
+#registraAtt input[type=submit]{
+	margin-right: 5em;
+	margin-bottom: 1em;
+	float: right;
+	font-size:1em;
+	width:8em;
+	padding:0.4em;
+	border-radius: 0.4em;
+	border: 2px solid #b8b3b2;
+}
+
+#registraAtt input[type=submit]:hover{
+	background-color: #B5B5B5;
+	border-color: grey;
+}
+
+#registraAtt select{
+	outline: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	color: #474544;
+	background-color: #F2F3EB;
+}
+
+#registraAtt label{
+	margin-right: 1em;
+}
+
+#addActivity{
+	margin-top: 8em;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#addActivity legend{
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 1.2em;
+	padding: 0 0.5em;
+}
+
+#addActivity fieldset{
+	border-radius: 1em;
+	padding: 1em;
+	border: 1px solid #D9D7D7;
+}
+
+#addActivity input[type=submit]{
+	margin-right: 5em;
+	margin-bottom: 1em;
+	float: right;
+	font-size:1em;
+	width:9em;
+	padding:0.4em;
+	border-radius: 0.4em;
+	border: 2px solid #b8b3b2;
+}
+
+#addActivity input[type=submit]:hover{
+	background-color: #B5B5B5;
+	border-color: grey;
+}
+
+
+input[type=date]{
+	border-radius: 0.4em;
+	padding: 0.4em;
+	border: 2px solid #b8b3b2;
+}
+
+#addActivity select{
+	outline: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	color: #474544;
+	background-color: #F2F3EB;
+}
+
+#addActivity label{
+	margin-right: 1em;
+}
 
 @media screen and (max-width: 960px) {
 	.activitySection img {
@@ -933,8 +954,65 @@ textarea {
 }
 
 /*--------------*/
+/*---ORARIO E BIGLIETTI---*/
+/*--------------*/
+
+#ticket{
+	margin-top: 8em;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#ticket legend{
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 1.2em;
+	padding: 0 0.5em;
+}
+
+#ticket fieldset{
+	border-radius: 1em;
+	padding: 1em;
+	border: 1px solid #D9D7D7;
+}
+
+#ticket input[type=submit]{
+	margin-right: 5em;
+	margin-bottom: 1em;
+	float: right;
+	font-size:1em;
+	width:8em;
+	padding:0.4em;
+	border-radius: 0.4em;
+	border: 2px solid #b8b3b2;
+}
+
+#ticket input[type=submit]:hover{
+	background-color: #B5B5B5;
+	border-color: grey;
+}
+
+#ticket select{
+	outline: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	color: #474544;
+	background-color: #F2F3EB;
+}
+
+#ticket label{
+	margin-right: 1em;
+}
+
+/*--------------*/
 /*-REGISTRAZIONE-*/
 /*--------------*/
+
+#signinForm{
+	/*display: inline-block;
+	float: center;*/
+}
 
 #signinForm legend{
 	font-style: italic;
@@ -945,7 +1023,7 @@ textarea {
 
 #signinForm fieldset{
 	border-radius: 1em;
-	padding: 1em 2em;
+	padding: 1em;
 	border: 1px solid #D9D7D7;
 }
 
@@ -953,31 +1031,32 @@ textarea {
 	border-radius: 0.4em;
 	padding: 0.4em;
 	border: 2px solid #b8b3b2;
-	display: inline-block;
 }
 
 #signinForm label{
-	width: 15em;
+	width: 20%;
 	display: inline-block;
 }
 
-#signinForm input{
+ input[type=text], input[type=email], input[type=password], input[type=date]{
 	margin-bottom: 1em;
-	width: 15em;
+	width:15em;
+	background-color: #F2F3EB;
 }
 
-#signinForm input[type="radio"]{
-	width: auto;
+#signinForm input[type=text]:hover{
+	border-color: grey;
 }
 
-#signinForm input[type="submit"] {
-	margin-bottom: 1em;
-	float: right;
-	font-size: 1em;
-	width: 6em;
+#signinForm input[type=email]:hover{
+	border-color: grey;
 }
 
-#signinForm input:hover{
+#signinForm input[type=password]:hover{
+	border-color: grey;
+}
+
+#signinForminput[type=date]:hover{
 	border-color: grey;
 }
 
@@ -985,18 +1064,22 @@ textarea {
 	color: grey;
 }
 
-#signinForm input[type="submit"]:hover{
-	background-color: #B5B5B5;
-}
-
-#signinForm select {
-	width: 25em;
-}
-
-#signinForm .error, #loginForm .error{
-	color: firebrick;
+#signinForm input[type=submit] {
+	margin-right: 5em;
+	margin-bottom: 1em;
 	float: right;
-	display: block;
+	font-size:1em;
+	width:6em;
+}
+
+#signinForm input[type=submit]:hover{
+	background-color: #B5B5B5;
+	border-color: grey;
+}
+
+#signinForm .error{
+	color: firebrick;
+	float:right;
 }
 
 #loginForm legend{
@@ -1008,12 +1091,12 @@ textarea {
 
 #loginForm fieldset{
 	border-radius: 1em;
-	padding: 1em 2em;
+	padding: 1em;
 	border: 1px solid #D9D7D7;
 }
 
 #loginForm label{
-	width: 15em;
+	width: 20%;
 	display: inline-block;
 }
 
@@ -1023,46 +1106,54 @@ textarea {
 	border: 2px solid #b8b3b2;
 	text-align: left;
 	width: 15em;
-	display: inline-block;
+}
+
+#loginForm input[type=text]{
 	margin-bottom: 1em;
 }
 
-#loginForm input[type="submit"] {
-	float: right;
-	font-size: 1em;
-	width: 6em;
-	text-align: center;
-	display: block;
+#loginForm input[type=password]{
+	margin-bottom: 1em;
 }
 
-#loginForm input:hover{
+#loginForm input[type=text]:hover{
 	border-color: grey;
 }
 
-#loginForm input[type="submit"]:hover{
-	background-color: #B5B5B5;
+#loginForm input[type=password]:hover{
+	border-color: grey;
 }
 
 #loginForm input::placeholder{
 	color: grey;
 }
 
-@media screen and (max-width: 960px) {
-	#loginForm label, #signinForm label{
-		width: 12em;
-	}
+#loginForm input[type=submit] {
+	margin-right: 5em;
+	float: right;
+	font-size: 1em;
+	width: 6em;
+	text-align: center;
 }
 
-@media screen and (max-width: 640px) {
-	#signinForm label, #signinForm input, #signinForm select, #loginForm label, #loginForm input {
-		width: 100%;
-	}
-	#signinForm fieldset, #loginForm fieldset {
-		padding-right: 3em;
-	}
+#loginForm input[type=submit]:hover{
+	background-color: #B5B5B5;
+	border-color: grey;
 }
 
-/*----AREA PERSONALE----*/
+
+/*--------------*/
+/*-PROFILO-*/
+/*--------------*/
+
+#profileText{
+	line-height: 1.5em;
+}
+
+#profileText p{
+	margin-left: 3em;
+	line-height: 2em;
+}
 
 #profile input{
 	width: 25%;
@@ -1086,4 +1177,16 @@ textarea {
 	float: right;
 	font-size:1em;
 	width:8em;
+}
+
+@media screen and (max-width:640px){
+
+	#profile input{
+		margin-left:2em;
+		width:60%;
+	}
+
+	#profile input[type=submit] {
+		margin-right: 0;
+	}
 }
