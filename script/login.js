@@ -1,5 +1,5 @@
 
-window.onload = function () {
+function login () {
 	var formGruppo = document.getElementById('gruppo');
 	var formScuola = document.getElementById('scuola');
 	var btnAccompagnatore = document.getElementById('btnAccompagnatore');

@@ -13,4 +13,6 @@ window.onload = function () {
 		else
 		{ topButton.style.display = "none"; }
 	}
+	
+	if (typeof(login) === "function") { login(); }
 };
