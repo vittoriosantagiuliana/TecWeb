@@ -25,7 +25,7 @@ function listaPrenotazioni() {
 
 	$output = "";
 	while ($prenotazione = $prenotazioni->fetch_assoc()) {
-		$output .= "<p>
+		$output .= "<p class=\"prenotazione\">
 				<strong>Attivit&agrave;: </strong>" . $prenotazione["att"] . "<br/>
 				<strong>Data: </strong>" . $prenprenotazione["data"] . "<br/>
 				<strong>Numero partecipanti: </strong>" . $prenotazione["persone"] . "<br/>
@@ -39,7 +39,7 @@ function listaMessaggi() {
 
 	$output = "";
 	while ($messaggio = $messaggi->fetch_assoc()) {
-		$output .= "<p>
+		$output .= "<p class=\"messaggio\">
 				<strong>Data e ora: </strong>" . $messaggio["Data_Mes"] . "<br/>
 				<strong>Categoria: </strong>" . $prenmessaggio["Categoria_Mes"] . "<br/>
 				<strong>Nome mittente: </strong>" . $messaggio["Nome_Mes"] . "<br/>
