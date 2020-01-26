@@ -13,6 +13,29 @@ a:visited {
 	color: #3d8c0d;
 }
 
+a.button {
+	text-decoration: none;
+	text-align: center;
+	width: 15em;
+	display: block;
+	padding: 1em;
+	margin: auto;
+	border-radius: 1em;
+	background-color: #2f6115;
+	color: white;
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+
+a.button:hover {
+	box-shadow: 0 0 0.3em #777;
+}
+
+
+#homeAnimals{
+	margin-top: 10em;
+}
+
 h1,h2,h3{
 	font-family: 'Luckiest Guy';
 }
@@ -87,27 +110,6 @@ body {
 	position:relative;
 }
 
-@media all and (min-width:640px){
-	#navbar a:after {
-		content: '';
-		position: absolute;
-		width: 0;
-		height: 3px;
-		display: block;
-		margin-top: 5px;
-		right: 0;
-		background: #497337;
-		transition: width .3s ease;
-		-webkit-transition: width .3s ease;
-	}
-
-	#navbar a:hover:after {
-		width: 100%;
-		left: 0;
-		background: #497337;
-	}
-}
-
 #navbar #closeBtn, #menuBtn {
 	font-size: 2em;
 	text-decoration: none;
@@ -145,6 +147,10 @@ body {
 	font-family: 'Luckiest Guy', Arial, Helvetica, sans-serif;
 	text-align: center;
 	color: #474544;
+}
+
+img {
+	width: 100%;
 }
 
 form{
@@ -418,6 +424,27 @@ input:hover{
 	}
 }
 
+@media (min-width:640px) {
+	#navbar a:after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 3px;
+		display: block;
+		margin-top: 5px;
+		right: 0;
+		background: #497337;
+		transition: width .3s ease;
+		-webkit-transition: width .3s ease;
+	}
+
+	#navbar a:hover:after {
+		width: 100%;
+		left: 0;
+		background: #497337;
+	}
+}
+
 @media (hover:none) or (hover:on-demand) {
 	#navbar.menu a:hover {
 		background: none;
@@ -477,39 +504,8 @@ input:hover{
 	transform: scale(1.1);
 }
 
-#homeAnimals{
-	margin-top: 10em;
-}
-
-#homeAnimals p{
-	margin-top: 2em;
-	text-align: center;
-}
-
-#homeAnimals input[type='submit']{
-	border-radius: 1em;
-	padding: 0.5em 0.5em 0.5em 0.5em;
-	background-color: #2f6115;
-	color: white;
-	display: block;
-	margin:0 auto;
-	-webkit-transition-duration: 0.2s;
-	transition-duration: 0.2s;
-}
-
-#homeAnimals input[type='submit']:hover{
-	box-shadow: 0 0 0.3em #777;
-}
-
-#homeAnimals fieldset{
-	border: 0;
-}
-
-
-#socialBar .social {
-	width:45px;
-	height: 45px;
-	display: block;
+#homeAnimals img {
+	margin: 5em 0;
 }
 
 @media screen and (max-width: 1400px){
@@ -614,10 +610,6 @@ input:hover{
 	width: 50%;
 	margin: 0 auto;
 	margin-bottom: 3em;
-}
-
-#contact_form button {
-	overflow: visible;
 }
 
 #contact_form button, #contact_form select {
