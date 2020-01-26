@@ -7,7 +7,7 @@
 	}
 	$tab_name="utente";
 	
-	if (isset($_SESSION['userName'])) {
+	if (isset($_SESSION["userName"])) {
 		$username = $_SESSION["userName"];
 		$userR = $connessione->query("SELECT Password_Ut,Nome_Ut,Cognome_Ut,Mail_Ut FROM utente WHERE Username_Ut='$username';");
 		$user = mysqli_fetch_array($userR);
@@ -37,4 +37,15 @@
 		} else {
 			header("Location: profile.php");
 		}
+
+
+		if ($result = $connessione->query($sql)) {
+			header("Location: profile.php");
+			exit();
+		}
+		else {
+			header("Location: contacts.php?error=" . urldecode($connessione->error));
+			exit();
+		}
+
 	}

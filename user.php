@@ -11,8 +11,8 @@
 	if ($_SESSION["userType"] == "admin") {
 		header("Location: admin.php");
 	}
-
 	$connessione = connessione();
+
 	$username = $_SESSION["userName"];
 	$result = $connessione->query("SELECT Password_Ut,Nome_Ut,Cognome_Ut,Mail_Ut FROM utente WHERE Username_Ut='$username';");
 	$user = $result->fetch_assoc();
@@ -20,6 +20,28 @@
 	$nome = $user["Nome_Ut"];
 	$cognome = $user["Cognome_Ut"];
 	$email = $user["Mail_Ut"];
+
+function listaBiglietti() {
+	global $username, $connessione;
+	$biglietti=$connessione->query("SELECT * FROM ticket where UsernameUt_T = '$username';");
+	if ($biglietti->num_rows > 0) {
+		$output = "<h3>I tuoi biglietti</h3>";
+		while ($biglietto = $biglietti->fetch_assoc()) {
+			$output .= "<h4>Transazione numero " . $biglietto["ID_T"] . " - spesa totale: " . $biglietto["CostoTot_T"] . " euro</h4>
+				<p>
+					<ul>
+						<li>Numero biglietti interi: " . $biglietto["NumInteri_T"] . "</li>
+						<li>Numero biglietti bambini: " . $biglietto["NumRidottiB_T"] . "</li>
+						<li>Numero biglietti anziani: " . $biglietto["NumRidottiA_T"] . "</li>
+					</ul>
+				</p>";
+		}
+	}
+	else {
+		$output = "";
+	}
+	return $output;
+}
 
 function listaGruppi() {
 	global $username, $connessione;
@@ -62,6 +84,7 @@ function accompagnatore() {
 	$output = str_replace("%Nome%", $nome, $output);
 	$output = str_replace("%Cognome%", $cognome, $output);
 	$output = str_replace("%Email%", $email, $output);
+	$output = str_replace("<p biglietti/>", listaBiglietti(), $output);
 	
 	$sezioneAccompagnatore = $_SESSION["UtenteAccompagnatore"] ? accompagnatore() : "";
 	$output = str_replace("<p accompagnatore/>", $sezioneAccompagnatore, $output);
