@@ -1,22 +1,23 @@
 <?php
 
 	require_once "includes/dbhandler.php";
-	$connessione = connessione();
 	if (!isset($_SESSION)) {
 		session_start();
 	}
-	$tab_name="utente";
-	
-	if (isset($_SESSION["userName"])) {
-		$username = $_SESSION["userName"];
-		$userR = $connessione->query("SELECT Password_Ut,Nome_Ut,Cognome_Ut,Mail_Ut FROM utente WHERE Username_Ut='$username';");
-		$user = mysqli_fetch_array($userR);
-		$password = $user["Password_Ut"];
-		$nome = $user["Nome_Ut"];
-		$cognome = $user["Cognome_Ut"];
-		$email = $user["Mail_Ut"];
+	if (!isset($_SESSION["userName"])) {
+		header("Location: login.php");
+		exit();
 	}
-	if (isset($_POST["mod"])) {
+	$connessione = connessione();
+	
+	$username = $_SESSION["userName"];
+	$result = $connessione->query("SELECT Password_Ut,Nome_Ut,Cognome_Ut,Mail_Ut FROM utente WHERE Username_Ut='$username';");
+	$user = $result->fetch_assoc;
+	$password = $user["Password_Ut"];
+	$nome = $user["Nome_Ut"];
+	$cognome = $user["Cognome_Ut"];
+
+	if (isset($_POST["modifica"])) {
 		$newName = $_POST["name"];
 		$newSurname = $_POST["surname"];
 		$newPassword = $_POST["password"];
@@ -30,22 +31,14 @@
 			$newPassword = $password;
 		}
 		$sql = ("UPDATE utente SET Nome_Ut='$newName',Cognome_Ut='$newSurname',Password_Ut='$newPassword' WHERE Username_Ut='$username';");
-		$result = $connessione->query($sql);
-		if (!$result) {
-			echo "Errore della query: ".$connessione->error;
-			exit();
-		} else {
-			header("Location: profile.php");
-		}
-
-
+		
 		if ($result = $connessione->query($sql)) {
 			header("Location: profile.php");
 			exit();
 		}
 		else {
-			header("Location: contacts.php?error=" . urldecode($connessione->error));
+			//header("Location: profile.php?error=" . urldecode($connessione->error));
+			echo "Errore della query: " . $connessione->error;
 			exit();
 		}
-
 	}

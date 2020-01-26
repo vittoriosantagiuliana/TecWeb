@@ -8,9 +8,11 @@
 	}
 	if (!isset($_SESSION["userName"])) {
 		header("Location: home.php");
+		exit();
 	}
 	if ($_SESSION["userType"] != "admin") {
 		header("Location: user.php");
+		exit();
 	}
 
 	$connessione = connessione();
