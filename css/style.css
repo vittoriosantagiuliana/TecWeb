@@ -936,11 +936,6 @@ textarea {
 /*-REGISTRAZIONE-*/
 /*--------------*/
 
-#signinForm{
-	/*display: inline-block;
-	float: center;*/
-}
-
 #signinForm legend{
 	font-style: italic;
 	font-weight: bolder;
@@ -976,7 +971,6 @@ textarea {
 }
 
 #signinForm input[type="submit"] {
-	margin-right: 5em;
 	margin-bottom: 1em;
 	float: right;
 	font-size: 1em;
@@ -1069,15 +1063,6 @@ textarea {
 }
 
 /*----AREA PERSONALE----*/
-
-#profileText{
-	line-height: 1.5em;
-}
-
-#profileText p{
-	margin-left: 3em;
-	line-height: 2em;
-}
 
 #profile input{
 	width: 25%;
