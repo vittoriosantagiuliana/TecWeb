@@ -50,9 +50,7 @@
 				} elseif ($_POST["class"] != '' && $_POST["scuole"] != '---') {
 					$nomeC = mysqli_real_escape_string($connessione, $_POST["class"]);
 					$nomeI = mysqli_real_escape_string($connessione, $_POST["scuole"]);
-					$sql1 = "INSERT INTO Utente VALUES ('$username','$password','$name','$surname','$email','$birth','$type');";
 					$sql2 = "INSERT INTO gruppo (NumPers_Gr) VALUES ('$number');";
-					$connessione->query($sql1);
 					$connessione->query($sql2);
 					$result1 = $connessione->query("SELECT Citta_Ist FROM Istituto WHERE Nome_Ist='$nomeI';");
 					$result2 = $connessione->query("SELECT ID_Gr FROM gruppo ORDER BY ID_Gr DESC LIMIT 1;");
