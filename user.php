@@ -85,6 +85,7 @@ function accompagnatore() {
 	$sezioneAccompagnatore = $_SESSION["UtenteAccompagnatore"] ? accompagnatore() : "";
 
 	$output = file_get_contents("html/user.html");
+	$output = str_replace("<meta/>", file_get_contents("html/head.html"), $output);
 	$output = str_replace("<div id=\"header\"></div>", Header::build(), $output);
 	$output = str_replace("<div id=\"footer\"></div>", Footer::build(), $output);
 	$output = str_replace("%Username%", $username, $output);

@@ -52,6 +52,7 @@ else
 	$adminForm = "";
 
 	$output = file_get_contents("html/animals.html");
+	$output = str_replace("<meta/>", file_get_contents("html/head.html"), $output);
 	$output = str_replace("<div id=\"header\"></div>", Header::build(), $output);
 	$output = str_replace("<div id=\"footer\"></div>", Footer::build(), $output);
 	$output = str_replace("<div class=\"animalsImg\"/>", listaAnimali(), $output);

@@ -28,7 +28,7 @@ function listaScuole()
 }
 
 	$output = file_get_contents("html/addgroup.html");
-	
+	$output = str_replace("<meta/>", file_get_contents("html/head.html"), $output);
 	$output = str_replace("<div id=\"header\"></div>", Header::build(), $output);
 	$output = str_replace("<div id=\"footer\"></div>", Footer::build(), $output);
 	$output = str_replace("<h2 risultato/>", isset($risultato) ? $risultato : "", $output);
