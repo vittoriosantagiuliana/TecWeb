@@ -27,9 +27,9 @@ class Header
 			$page['Esci'] = 'logout.php';
 		}
 		if (isset($_SESSION["userType"]) && $_SESSION["userType"] == "user") {
-			$page['Area personale'] = 'user.php';
+			$page['Profilo'] = 'user.php';
 		} elseif (isset($_SESSION["userType"]) && $_SESSION["userType"] == "admin") {
-			$page['Amministrazione'] = 'admin.php';
+			$page['Gestione'] = 'admin.php';
 		} else {
 			$page['Accedi'] = 'login.php';
 		}
