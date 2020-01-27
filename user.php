@@ -37,7 +37,7 @@ function listaBiglietti() {
 							<li>Numero biglietti bambini: " . $biglietto["NumRidottiB_T"] . "</li>
 							<li>Numero biglietti anziani: " . $biglietto["NumRidottiA_T"] . "</li>
 						</ul>
-					</p>
+					</p><br/>
 				</div>";
 		}
 	}
@@ -67,8 +67,9 @@ function listaGruppi() {
 		$idGruppo = $gruppo["ID_Gr"];
 		$result = $connessione->query("SELECT A.Nome_Att AS Nome_Att,P.Data_P AS Data_P FROM partecipazione AS P JOIN attivita as A on P.IDAtt_P=A.ID_Att WHERE P.IDGr_P='$idGruppo';");
 		while ($attivita = $result->fetch_assoc()) {
-			"<strong>Attivit&agrave; svolta o prenotata: </strong>" . $attivita['Nome_Att'] . "in data" . $attivita["Data_P"] . "<br/>";
+			$output .="<strong>Attivit&agrave; svolta o prenotata: </strong>" . $attivita['Nome_Att'] . " in data " . $attivita["Data_P"] . "<br/>";
 		}
+			$output .="<br/><br/>";
 	}
 	$output .= "</p>";
 
