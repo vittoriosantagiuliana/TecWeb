@@ -47,6 +47,10 @@ function listaScuole()
 	$output = str_replace("<div error_g_cl/>", isset($error_g_cl) ? "<div class=\"error\">" . $error_g_cl . "</div>" : "", $output);
 	$output = str_replace("<select name=\"scuole\"/>", listaScuole(), $output);
 
+	// mitigazione errori/warning html5
+	$output = str_replace("xml:lang=\"en\"", "lang=\"en\"", $output);
+	$output = str_replace("script type=\"text/javascript\"", "script", $output);
+
 	echo $output;
 
 ?>
