@@ -16,32 +16,32 @@
 			<h2 risultato/>
 			<div id="contactText">
 				<p>Per qualsiasi domanda relativa il parco, le sue strutture o i suoi servizi, non esitare a contattarci!
-					Compila il modulo qui sotto e il nostro staff ti risponderà entro 24 ore!</p><br/>
-					<p><strong>Telefono:</strong> 049 xxxxxxx<br/><strong>Email:</strong> zoo@zoocreola.it</p>
+					Compila il modulo qui sotto e il nostro staff ti risponderà entro 24 ore!</p><br></br>
+					<p><strong>Telefono:</strong> 049 xxxxxxx<br></br><strong>Email:</strong> zoo@zoocreola.it</p>
 			</div>
 			<div id="container">
 				<h1>&bull; CONTATTACI! &bull;</h1>
 				<div class="icon_wrapper">
-					<img src="./images/logo.png" class="icon" alt="logo Zoo"/>
+					<img src="./images/logo.png" class="icon"/>
 				</div>
-				<form id="contact_form" action="sendmessage.php" method="post">
+				<form id="contact_form" action="sendmessage.php" method="POST">
 					<div class="name">
-						<label for="name"></label>
+						<label name="name"></label>
 						<input type="text" placeholder="Nome" name="name" id="name" %ValueUsername% required/>
 					</div>
 					<div class="email">
-						<label for="email"></label>
+						<label name="email"></label>
 						<input type="email" placeholder="E-mail" name="email" id="email" %ValueEmail% required/>
 					</div>
 					<div class="subject">
-						<label for="subject"></label>
+						<label name="subject"></label>
 						<select placeholder="Vorrei scrivervi per..." name="subject" id="subject" required>
-						<option disabled hidden selected>Vorrei scrivervi per...</option>
-						<option>Informazioni sugli animali</option>
-						<option>Orari apertura del parco</option>
-						<option>Informazioni sulle attività del parco</option>
-						<option>Organizzazione eventi</option>
-						<option>Altro...</option>
+							<option disabled hidden selected>Vorrei scrivervi per...</option>
+							<option value="INFORMAZIONI ANIMALI">Informazioni sugli animali</option>
+							<option value="ORARI APERTURA">Orari apertura del parco</option>
+							<option value="INFORMAZIONI ATTIVITA">Informazioni sulle attività del parco</option>
+							<option value="EVENTI">Organizzazione eventi</option>
+							<option value="ALTRO">Altro...</option>
 					</select>
 				</div>
 				<div class="message">
@@ -56,7 +56,7 @@
 			<div id="googleMaps">
 				<h1>Come raggiungerci</h1>
 				<div class="map-responsive"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2801.030142285919!2d11.744632215765485!3d45.40873174516357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477ed8813499be6d%3A0x4ca23e9253266609!2sMontagnola%20Di%20Caretta!5e0!3m2!1sen!2sit!4v1579336355890!5m2!1sen!2sit" width="800" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
-					<p>Zoo Creola <br/>Via Montagnola di Caretta 1<br/>Saccolongo(PD)<br/>049xxxxxxx</p>
+					<p>Zoo Creola <br>Via Montagnola di Caretta 1<br>Saccolongo(PD)<br>049xxxxxxx</p>
 					<h3>Indicazioni stradali</h3>
 					<p>Dopo aver lasciato l'autostrada A31, pendendo l'uscita in corrispondenza del paese di Montegalda, si prosegue lungo la Strada Provinciale 16 per circa 6 km, attraversando i paesi di Montegaldella e Cervarese Santa Croce. Superato il castello di San Martino della Vaneza, si svolta a sinistra seguendo le indicazioni per Saccolongo. Dopo circa 5 km arriviamo ad un bivio che, svoltando a sinistra, ci porterà nella direzione della Chiesa Parrocchiale di Creola. Dopo poco più di un km, lo zoo sarà ben visibile sul lato destro della strada.</p>
 			</div>
