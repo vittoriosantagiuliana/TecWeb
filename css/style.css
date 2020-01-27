@@ -210,6 +210,7 @@ input[type=submit] {
 	width: 6em;
 	float: right;
 	text-align: center;
+	background-color: #d9d9d9;
 }
 
 input[type=submit]:hover{
@@ -218,6 +219,20 @@ input[type=submit]:hover{
 
 input:hover{
 	border-color: grey;
+}
+
+textarea{
+	height: 50%;
+	width:70%;
+	border-radius: 0.4em;
+	resize: none;
+	border: 2px solid #B8B3B2;
+	background-color: #F2F3EB;
+	vertical-align: top;
+}
+
+label textarea{
+	margin-bottom:5em;
 }
 
 .error{
@@ -500,8 +515,11 @@ input:hover{
 }
 
 #homeAnimals img {
-	width: 100%;
-	margin: 5em 0;
+	width: 70%;
+	display: block;
+	margin:0 auto;
+	margin-bottom:3em;
+	margin-top: 3em;
 }
 
 @media screen and (max-width: 1400px){
@@ -765,6 +783,10 @@ form#contact_form {
 	color: #474544;
 }
 
+#googleMaps h3{
+	margin-top:3em;
+}
+
 #googleMaps p{
 	text-align: center;
 	margin-top:2em;
@@ -861,6 +883,23 @@ form#contact_form {
 	text-align: left
 }
 
+#addAnimal{
+	margin-top: 3em;
+}
+
+#addAnimal textarea{
+	height:12em;
+	margin-bottom: 2em;
+}
+
+#addAnimal input[type=submit]{
+	width:10em;
+}
+
+#addAnimal input[type=file]{
+	border:0;
+}
+
 @media screen and (max-width: 640px) {
 	.description {
 		grid-template-columns: auto;
@@ -886,18 +925,19 @@ form#contact_form {
 .activitySection:nth-child(odd){
 	margin-left: 3em;
 	margin-right: 3em;
+	clear: both;
 }
 
 .activitySection:nth-child(even){
 	margin-right: 3em;
 	margin-left: 3em;
-
 }
 
 .activitySection:nth-child(odd) img {
 	float: left;
 	margin-bottom: 3em;
 	margin-right:3em;
+	clear:left;
 
 }
 
@@ -905,7 +945,7 @@ form#contact_form {
 	float: right;
 	margin-bottom: 3em;
 	margin-left:3em;
-
+	clear:right;
 }
 
 #registraAtt{
@@ -929,19 +969,7 @@ form#contact_form {
 }
 
 #registraAtt input[type=submit]{
-	margin-right: 5em;
-	margin-bottom: 1em;
-	float: right;
-	font-size:1em;
-	width:8em;
-	padding:0.4em;
-	border-radius: 0.4em;
-	border: 2px solid #b8b3b2;
-}
-
-#registraAtt input[type=submit]:hover{
-	background-color: #B5B5B5;
-	border-color: grey;
+	width:9em;
 }
 
 #registraAtt select{
@@ -957,41 +985,20 @@ form#contact_form {
 }
 
 #addActivity{
-	margin-top: 8em;
-	width: 75%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-#addActivity legend{
-	font-style: italic;
-	font-weight: bolder;
-	font-size: 1.2em;
-	padding: 0 0.5em;
-}
-
-#addActivity fieldset{
-	border-radius: 1em;
-	padding: 1em;
-	border: 1px solid #D9D7D7;
+	margin-top: 10em;
 }
 
 #addActivity input[type=submit]{
-	margin-right: 5em;
-	margin-bottom: 1em;
-	float: right;
-	font-size:1em;
 	width:9em;
-	padding:0.4em;
-	border-radius: 0.4em;
-	border: 2px solid #b8b3b2;
+}
+#addActivity textarea{
+	height:12em;
+	margin-bottom: 2em;
 }
 
-#addActivity input[type=submit]:hover{
-	background-color: #B5B5B5;
-	border-color: grey;
+#addActivity input[type=file]{
+	border:0;
 }
-
 
 input[type=date]{
 	border-radius: 0.4em;
@@ -1049,17 +1056,6 @@ input[type=date]{
 	border: 1px solid #D9D7D7;
 }
 
-#ticket input[type=submit]{
-	margin-right: 5em;
-	margin-bottom: 1em;
-	float: right;
-	font-size:1em;
-	width:8em;
-	padding:0.4em;
-	border-radius: 0.4em;
-	border: 2px solid #b8b3b2;
-}
-
 #ticket input[type=submit]:hover{
 	background-color: #B5B5B5;
 	border-color: grey;
@@ -1071,20 +1067,23 @@ input[type=date]{
 	-webkit-appearance: none;
 	color: #474544;
 	background-color: #F2F3EB;
+	width:100%;
+	font-size: 1.05em;
+	margin-top:0.5em;
 }
 
 #ticket label{
 	margin-right: 1em;
 }
 
-/*---------------*/
+/*--------------*/
 /*-REGISTRAZIONE-*/
-/*---------------*/
+/*--------------*/
 
 
-/*-------------*/
-/*---PROFILO---*/
-/*-------------*/
+/*--------------*/
+/*-PROFILO-*/
+/*--------------*/
 
 #profileText{
 	line-height: 1.5em;
@@ -1130,13 +1129,3 @@ input[type=date]{
 		margin-right: 0;
 	}
 }
-
-/*-----------------*/
-/*-AMMINISTRAZIONE-*/
-/*-----------------*/
-
-p.prenotazione, p.messaggio {
-	margin-bottom: 1em;
-}
-
-
