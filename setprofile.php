@@ -12,28 +12,25 @@
 	
 	$username = $_SESSION["userName"];
 	$result = $connessione->query("SELECT Password_Ut,Nome_Ut,Cognome_Ut,Mail_Ut FROM utente WHERE Username_Ut='$username';");
-	$user = $result->fetch_assoc;
+	$user = mysqli_fetch_array($result);
 	$password = $user["Password_Ut"];
 	$nome = $user["Nome_Ut"];
 	$cognome = $user["Cognome_Ut"];
 
 	if (isset($_POST["modifica"])) {
-		$newName = $_POST["name"];
-		$newSurname = $_POST["surname"];
-		$newPassword = $_POST["password"];
-		if ($newName == '') {
-			$newName = $nome;
-		}
-		if ($newSurname == '') {
-			$newSurname = $cognome;
-		}
-		if ($newPassword == '') {
-			$newPassword = $password;
-		}
+		$newName=$nome;
+		$newSurname=$cognome;
+		$newPassword=$password;
+		if(isset($_POST["name"]) && $_POST["name"]!='')
+			$newName = $_POST["name"];
+		if(isset($_POST["surname"]) && $_POST["surname"]!='')
+			$newSurname = $_POST["surname"];
+		if(isset($_POST["password"]) && $_POST["password"]!='')
+			$newPassword = $_POST["password"];
 		$sql = ("UPDATE utente SET Nome_Ut='$newName',Cognome_Ut='$newSurname',Password_Ut='$newPassword' WHERE Username_Ut='$username';");
 		
 		if ($result = $connessione->query($sql)) {
-			header("Location: profile.php");
+			header("Location: user.php");
 			exit();
 		}
 		else {
