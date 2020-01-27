@@ -26,7 +26,7 @@ function listaAnimali() {
 }
 
 if (isset($_SESSION["userName"]) && $_SESSION["userType"]=="admin")
-	$adminForm = "<form method=\"post\" action=\"includes/animals.php\" id=\"addAnimal\" enctype=\"multipart/form-data\">
+	$adminForm = "<form method=\"post\" action=\"includes/addAnimal.php\" id=\"addAnimal\" enctype=\"multipart/form-data\">
 		<fieldset>
 			<legend>Aggiungi un nuovo animale</legend>
 			<div>
