@@ -359,6 +359,10 @@ label textarea{
 
 @media screen and (max-width: 640px) {
 
+	#title h1 a{
+		align-content: center;
+	}
+
 	#title h1:hover{
 		-webkit-transform: scale(1);
 		-moz-transform: scale(1);
@@ -604,8 +608,8 @@ label textarea{
 
 @media screen and (max-width:640px){
 	#zooHistory img{
-		height:14em;
-		width: auto;
+		width:100%;
+		height: auto;
 	}
 }
 
