@@ -5,14 +5,12 @@
 		session_start();
 	}
 
-	if (isset($_POST['form_button'])) {
-		if (!isset($_SESSION['userName'])) {
-			$name = mysqli_real_escape_string($connessione, $_POST['name']);
-			$email = mysqli_real_escape_string($connessione, $_POST['email']);
-		}
+	if (isset($_POST["sendmessage"])) {
+		$name = mysqli_real_escape_string($connessione, $_POST['name']);
+		$email = mysqli_real_escape_string($connessione, $_POST['email']);
 		$message = mysqli_real_escape_string($connessione, $_POST['message']);
 		$cat = mysqli_real_escape_string($connessione, $_POST['subject']);
-		$today = new DateTime();
+		$today = date("d-m-Y");
 		$sql = ("INSERT INTO messaggio(Categoria_Mes,Nome_Mes,Mail_Mes,Testo_Mes) VALUES ('$cat','$name','$email','$message','$today');");
 		if ($result = $connessione->query($sql)) {
 			header("Location: contacts.php?done");

@@ -24,14 +24,14 @@
 				<div class="icon_wrapper">
 					<img src="./images/logo.png" class="icon"/>
 				</div>
-				<form id="contact_form">
+				<form id="contact_form" action="sendmessage.php" method="POST">
 					<div class="name">
 						<label name="name"></label>
-						<input type="text" placeholder="Nome" name="name" id="name" %ValueUsername% required>
+						<input type="text" placeholder="Nome" name="name" id="name" %ValueUsername% required/>
 					</div>
 					<div class="email">
 						<label name="email"></label>
-						<input type="email" placeholder="E-mail" name="email" id="email" %ValueEmail% required>
+						<input type="email" placeholder="E-mail" name="email" id="email" %ValueEmail% required/>
 					</div>
 					<div class="subject">
 						<label name="subject"></label>
@@ -49,7 +49,7 @@
 					<textarea name="message" placeholder="Il mio messaggio" id="message" cols="30" rows="5" required></textarea>
 					</div>
 					<div class="submit">
-					<input type="submit" value="Invia" id="form_button" />
+					<input type="submit" value="Invia" name="sendmessage" id="form_button" />
 					</div>
 				</form>
 			</div>
