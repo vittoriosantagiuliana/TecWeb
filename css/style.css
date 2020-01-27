@@ -1034,6 +1034,10 @@ input[type=date]{
 		height: auto;
 		margin: 0;
 	}
+
+	#addActivity{
+		width: 100%;
+	}
 }
 
 /*--------------*/
