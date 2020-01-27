@@ -35,7 +35,7 @@ class Header
 		}
 
 		$output = "<div id=\"navbar\">";
-		$output .= "<i href=\"#\" class=\"fa fa-times-circle\" id=\"closeBtn\" title=\"close menu\"></i>";
+		$output .= "<i class=\"fa fa-times-circle\" id=\"closeBtn\" title=\"close menu\"></i>";
 		foreach ($page as $nome => $indirizzo) {
 			$output .= basename($_SERVER['PHP_SELF']) == $indirizzo ? "<a id=\"current\">" : "<a href=\"$indirizzo\">";
 			$output .= $nome . "</a>";
