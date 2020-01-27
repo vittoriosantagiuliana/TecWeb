@@ -43,7 +43,7 @@
 		if ($result) {
 			header("Location: activities.php");
 		} else {
-			echo "Errore della query: ".$connessione->error;
+			echo "Errore della query: " . $connessione->error;
 			exit();
 		}
 	}

@@ -36,11 +36,6 @@ function formAttivita()
 	global $connessione;
 	$form = "";
 	if (isset($_SESSION["userName"]) && $_SESSION["UtenteAccompagnatore"]) {
-		$username = $_SESSION["userName"];
-		$connessione->query("DROP VIEW IF EXISTS gruppoProva;
-			CREATE VIEW gruppoProva AS SELECT UsernameUt_UA, ID_Gr, NumPers_Gr FROM gruppo, utenteaccompagnatore WHERE UsernameUt_UA='$username' AND IDGr_UA=ID_Gr;");
-		$gruppo = $connessione->query("SELECT GP.UsernameUT_UA AS UsernameUT_UA, GP.ID_Gr AS ID_Gr,GP.NumPers_Gr AS NumPers_Gr,C.Nome_C AS Nome_C,C.NomeIst_C AS NomeIst_C FROM gruppoProva as GP LEFT JOIN classe as C on GP.ID_Gr=C.IDGr_C ORDER BY GP.ID_Gr");
-
 		$form = "<form method=\"post\" action=\"activities.php\" id=\"registraAtt\">
 					<fieldset>
 						<legend>Iscrivi uno dei tuoi gruppi alle attivit&agrave;</legend>
@@ -50,26 +45,32 @@ function formAttivita()
 						<label>Scegli il gruppo da iscrivere</label>
 						<select name=\"group\">%SelectGruppo</select>
 						<br/>
+						%ErroreData%
 						<label>Scegli una data per l'attivit&agrave;</label>
 						<input type=\"date\" name=\"data\"/>
-						%ErroreData%
 						<br/>
 						<input type=\"submit\" name=\"add\" value=\"Iscrivi il gruppo\"/>
 					</fieldset>
 				</form>";
 
+		$username = $_SESSION["userName"];
+		$connessione->query("DROP VIEW IF EXISTS gruppoProva;
+			CREATE VIEW gruppoProva AS SELECT UsernameUt_UA, ID_Gr, NumPers_Gr FROM gruppo, utenteaccompagnatore WHERE UsernameUt_UA='$username' AND IDGr_UA=ID_Gr;");
+		$gruppi = $connessione->query("SELECT GP.UsernameUT_UA AS UsernameUT_UA, GP.ID_Gr AS ID_Gr,GP.NumPers_Gr AS NumPers_Gr,C.Nome_C AS Nome_C,C.NomeIst_C AS NomeIst_C FROM gruppoProva as GP LEFT JOIN classe as C on GP.ID_Gr=C.IDGr_C ORDER BY GP.ID_Gr");
+		$listaAttivita=$connessione->query("SELECT ID_Att, Nome_Att FROM attivita;");
+
 		$selectAttivita = "";
-		while ($attiv = mysqli_fetch_array($attivita)) {
-			$selectAttivita .= "<option value=\"" . $attiv["ID_Att"] . "\">" . $attiv["Nome_Att"] . "</option>";
+		while ($attivita = $listaAttivita->fetch_assoc()) {
+			$selectAttivita .= "<option value=\"" . $attivita["ID_Att"] . "\">" . $attivita["Nome_Att"] . "</option>";
 		}
 		
 		$selectGruppo = "";
-		while ($gr = mysqli_fetch_array($gruppo)) {
-			$selectGruppo .= "<option value=\"" . $gr["ID_Gr"] . "\">";
-			if ($gr['Nome_C'] == null) {
-				$selectGruppo .= "Gruppo di " . $gr["NumPers_Gr"] . " persone";
+		while ($gruppo = $gruppi->fetch_assoc()) {
+			$selectGruppo .= "<option value=\"" . $gruppo["ID_Gr"] . "\">";
+			if ($gruppo['Nome_C'] == null) {
+				$selectGruppo .= "Gruppo di " . $gruppo["NumPers_Gr"] . " persone";
 			} else {
-				$selectGruppo .= "Classe " . $gr["Nome_C"] . " dell'istituto " . $gr["NomeIst_C"] . " (" . $gr["NumPers_Gr"] . " persone)";
+				$selectGruppo .= "Classe " . $gruppo["Nome_C"] . " dell'istituto " . $gruppo["NomeIst_C"] . " (" . $gruppo["NumPers_Gr"] . " persone)";
 			}
 			$selectGruppo .= "</option>";
 		}
