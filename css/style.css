@@ -1077,14 +1077,14 @@ input[type=date]{
 	margin-right: 1em;
 }
 
-/*--------------*/
+/*---------------*/
 /*-REGISTRAZIONE-*/
-/*--------------*/
+/*---------------*/
 
 
-/*--------------*/
-/*-PROFILO-*/
-/*--------------*/
+/*-------------*/
+/*---PROFILO---*/
+/*-------------*/
 
 #profileText{
 	line-height: 1.5em;
@@ -1130,3 +1130,13 @@ input[type=date]{
 		margin-right: 0;
 	}
 }
+
+/*-----------------*/
+/*-AMMINISTRAZIONE-*/
+/*-----------------*/
+
+p.prenotazione, p.messaggio {
+	margin-bottom: 1em;
+}
+
+
