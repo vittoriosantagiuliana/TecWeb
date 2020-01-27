@@ -39,16 +39,19 @@ function formAttivita()
 		$form = "<form method=\"post\" action=\"activities.php\" id=\"registraAtt\">
 					<fieldset>
 						<legend>Iscrivi uno dei tuoi gruppi alle attivit&agrave;</legend>
-						<label>Scegli una delle attivit&agrave;</label>
-						<select name=\"att\">%SelectAttivita%</select>
-						<br/>
-						<label>Scegli il gruppo da iscrivere</label>
-						<select name=\"group\">%SelectGruppo</select>
-						<br/>
+						<div>
+							<label>Scegli una delle attivit&agrave;</label>
+							<select name=\"att\">%SelectAttivita%</select>
+						</div>
+						<div>
+							<label>Scegli il gruppo da iscrivere</label>
+							<select name=\"group\">%SelectGruppo%</select>
+						</div>
 						%ErroreData%
-						<label>Scegli una data per l'attivit&agrave;</label>
-						<input type=\"date\" name=\"data\"/>
-						<br/>
+						<div>
+							<label>Scegli una data per l'attivit&agrave;</label>
+							<input type=\"date\" name=\"data\"/>
+						</div>
 						<input type=\"submit\" name=\"add\" value=\"Iscrivi il gruppo\"/>
 					</fieldset>
 				</form>";
