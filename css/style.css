@@ -149,10 +149,6 @@ body {
 	color: #474544;
 }
 
-img {
-	width: 100%;
-}
-
 form{
 	overflow: hidden;
 }
@@ -504,6 +500,7 @@ input:hover{
 }
 
 #homeAnimals img {
+	width: 100%;
 	margin: 5em 0;
 }
 
