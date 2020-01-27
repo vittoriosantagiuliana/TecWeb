@@ -28,14 +28,14 @@ function listaPrenotazioni() {
 		$output .= "<p class=\"prenotazione\">
 				<strong>Attivit&agrave;: </strong>" . $prenotazione["att"] . "<br/>
 				<strong>Data: </strong>" . $prenotazione["data"] . "<br/>
-				<strong>Numero partecipanti: </strong>" . $prenotazione["persone"] . "<br/>
+				<strong>Numero partecipanti: </strong>" . $prenotazione["persone"] . "<br/><br/>
 			</p>";
 	}
 	return $output;
 }
 function listaMessaggi() {
 	global $connessione;
-	$messaggi = $connessione->query("SELECT * FROM messaggio ORDER BY Data_Mes");
+	$messaggi = $connessione->query("SELECT * FROM messaggio ORDER BY Data_Mes DESC");
 
 	$output = "";
 	while ($messaggio = $messaggi->fetch_assoc()) {
@@ -44,7 +44,7 @@ function listaMessaggi() {
 				<strong>Categoria: </strong>" . $messaggio["Categoria_Mes"] . "<br/>
 				<strong>Nome mittente: </strong>" . $messaggio["Nome_Mes"] . "<br/>
 				<strong>E-mail mittente: </strong>" . $messaggio["Mail_Mes"] . "<br/>
-				<strong>Messaggio: </strong>" . $messaggio["Testo_Mes"] . "<br/>
+				<strong>Messaggio: </strong>" . $messaggio["Testo_Mes"] . "<br/><br/>
 			</p>";
 	}
 	return $output;
