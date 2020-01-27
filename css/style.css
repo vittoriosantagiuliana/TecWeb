@@ -75,10 +75,10 @@ body {
 #title a{
 	text-decoration: none;
 }
-#title h1 {
+#title h1 a {
 	font-family: 'Luckiest Guy';
 	padding-top: 0.3em;
-	font-size: 2.3em;
+	font-size: 1.2em;
 	color: #CFB682 !important;
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
