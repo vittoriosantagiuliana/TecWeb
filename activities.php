@@ -13,7 +13,7 @@ function listaAttivita()
 	global $connessione;
 
 	$listaAtt=$connessione->query("SELECT Nome_Att, Descrizione_Att, Immagine_Att FROM attivita;");
-	
+
 	$attivita = "";
 	while ($singolaAtt = $listaAtt->fetch_assoc()) {
 		$attivita .=
@@ -66,7 +66,7 @@ function formAttivita()
 		while ($attivita = $listaAttivita->fetch_assoc()) {
 			$selectAttivita .= "<option value=\"" . $attivita["ID_Att"] . "\">" . $attivita["Nome_Att"] . "</option>";
 		}
-		
+
 		$selectGruppo = "";
 		while ($gruppo = $gruppi->fetch_assoc()) {
 			$selectGruppo .= "<option value=\"" . $gruppo["ID_Gr"] . "\">";
@@ -79,7 +79,7 @@ function formAttivita()
 		}
 
 		$erroreData = isset($errorD) ? "<div class=\"error\">" . $errorD . "</div>" : "";
-		
+
 		$form = str_replace("%SelectAttivita%", $selectAttivita, $form);
 		$form = str_replace("%SelectGruppo%", $selectGruppo, $form);
 		$form = str_replace("%ErroreData%", $erroreData, $form);
@@ -89,12 +89,18 @@ function formAttivita()
 		$form = "<form method=\"post\" action=\"activities.php\" id=\"addActivity\" enctype=\"multipart/form-data\">
 				<fieldset>
 					<legend>Aggiungi una nuova attivit&agrave;</legend>
-					<label for=\"nomeAtt\">Nome attivit&agrave;: </label>
-					<input type=\"text\" name=\"nomeAtt\"/>
-					<label for=\"descAtt\">Descrizione attivit&agrave;: </label>
-					<textarea name=\"descAtt\" cols=\"30\" rows=\"5\"></textarea>
-					<label for=\"imgAtt\">Inserisci un'immagine per l'attivit&agrave;: </label>
-					<input type=\"file\" name=\"imgAtt\" id=\"imgAtt\" accept=\"image/png, image/jpeg\"/>
+					<div>
+						<label for=\"nomeAtt\">Nome attivit&agrave;: </label>
+						<input type=\"text\" name=\"nomeAtt\"/>
+					</div>
+					<div>
+						<label for=\"descAtt\">Descrizione attivit&agrave;: </label>
+						<textarea name=\"descAtt\" cols=\"30\" rows=\"5\"></textarea>
+					</div>
+					<div>
+						<label for=\"imgAtt\">Inserisci un'immagine per l'attivit&agrave;: </label>
+						<input type=\"file\" name=\"imgAtt\" id=\"imgAtt\" accept=\"image/png, image/jpeg\"/>
+					</div>
 					<input type=\"submit\" name=\"addAtt\" value=\"Aggiungi attivit&agrave;\"/>
 				</fieldset>
 			</form>";
