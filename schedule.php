@@ -16,56 +16,17 @@
 					</tr>
 					<tr>
 						<td>Biglietto intero</td>
-						<td>
-							<select name=\"intero\">
-								<option value=\"0\">0</option>
-								<option value=\"1\">1</option>
-								<option value=\"2\">2</option>
-								<option value=\"3\">3</option>
-								<option value=\"4\">4</option>
-								<option value=\"5\">5</option>
-								<option value=\"6\">6</option>
-								<option value=\"7\">7</option>
-								<option value=\"8\">8</option>
-								<option value=\"9\">9</option>
-								<option value=\"10\">10</option>
-						</td>
+						<td><input type=\"number\" name=\"intero\" min=\"0\" max=\"10\"/></td>
 						<td>12.00€</td>
 					</tr>
 					<tr>
-						<td>Biglietto ridotto &lpar;under 10&rpar;</td>
-						<td>
-							<select name=\"ridottoB\">
-								<option value=\"0\">0</option>
-								<option value=\"1\">1</option>
-								<option value=\"2\">2</option>
-								<option value=\"3\">3</option>
-								<option value=\"4\">4</option>
-								<option value=\"5\">5</option>
-								<option value=\"6\">6</option>
-								<option value=\"7\">7</option>
-								<option value=\"8\">8</option>
-								<option value=\"9\">9</option>
-								<option value=\"10\">10</option>
-						</td>
+						<td>Biglietto ridotto (under 10)</td>
+						<td><input type=\"number\" name=\"ridottoB\" min=\"0\" max=\"10\"/></td>
 						<td>8.00€</td>
 					</tr>
 					<tr>
-						<td>Biglietto ridotto &lpar;over 65&rpar;</td>
-						<td>
-							<select name=\"ridottoA\">
-							<option value=\"0\">0</option>
-							<option value=\"1\">1</option>
-							<option value=\"2\">2</option>
-							<option value=\"3\">3</option>
-							<option value=\"4\">4</option>
-							<option value=\"5\">5</option>
-							<option value=\"6\">6</option>
-							<option value=\"7\">7</option>
-							<option value=\"8\">8</option>
-							<option value=\"9\">9</option>
-							<option value=\"10\">10</option>
-						</td>
+						<td>Biglietto ridotto (over 65)</td>
+						<td><input type=\"number\" name=\"ridottoA\" min=\"0\" max=\"10\"/></td>
 						<td>10.00€</td>
 					</tr>
 				</table>
