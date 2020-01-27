@@ -20,7 +20,6 @@ function listaAttivita()
         "<div class=\"activitySection\">
 			<img src=\"data:image/jpeg;base64,%ImgB64%\" alt=\"%NomeAtt%\"/>
 			<strong>%NomeAtt%</strong>
-			&nbsp;&#45;&nbsp;
 			<p>%DescrizioneAtt%</p>
 		</div>";
 
