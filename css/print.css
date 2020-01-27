@@ -1,51 +1,154 @@
-	
-	
-	
-	
-	*{
-		color: black;
-		background:white;
-		box-shadow:none;
-	}
-
-
-	a{
-		color:black;
-		text-decoration: none;
-	}
-
-	a:visited{
-		color:black;
-		text-decoration: none;
-	}
-
-	#header{
-		background:white;
-		box-shadow: none;
-	}
-
-	#breadcrumb{
-		background:white;
-		box-shadow: none;
-	}
-
-	#content{
-		background:white;
-		width:100%;
-		box-shadow: none;
-	}
-
-	#navbar{
-		display: none;
-	}
-
-	#footer #social{
-		display:none;
-	}
-
-	#footer{
-		box-shadow: none;
-		line-height: 1.5em;
-	}
+*{
+	color: black;
+	background:white;
+	box-shadow:none;
+	font-family: Arial;
 }
 
+html,
+body {
+	margin-top: 0px !important;
+	padding-top: 0px;
+	margin-bottom: 0em;
+	padding-bottom: 0em;
+	font-family: Arial;
+}
+
+h1,h2,h3{
+	color:black;
+	font-family: Georgia, "Times New Roman", Times, serif !important;
+	font-weight: bold;
+}
+
+a{
+	color:black;
+}
+
+#header{
+	display: none;
+}
+
+a:visited{
+	color:black;
+	text-decoration: none;
+	font-family: Arial;
+}
+
+#footer{
+	display: none;
+}
+
+#title h1{
+	color:black;
+}
+
+#breadcrumb{
+	background:white;
+	box-shadow: none;
+	margin: 0;
+}
+
+#content{
+	padding:0;
+	background:white;
+	margin:0;
+	box-shadow: none;
+	float: none;
+}
+
+/*----HOME----*/
+
+#backgroundContent{
+	display: none;
+	margin: 0;
+}
+
+.barItem img{
+	height: 8em;
+	width: auto;
+}
+
+#homeAnimals{
+	margin:0;
+	margin-bottom: 3em;
+}
+
+/*---CONTATTI---*/
+
+#googleMaps iframe{
+	display:none;
+}
+
+.map-responsive{
+	border:0;
+	height: 0;
+	display: none;
+}
+
+#container{
+	display: none;
+}
+
+/*---ATTIVITA'--*/
+
+.activitySection{
+	margin:0;
+}
+
+.activitySection img{
+	width:20em;
+	height: auto;
+	margin-bottom: 1em;
+}
+
+.activitySection:nth-child(odd) img {
+	float: none;
+	margin:0 auto;
+	display: block;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.activitySection:nth-child(even) img {
+	float:none;
+	margin:0 auto;
+	display: block;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#addActivity{
+	display: none;
+}
+
+#registraAtt{
+	display: none;
+}
+
+/*---ANIMALI--*/
+
+#animalsContainer img{
+	height:5em;
+	width: auto;
+}
+
+#addAnimal{
+	display: none;
+}
+
+/*---STORIA---*/
+
+#zooHistory{
+	font-size: 1em;
+}
+
+#zooHistory img{
+	height: 20em;
+	width: auto;
+}
+
+/*---PROFILO---*/
+
+#profile{
+	display: none;
+}
