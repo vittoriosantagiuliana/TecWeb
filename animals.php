@@ -29,22 +29,38 @@ if (isset($_SESSION["userName"]) && $_SESSION["userType"]=="admin")
 	$adminForm = "<form method=\"post\" action=\"includes/animals.php\" id=\"addAnimal\" enctype=\"multipart/form-data\">
 		<fieldset>
 			<legend>Aggiungi un nuovo animale</legend>
-			<label for=\"nomeA\">Nome Comune: </label>
-			<input type=\"text\" name=\"nomeA\"/>
-			<label for=\"scieA\">Nome Scientifico: </label>
-			<input type=\"text\" name=\"scieA\"/>
-			<label for=\"ordA\">Ordine: </label>
-			<input type=\"text\" name=\"ordA\"/>
-			<label for=\"famA\">Famiglia: </label>
-			<input type=\"text\" name=\"famA\"/>
-			<label for=\"habA\">Habitat: </label>
-			<textarea name=\"habA\" cols=\"30\" rows=\"2\"></textarea>
-			<label for=\"ripA\">Riproduzione: </label>
-			<textarea name=\"ripA\" cols=\"30\" rows=\"2\"></textarea>
-			<label for=\"curioA\">Curiosit&agrave;: </label>
-			<textarea name=\"curioA\" cols=\"30\" rows=\"2\"></textarea>
-			<label for=\"imgA\">Inserisci un'immagine per l'animale: </label>
-			<input type=\"file\" name=\"imgA\" id=\"imgA\" accept=\"image/png, image/jpeg\"/>
+			<div>
+				<label for=\"nomeA\">Nome Comune: </label>
+				<input type=\"text\" name=\"nomeA\"/>
+			</div>
+			<div>
+				<label for=\"scieA\">Nome Scientifico: </label>
+				<input type=\"text\" name=\"scieA\"/>
+			</div>
+			<div>
+				<label for=\"ordA\">Ordine: </label>
+				<input type=\"text\" name=\"ordA\"/>
+			</div>
+			<div>
+				<label for=\"famA\">Famiglia: </label>
+				<input type=\"text\" name=\"famA\"/>
+			</div>
+			<div>
+				<label for=\"habA\">Habitat: </label>
+				<textarea name=\"habA\" cols=\"30\" rows=\"2\"></textarea>
+			</div>
+			<div>
+				<label for=\"ripA\">Riproduzione: </label>
+				<textarea name=\"ripA\" cols=\"30\" rows=\"2\"></textarea>
+			</div>
+			<div>
+				<label for=\"curioA\">Curiosit&agrave;: </label>
+				<textarea name=\"curioA\" cols=\"30\" rows=\"2\"></textarea>
+			</div>
+			<div>
+				<label for=\"imgA\">Inserisci un'immagine per l'animale: </label>
+				<input type=\"file\" name=\"imgA\" id=\"imgA\" accept=\"image/png, image/jpeg\"/>
+			</div>
 			<input type=\"submit\" name=\"addAnimal\" value=\"Aggiungi animale\"/>
 		</fieldset>
 	</form>";
