@@ -31,13 +31,11 @@ function listaBiglietti() {
 		while ($biglietto = $biglietti->fetch_assoc()) {
 			$output .= "<div class=\"biglietto\">
 					<h4>Transazione numero " . $biglietto["ID_T"] . " - spesa totale: " . $biglietto["CostoTot_T"] . " euro</h4>
-					<p>
-						<ul>
-							<li>Numero biglietti interi: " . $biglietto["NumInteri_T"] . "</li>
-							<li>Numero biglietti bambini: " . $biglietto["NumRidottiB_T"] . "</li>
-							<li>Numero biglietti anziani: " . $biglietto["NumRidottiA_T"] . "</li>
-						</ul>
-					</p><br/>
+					<ul>
+						<li>Numero biglietti interi: " . $biglietto["NumInteri_T"] . "</li>
+						<li>Numero biglietti bambini: " . $biglietto["NumRidottiB_T"] . "</li>
+						<li>Numero biglietti anziani: " . $biglietto["NumRidottiA_T"] . "</li>
+					</ul>
 				</div>";
 		}
 	}

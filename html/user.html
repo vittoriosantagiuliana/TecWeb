@@ -17,17 +17,19 @@
 			<h1>I tuoi dati</h1>
 			<h2>Benvenuto, %Username%</h2>
 			<form method="post" action="setprofile.php" id="profile">
-				<label>Username:</label>
-					<input type="text" name="user" readonly="readonly" placeholder="%Username%"/><br/>
-				<label>Password:</label>
-					<input type="password" name="password"/><br/>
-				<label>Nome:</label>
-					<input type="text" name="name" placeholder="%Nome%"/><br/>
-				<label>Cognome:</label>
-					<input type="text" name="surname" placeholder="%Cognome%"/><br/>
-				<label>Email:</label>
-					<input type="text" name="email" readonly="readonly" placeholder="%Email%"/><br/>
-				<input type="submit" name="modifica" value="Modifica i dati"/>
+				<div>
+					<label>Username:</label>
+						<input type="text" name="user" readonly="readonly" value="%Username%"/><br/>
+					<label>Password:</label>
+						<input type="password" name="password"/><br/>
+					<label>Nome:</label>
+						<input type="text" name="name" value="%Nome%"/><br/>
+					<label>Cognome:</label>
+						<input type="text" name="surname" value="%Cognome%"/><br/>
+					<label>Email:</label>
+						<input type="text" name="email" readonly="readonly" value="%Email%"/><br/>
+					<input type="submit" name="modifica" value="Modifica i dati"/>
+				</div>
 			</form>
 			<p biglietti/>
 			<p accompagnatore/>
