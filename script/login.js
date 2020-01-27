@@ -1,5 +1,5 @@
 
-function login () {
+function groupForm () {
 	var formGruppo = document.getElementById('gruppo');
 	var formScuola = document.getElementById('scuola');
 	var btnAccompagnatore = document.getElementById('btnAccompagnatore');

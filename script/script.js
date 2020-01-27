@@ -14,5 +14,5 @@ window.onload = function () {
 		{ topButton.style.display = "none"; }
 	}
 	
-	if (typeof(login) === "function") { login(); }
+	if (typeof(groupForm) === "function") { groupForm(); }
 };
