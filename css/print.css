@@ -152,3 +152,9 @@ a:visited{
 #profile{
 	display: none;
 }
+
+/*---ORARI E BIGLIETTI---*/
+
+#ticket{
+	display:none;
+}

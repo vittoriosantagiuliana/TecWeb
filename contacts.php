@@ -3,6 +3,8 @@
 	require_once "includes/header.php";
 	require_once "includes/footer.php";
 	require_once "includes/dbhandler.php";
+	require_once "sendmessage.php";
+	
 	if (!isset($_SESSION)) {
 		session_start();
 	}
