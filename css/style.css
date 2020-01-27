@@ -275,6 +275,10 @@ label textarea{
 	font-family: "Raleway";
 }
 
+#validator img{
+	height: 2em;
+	width: 4.2em;
+}
 #socialContainer {
 	position: relative;
 	display: flex;
@@ -574,12 +578,12 @@ label textarea{
 	margin: 1em 0 1em 0;
 }
 
-/*--------------------------*/
-/*--HOMEPAGE->INFORMAZIONI--*/
-/*--------------------------*/
+/*-----------------------------*/
+/*---HOMEPAGE->INFORMAZIONI---*/
+/*---------------------------*/
 
 #informationList ul{
-	margin: 2em 0;
+	margin-bottom: 2em;
 }
 
 #informationList li{
@@ -587,18 +591,27 @@ label textarea{
 	margin-left: 1em;
 }
 
+@media screen and (max-width: 640px){
+	#informationList li{
+
+	}
+}
+
 /*---------------*/
 /* STORIA */
 /*---------------*/
 
-img.history{
+#zooHistory img{
 	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	height: 30em;
-	margin: 3em auto;
+	width: auto;
+	margin-bottom: 3em;
 }
 
 @media screen and (max-width:640px){
-	img.history{
+	#zooHistory img{
 		width:100%;
 		height: auto;
 	}
