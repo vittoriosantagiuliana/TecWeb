@@ -91,11 +91,11 @@ function formAttivita()
 					<legend>Aggiungi una nuova attivit&agrave;</legend>
 					<div>
 						<label for=\"nomeAtt\">Nome attivit&agrave;: </label>
-						<input type=\"text\" name=\"nomeAtt\"/>
+						<input type=\"text\" name=\"nomeAtt\" id=\"nomeAtt\"/>
 					</div>
 					<div>
 						<label for=\"descAtt\">Descrizione attivit&agrave;: </label>
-						<textarea name=\"descAtt\" cols=\"30\" rows=\"5\"></textarea>
+						<textarea id=\"descAtt\" name=\"descAtt\" cols=\"30\" rows=\"5\"></textarea>
 					</div>
 					<div>
 						<label for=\"imgAtt\">Inserisci un'immagine per l'attivit&agrave;: </label>
