@@ -15,5 +15,5 @@ window.onload = function () {
 	}
 	
 	if (typeof(groupForm) === "function") { groupForm(); }
-	if (typeof(mailCheck) === "function") { groupForm(); }
+	if (typeof(mailCheck) === "function") { mailCheck(); }
 };
