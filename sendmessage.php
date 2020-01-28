@@ -10,7 +10,7 @@
 		$email = mysqli_real_escape_string($connessione, $_POST['email']);
 		$message = mysqli_real_escape_string($connessione, $_POST['message']);
 		$cat = mysqli_real_escape_string($connessione, $_POST['subject']);
-		$today = date("d-m-Y");
+		$today = date("Y-m-d");
 		$sql = ("INSERT INTO messaggio(Categoria_Mes,Nome_Mes,Mail_Mes,Testo_Mes,Data_Mes) VALUES ('$cat','$name','$email','$message','$today');");
 		if ($result = $connessione->query($sql)) {
 			header("Location: contacts.php?done");
