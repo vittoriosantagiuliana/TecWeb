@@ -6,4 +6,16 @@ function groupForm () {
 	btnScuola.onclick = function () { checkScuola(); }
 	document.getElementById('btnScuolaNo').onclick = function () { checkScuola(); }
 	checkScuola();
+
+	var numberInput = document.forms.namedItem("addGroupForm")["num"];
+
+	numberInput.oninput = function () {
+		var numRegExp = new RegExp("^[1-5][0-9]$");
+		if (!numRegExp.test(numberInput.value))
+			alert("A");
+	}
+
 }
+
+
+
