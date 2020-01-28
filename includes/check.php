@@ -16,3 +16,7 @@ function sanitizeNumber ($n) {
 function sanitizeEmail ($e) {
 	return filter_var($e, FILTER_SANITIZE_EMAIL);
 }
+
+function sanitizeString ($s) {
+	return filter_var(trim($s), FILTER_SANITIZE_STRING);
+}
