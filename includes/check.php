@@ -12,3 +12,7 @@ function sanitizeNumber ($n) {
 	$temp = filter_var($n, FILTER_SANITIZE_NUMBER_INT);
 	return $temp > 0 ? $temp : 0;
 }
+
+function sanitizeEmail ($e) {
+	return filter_var($e, FILTER_SANITIZE_EMAIL);
+}
