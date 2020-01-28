@@ -356,7 +356,7 @@ label textarea{
 	}
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
 
 	#title h1 a{
 		align-content: center;

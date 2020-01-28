@@ -9,11 +9,11 @@
 		if ($_POST["data"]=='') {
 			$errorD="Inserisci una data per la tua prenotazione!";
 		} else {
-			$idA=mysqli_real_escape_string($connessione, $_POST["att"]);
-			$idG=mysqli_real_escape_string($connessione, $_POST["group"]);
-			$date=mysqli_real_escape_string($connessione, $_POST["data"]);
-			$today=new DateTime();
-			$choice=new DateTime($date);
+			$idA = mysqli_real_escape_string($connessione, $_POST["att"]);
+			$idG = mysqli_real_escape_string($connessione, $_POST["group"]);
+			$date = mysqli_real_escape_string($connessione, $_POST["data"]);
+			$today = new DateTime();
+			$choice = new DateTime($date);
 			if ($choice <= $today) {
 				$errorD = "Inserisci una data valida per la tua prenotazione!";
 			} else {

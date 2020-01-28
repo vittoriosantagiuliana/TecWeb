@@ -57,9 +57,9 @@ function formAttivita()
 				</form>";
 
 		$username = $_SESSION["userName"];
-		$connessione->query("DROP VIEW IF EXISTS gruppoProva;
-			CREATE VIEW gruppoProva AS SELECT UsernameUt_UA, ID_Gr, NumPers_Gr FROM gruppo, utenteaccompagnatore WHERE UsernameUt_UA='$username' AND IDGr_UA=ID_Gr;");
-		$gruppi = $connessione->query("SELECT GP.UsernameUT_UA AS UsernameUT_UA, GP.ID_Gr AS ID_Gr,GP.NumPers_Gr AS NumPers_Gr,C.Nome_C AS Nome_C,C.NomeIst_C AS NomeIst_C FROM gruppoProva as GP LEFT JOIN classe as C on GP.ID_Gr=C.IDGr_C ORDER BY GP.ID_Gr");
+		
+		$gruppi = $connessione->query("SELECT ID_Gr AS ID, NumPers_Gr AS NumeroPersone, Nome_C AS Classe, NomeIst_C AS Istituto FROM utenteaccompagnatore INNER JOIN gruppo ON IDGr_UA = ID_Gr LEFT OUTER JOIN classe ON ID_Gr = IDGr_C WHERE UsernameUt_UA = '$username';");
+
 		$listaAttivita=$connessione->query("SELECT ID_Att, Nome_Att FROM attivita;");
 
 		$selectAttivita = "";
@@ -69,11 +69,11 @@ function formAttivita()
 
 		$selectGruppo = "";
 		while ($gruppo = $gruppi->fetch_assoc()) {
-			$selectGruppo .= "<option value=\"" . $gruppo["ID_Gr"] . "\">";
-			if ($gruppo['Nome_C'] == null) {
-				$selectGruppo .= "Gruppo di " . $gruppo["NumPers_Gr"] . " persone";
+			$selectGruppo .= "<option value=\"" . $gruppo["ID"] . "\">";
+			if ($gruppo["Classe"] == null) {
+				$selectGruppo .= "Gruppo di " . $gruppo["NumeroPersone"] . " persone";
 			} else {
-				$selectGruppo .= "Classe " . $gruppo["Nome_C"] . " dell'istituto " . $gruppo["NomeIst_C"] . " (" . $gruppo["NumPers_Gr"] . " persone)";
+				$selectGruppo .= "Classe " . $gruppo["Classe"] . " dell'istituto " . $gruppo["Istituto"] . " (" . $gruppo["NumeroPersone"] . " persone)";
 			}
 			$selectGruppo .= "</option>";
 		}
