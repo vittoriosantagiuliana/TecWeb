@@ -341,6 +341,14 @@ label textarea{
 	#navbar {
 		margin: 0;
 	}
+	
+	#title h1 a{
+		font-size: 1.1em;
+	}
+	
+	#navbar a{
+		font-size: 1em;
+	}
 
 	#content {
 		margin: 0;
