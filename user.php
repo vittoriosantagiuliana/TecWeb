@@ -49,7 +49,7 @@ function listaGruppi() {
 	global $username, $connessione;
 	$output = "<p>";
 
-	$gruppi = $connessione->query("SELECT ID_Gr AS ID, NumPers_Gr AS NumeroPersone, Nome_C AS Classe, NomeIst_C AS Istituto FROM utenteaccompagnatore INNER JOIN gruppo ON IDGr_UA = ID_Gr LEFT OUTER JOIN classe ON ID_Gr = IDGr_C;");
+	$gruppi = $connessione->query("SELECT ID_Gr AS ID, NumPers_Gr AS NumeroPersone, Nome_C AS Classe, NomeIst_C AS Istituto FROM utenteaccompagnatore INNER JOIN gruppo ON IDGr_UA = ID_Gr LEFT OUTER JOIN classe ON ID_Gr = IDGr_C WHERE UsernameUt_UA = '$username';");
 
 	while ($gruppo = $gruppi->fetch_assoc()) {
 		if ($gruppo["Classe"] == NULL) {
