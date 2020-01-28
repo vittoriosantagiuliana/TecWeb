@@ -48,21 +48,20 @@ function listaBiglietti() {
 function listaGruppi() {
 	global $username, $connessione;
 	$output = "<p>";
-	$connessione->query("DROP VIEW IF EXISTS gruppoProva; CREATE VIEW gruppoProva AS SELECT UsernameUt_UA, ID_Gr, NumPers_Gr FROM gruppo, utenteaccompagnatore WHERE UsernameUt_UA='$username' AND IDGr_UA=ID_Gr;");
-	$gruppi = $connessione->query("SELECT GP.UsernameUT_UA AS UsernameUT_UA, GP.ID_Gr AS ID_Gr,GP.NumPers_Gr AS NumPers_Gr,C.Nome_C AS Nome_C,C.NomeIst_C AS NomeIst_C FROM gruppoProva as GP LEFT JOIN classe as C on GP.ID_Gr=C.IDGr_C ORDER BY GP.ID_Gr;");
+
+	$gruppi = $connessione->query("SELECT ID_Gr AS ID, NumPers_Gr AS NumeroPersone, Nome_C AS Classe, NomeIst_C AS Istituto FROM utenteaccompagnatore INNER JOIN gruppo ON IDGr_UA = ID_Gr LEFT OUTER JOIN classe ON ID_Gr = IDGr_C;");
 
 	while ($gruppo = $gruppi->fetch_assoc()) {
-
-		if ($gruppo["Nome_C"] == NULL) {
+		if ($gruppo["Classe"] == NULL) {
 			$output .= "<strong>Tipologia gruppo: </strong>gruppo generico<br/>
-			<strong>Numero di persone: </strong>" . $gruppo["NumPers_Gr"] . "<br/>";
+			<strong>Numero di persone: </strong>" . $gruppo["NumeroPersone"] . "<br/>";
 		} else {
 			$output .= "<strong>Tipologia gruppo: </strong>classe scolastica<br/>
-			<strong>Numero di persone: </strong>" . $gruppo["NumPers_Gr"] . "<br/>
-			<strong>Nome classe: </strong>" . $gruppo["Nome_C"] . "<br/>
-			<strong>Nome istituto: </strong>" . $gruppo["NomeIst_C"] . "<br/>";
+			<strong>Numero di persone: </strong>" . $gruppo["NumeroPersone"] . "<br/>
+			<strong>Nome classe: </strong>" . $gruppo["Classe"] . "<br/>
+			<strong>Nome istituto: </strong>" . $gruppo["Istituto"] . "<br/>";
 		}
-		$idGruppo = $gruppo["ID_Gr"];
+		$idGruppo = $gruppo["ID"];
 		$result = $connessione->query("SELECT A.Nome_Att AS Nome_Att,P.Data_P AS Data_P FROM partecipazione AS P JOIN attivita as A on P.IDAtt_P=A.ID_Att WHERE P.IDGr_P='$idGruppo';");
 		while ($attivita = $result->fetch_assoc()) {
 			$output .="<strong>Attivit&agrave; svolta o prenotata: </strong>" . $attivita['Nome_Att'] . " in data " . $attivita["Data_P"] . "<br/>";
