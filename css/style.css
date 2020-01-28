@@ -809,7 +809,8 @@ form#contact_form {
 		display: block;
 		margin: 0 auto;
 }
-.map-responsive iframe{
+
+.map-responsive object{
     left:0;
     top:0;
     height:100%;
