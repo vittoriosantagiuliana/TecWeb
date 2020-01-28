@@ -158,19 +158,6 @@ INSERT INTO `gruppo` (`ID_Gr`, `NumPers_Gr`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struttura stand-in per le viste `gruppoprova`
--- (Vedi sotto per la vista effettiva)
---
-DROP VIEW IF EXISTS `gruppoprova`;
-CREATE TABLE `gruppoprova` (
-`UsernameUt_UA` varchar(20)
-,`ID_Gr` int(10) unsigned
-,`NumPers_Gr` int(10) unsigned
-);
-
--- --------------------------------------------------------
-
---
 -- Struttura della tabella `istituto`
 --
 
@@ -310,13 +297,6 @@ INSERT INTO `utenteaccompagnatore` (`UsernameUt_UA`, `IDGr_UA`) VALUES
 ('accompagnatore', 6);
 
 -- --------------------------------------------------------
-
---
--- Struttura per vista `gruppoprova`
---
-DROP TABLE IF EXISTS `gruppoprova`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `gruppoprova`  AS  select `utenteaccompagnatore`.`UsernameUt_UA` AS `UsernameUt_UA`,`gruppo`.`ID_Gr` AS `ID_Gr`,`gruppo`.`NumPers_Gr` AS `NumPers_Gr` from (`gruppo` join `utenteaccompagnatore`) where `utenteaccompagnatore`.`UsernameUt_UA` = 'accompagnatore' and `utenteaccompagnatore`.`IDGr_UA` = `gruppo`.`ID_Gr` ;
 
 --
 -- Indici per le tabelle scaricate
