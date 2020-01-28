@@ -19,10 +19,11 @@ function listaScuole()
 	
 	$selectScuole = "<select name=\"scuole\">
 						<option value=\"---\">- - -</option>";
-	while($scuola = $scuole->fetch_assoc())
+	while ($scuola = $scuole->fetch_assoc()) {
 		$selectScuole .= "<option value=\"" . $scuola["Nome_Ist"] . "\">" .
 			$scuola["Nome_Ist"] . " (" . $scuola["Citta_Ist"] . ")" .
 			"</option>";
+	}
 	$selectScuole .= "</select>";
 	return $selectScuole;
 }
@@ -38,4 +39,3 @@ function listaScuole()
 	$output = str_replace("<select name=\"scuole\"/>", listaScuole(), $output);
 
 	echo $output;
-?>
