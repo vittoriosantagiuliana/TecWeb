@@ -12,7 +12,7 @@ function groupForm () {
 	numberInput.oninput = function () {
 		var numRegExp = new RegExp("^[1-5][0-9]$");
 		if (!numRegExp.test(numberInput.value))
-			alert("A");
+			numberInput.value = numberInput.value.substring(0, str.length - 1);
 	}
 
 }

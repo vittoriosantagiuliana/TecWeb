@@ -118,6 +118,8 @@ function formAttivita()
 	$output = str_replace("<div activitySection/>", listaAttivita(), $output);
 	$output = str_replace("<div activityForm/>", formAttivita(), $output);
 
-
+	// mitigazione errori/warning html5
+	$output = str_replace("xml:lang=\"en\"", "lang=\"en\"", $output);
+	$output = str_replace("script type=\"text/javascript\"", "script", $output);
 
 	echo $output;
