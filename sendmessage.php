@@ -15,11 +15,8 @@
 		if ($result = $connessione->query($sql)) {
 			header("Location: contacts.php?done");
 			exit();
-		}
-		else {
+		} else {
 			header("Location: contacts.php?error=" . urlencode($connessione->error));
 			exit();
 		}
-
 	}
-?>
