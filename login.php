@@ -7,20 +7,21 @@
 	require_once "includes/dbhandler.php";
 	$connessione = connessione();
 
-	if (!isset($_SESSION))
+	if (!isset($_SESSION)) {
 		session_start();
+	}
 
-function listaScuole()
-{
+function listaScuole() {
 	global $connessione;
 	$scuole = $connessione->query("SELECT Nome_Ist, Citta_Ist FROM istituto");
 	
 	$selectScuole = "<select name=\"scuole\">
 						<option value=\"---\">- - -</option>";
-	while($scuola = $scuole->fetch_assoc())
+	while ($scuola = $scuole->fetch_assoc()) {
 		$selectScuole .= "<option value=\"" . $scuola["Nome_Ist"] . "\">" .
 			$scuola["Nome_Ist"] . " (" . $scuola["Citta_Ist"] . ")" .
 			"</option>";
+	}
 	$selectScuole .= "</select>";
 	return $selectScuole;
 }
@@ -52,5 +53,3 @@ function listaScuole()
 	$output = str_replace("script type=\"text/javascript\"", "script", $output);
 
 	echo $output;
-
-?>

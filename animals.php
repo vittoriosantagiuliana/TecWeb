@@ -3,8 +3,9 @@
 	require_once "includes/footer.php";
 	require_once "includes/dbhandler.php";
 	$connessione = connessione();
-	if (!isset($_SESSION))
-			session_start();
+	if (!isset($_SESSION)) {
+		session_start();
+	}
 
 function listaAnimali() {
 	global $connessione;
@@ -26,7 +27,7 @@ function listaAnimali() {
 }
 
 function adminForm() {
-	if (isset($_SESSION["userName"]) && $_SESSION["userType"]=="admin")
+	if (isset($_SESSION["userName"]) && $_SESSION["userType"]=="admin") {
 		$form = "<form method=\"post\" action=\"addanimal.php\" id=\"addAnimal\" enctype=\"multipart/form-data\">
 			<fieldset>
 				<legend>Aggiungi un nuovo animale</legend>
@@ -65,8 +66,9 @@ function adminForm() {
 				<input type=\"submit\" name=\"addAnimal\" value=\"Aggiungi animale\"/>
 			</fieldset>
 		</form>";
-	else
+	} else {
 		$form = "";
+	}
 	return $form;
 }
 
@@ -77,6 +79,4 @@ function adminForm() {
 	$output = str_replace("<div class=\"animalsImg\"/>", listaAnimali(), $output);
 	$output = str_replace("<form admin/>", adminForm(), $output);
 
-
 	echo $output;
-?>

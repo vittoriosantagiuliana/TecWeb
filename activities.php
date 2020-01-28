@@ -8,8 +8,7 @@
 		session_start();
 	}
 
-function listaAttivita()
-{
+function listaAttivita() {
 	global $connessione;
 
 	$listaAtt=$connessione->query("SELECT Nome_Att, Descrizione_Att, Immagine_Att FROM attivita;");
@@ -31,8 +30,7 @@ function listaAttivita()
 	return $attivita;
 }
 
-function formAttivita()
-{
+function formAttivita() {
 	global $connessione;
 	$form = "";
 	if (isset($_SESSION["userName"]) && $_SESSION["UtenteAccompagnatore"]) {
