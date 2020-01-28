@@ -31,11 +31,6 @@ a.button:hover {
 	box-shadow: 0 0 0.3em #777;
 }
 
-
-#homeAnimals{
-	margin-top: 10em;
-}
-
 h1,h2,h3{
 	font-family: 'Luckiest Guy';
 }
@@ -522,12 +517,15 @@ label textarea{
 	transform: scale(1.1);
 }
 
+#homeAnimals{
+	margin-top: 10em;
+}
+
+
 #homeAnimals img {
 	width: 70%;
 	display: block;
-	margin:0 auto;
-	margin-bottom:3em;
-	margin-top: 3em;
+	margin: 3em auto;
 }
 
 @media screen and (max-width: 1400px){
@@ -583,7 +581,7 @@ label textarea{
 /*---------------------------*/
 
 #informationList ul{
-	margin-bottom: 2em;
+	margin: 2em 0;
 }
 
 #informationList li{
@@ -591,23 +589,15 @@ label textarea{
 	margin-left: 1em;
 }
 
-@media screen and (max-width: 640px){
-	#informationList li{
-
-	}
-}
-
 /*---------------*/
 /* STORIA */
 /*---------------*/
 
 .history{
-	margin:0 auto;
+	margin: 3em auto;
 	display: block;
-	height: 35em;
-	width: auto;
-	margin-top: 3em;
-	margin-bottom: 3em;
+	height: 30em;
+	max-width: 100%;
 }
 
 @media screen and (max-width:640px){
@@ -623,7 +613,7 @@ label textarea{
 
 #contactText{
 	text-align: center;
-	font-size:1.1em;
+	font-size: 1.1em;
 }
 
 #contactNumbers{
@@ -726,7 +716,7 @@ form#contact_form {
 }
 
 #contact_form select {
-	background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+	background: url("../images/selectArrow.png") no-repeat right;
 	outline: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -1091,14 +1081,9 @@ p.schedule{
 	margin: 1em auto;
 }
 
-/*--------------*/
-/*-REGISTRAZIONE-*/
-/*--------------*/
-
-
-/*--------------*/
-/*-PROFILO-*/
-/*--------------*/
+/*-------------*/
+/*---PROFILO---*/
+/*-------------*/
 
 #profileText{
 	line-height: 1.5em;
@@ -1147,4 +1132,12 @@ div.biglietto{
 	#profile input[type=submit] {
 		margin-right: 0;
 	}
+}
+
+/*-----------------*/
+/*-AMMINISTRAZIONE-*/
+/*-----------------*/
+
+p.prenotazione, p.messaggio {
+	margin-bottom: 1em;
 }
