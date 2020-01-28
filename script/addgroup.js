@@ -8,11 +8,15 @@ function groupForm () {
 	checkScuola();
 
 	var numberInput = document.forms.namedItem("addGroupForm")["num"];
+	var numRegExp = new RegExp("^([1-5]?[0-9]|60)$");
 
 	numberInput.oninput = function () {
-		var numRegExp = new RegExp("^[1-5][0-9]$");
 		if (!numRegExp.test(numberInput.value))
-			numberInput.value = numberInput.value.substring(0, str.length - 1);
+			numberInput.value = numberInput.value.substring(0, numberInput.value.length - 1);
+	}
+	numberInput.onchange = function () {
+		if (!numRegExp.test(numberInput.value))
+			numberInput.value = 0;
 	}
 
 }
