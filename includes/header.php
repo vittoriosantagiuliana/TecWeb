@@ -18,7 +18,7 @@ class Header
 			'Home' => 'home.php',
 			'Storia' => 'history.php',
 			'Animali' => 'animals.php',
-			'Orari e biglietti'=> 'schedule.php',
+			'Biglietti'=> 'schedule.php',
 			'Attivit&agrave;' => 'activities.php',
 			'Contatti' => 'contacts.php',
 		);
