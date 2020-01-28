@@ -30,7 +30,7 @@ function listaScuole()
 	$output = str_replace("<div id=\"header\"></div>", Header::build(), $output);
 	$output = str_replace("<div id=\"footer\"></div>", Footer::build(), $output);
 
-	$output = str_replace("<h3 errorH/>", isset($error_m) ? "<h3 class=\"errorH\">" . $error_u . "</h3>" : "", $output);
+	$output = str_replace("<h3 errorH/>", isset($error_m) ? "<h3 class=\"errorH\">" . $error_m . "</h3>" : "", $output);
 	$output = str_replace("<div error_u/>", isset($error_u) ? "<div class=\"error\">" . $error_u . "</div>" : "", $output);
 	$output = str_replace("<div error_p/>", isset($error_p) ? "<div class=\"error\">" . $error_p . "</div>" : "", $output);
 	$output = str_replace("<div error_r_u/>", isset($error_r_u) ? "<div class=\"error\">" . $error_r_u . "</div>" : "", $output);
