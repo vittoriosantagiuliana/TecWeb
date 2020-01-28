@@ -387,7 +387,7 @@ label textarea{
 	#navbar.menu {
 		box-shadow: 0 0 1em #292319;
 		flex-direction: column;
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 		position: fixed;
 		z-index: 1000;
 		height: 100%;

@@ -21,7 +21,7 @@
 			header("Location: contacts.php?error=" . urlencode("Seleziona una categoria"));
 			exit();
 		} else {
-			$today = date("Y-m-d");
+			$today = date("Y-m-d H:i:s");
 			$sql = ("INSERT INTO messaggio(Categoria_Mes,Nome_Mes,Mail_Mes,Testo_Mes,Data_Mes) VALUES ('$cat','$name','$email','$message','$today');");
 			if ($result = $connessione->query($sql)) {
 				header("Location: contacts.php?done");
