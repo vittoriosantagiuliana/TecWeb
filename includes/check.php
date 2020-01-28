@@ -7,3 +7,8 @@ function checkNumber ($n) {
 function checkEmail ($e) {
 	return filter_var($e, FILTER_VALIDATE_EMAIL);
 }
+
+function sanitizeNumber ($n) {
+	$temp = filter_var($n, FILTER_SANITIZE_NUMBER_INT);
+	return $temp > 0 ? $temp : 0;
+}
